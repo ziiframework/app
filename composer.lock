@@ -1436,12 +1436,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/composer.git",
-                "reference": "4e0fdab111a3a39b19878b44775edac5acd9c751"
+                "reference": "5cc2953fb7ac0c09b6b8b0ce4eae57ae38745522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/composer/zipball/4e0fdab111a3a39b19878b44775edac5acd9c751",
-                "reference": "4e0fdab111a3a39b19878b44775edac5acd9c751",
+                "url": "https://api.github.com/repos/ziiframework/composer/zipball/5cc2953fb7ac0c09b6b8b0ce4eae57ae38745522",
+                "reference": "5cc2953fb7ac0c09b6b8b0ce4eae57ae38745522",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1451,7 +1451,8 @@
                 ]
             },
             "require": {
-                "composer-plugin-api": "^1.0 | ^2.0"
+                "composer-plugin-api": "^1.0 | ^2.0",
+                "ext-openssl": "*"
             },
             "require-dev": {
                 "composer/composer": "^1.0 | ^2.0@dev",
@@ -1486,7 +1487,7 @@
                 "composer",
                 "zii-framework"
             ],
-            "time": "2020-09-11T03:56:45+00:00"
+            "time": "2020-09-11T14:42:29+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
@@ -1551,12 +1552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "20396c88f3488e9e848b553d09fcbfc89f765789"
+                "reference": "323c2d73840c8e32cc326e3aee7830fdd9a60e9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/20396c88f3488e9e848b553d09fcbfc89f765789",
-                "reference": "20396c88f3488e9e848b553d09fcbfc89f765789",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/323c2d73840c8e32cc326e3aee7830fdd9a60e9f",
+                "reference": "323c2d73840c8e32cc326e3aee7830fdd9a60e9f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1585,7 +1586,7 @@
                 "phpunit/phpunit": "^8.5"
             },
             "bin": [
-                "framework/yii"
+                "src/yii"
             ],
             "type": "library",
             "extra": {
@@ -1595,7 +1596,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\": "framework/"
+                    "yii\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1616,7 +1617,7 @@
                 "framework",
                 "zii"
             ],
-            "time": "2020-09-11T04:52:03+00:00"
+            "time": "2020-09-11T13:27:40+00:00"
         }
     ],
     "packages-dev": [
@@ -3326,16 +3327,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.3.8",
+            "version": "9.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "93d78d8e2a06393a0d0c1ead6fe9984f1af1f88c"
+                "reference": "60c90ba713075e83bd039db4760226df7ad9a5cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/93d78d8e2a06393a0d0c1ead6fe9984f1af1f88c",
-                "reference": "93d78d8e2a06393a0d0c1ead6fe9984f1af1f88c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/60c90ba713075e83bd039db4760226df7ad9a5cb",
+                "reference": "60c90ba713075e83bd039db4760226df7ad9a5cb",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3355,7 +3356,7 @@
                 "myclabs/deep-copy": "^1.10.1",
                 "phar-io/manifest": "^2.0.1",
                 "phar-io/version": "^3.0.2",
-                "php": "^7.3 || ^8.0",
+                "php": ">=7.3",
                 "phpspec/prophecy": "^1.11.1",
                 "phpunit/php-code-coverage": "^9.1.5",
                 "phpunit/php-file-iterator": "^3.0.4",
@@ -3427,7 +3428,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-27T06:30:58+00:00"
+            "time": "2020-09-11T12:42:34+00:00"
         },
         {
             "name": "psr/container",
