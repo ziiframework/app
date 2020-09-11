@@ -10,6 +10,7 @@
         "source": "https://github.com/ziiframework/app"
     },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=7.3.0",
         "ziiframework/zii": "3.0.x-dev",
