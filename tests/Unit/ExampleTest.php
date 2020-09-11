@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Cept\Unit;
+namespace Zept\Unit;
 
-use Cept\UnitTester;
+use Zept\UnitTester;
 
 class ExampleTest extends CeptCase
 {

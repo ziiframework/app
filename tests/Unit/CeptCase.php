@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cept\Unit;
+namespace Zept\Unit;
 
 use Codeception\Test\Unit as CodeceptionUnit;
 use ReflectionClass;

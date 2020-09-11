@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Cept\Acceptance;
+namespace Zept\Acceptance;
 
-use Cept\AcceptanceTester;
+use Zept\AcceptanceTester;
 
 class FirstCest
 {

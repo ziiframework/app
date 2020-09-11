@@ -1,6 +1,8 @@
 <?php
 
-namespace Cept;
+namespace Zept;
+
+use Zept\_generated\UnitTesterActions;
 
 /**
  * Inherited Methods
@@ -17,9 +19,9 @@ namespace Cept;
  *
  * @SuppressWarnings(PHPMD)
  */
-class AcceptanceTester extends \Codeception\Actor
+class UnitTester extends \Codeception\Actor
 {
-    use _generated\AcceptanceTesterActions;
+    use UnitTesterActions;
 
     /**
      * Define custom actions here

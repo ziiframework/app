@@ -10,5 +10,5 @@ actor: FunctionalTester
 modules:
   enabled:
     # add a framework module here
-    - \Cept\Helper\Functional
+    - \Zept\FunctionalHelper
   step_decorators: ~
