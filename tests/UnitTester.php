@@ -2,6 +2,7 @@
 
 namespace Zept;
 
+use Codeception\Actor;
 use Zept\_generated\UnitTesterActions;
 
 /**
@@ -19,7 +20,7 @@ use Zept\_generated\UnitTesterActions;
  *
  * @SuppressWarnings(PHPMD)
  */
-class UnitTester extends \Codeception\Actor
+class UnitTester extends Actor
 {
     use UnitTesterActions;
 
