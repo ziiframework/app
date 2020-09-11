@@ -24,9 +24,6 @@ return [
         'urlManager' => [
             'showScriptName' => true,
         ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-        ],
         'request' => [
             'cookieValidationKey' => 'test',
             'enableCsrfValidation' => false,
