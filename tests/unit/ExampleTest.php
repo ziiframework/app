@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zept\Unit;
+namespace Zept\unit;
 
 use Zept\UnitTester;
 

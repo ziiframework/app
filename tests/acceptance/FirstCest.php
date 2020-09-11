@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zept\Acceptance;
+namespace Zept\acceptance;
 
 use Zept\AcceptanceTester;
 
