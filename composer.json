@@ -48,6 +48,11 @@
             "@composer install -vvv"
         ]
     },
+  "autoload": {
+    "psr-4": {
+      "Zept\\": "tests"
+    }
+  },
     "extra": {
         "yii\\composer\\Installer::postCreateProject": {
             "setPermission": [
