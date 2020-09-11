@@ -15,12 +15,17 @@
         "php": ">=7.3.0",
         "ziiframework/zii": "3.0.x-dev",
         "ziiframework/bootstrap": "3.0.x-dev",
-        "ziiframework/swiftmailer": "3.0.x-dev"
+        "ziiframework/swiftmailer": "3.0.x-dev",
+        "guzzlehttp/guzzle": "~7.0.1"
     },
     "require-dev": {
         "ziiframework/debug": "3.0.x-dev",
         "ziiframework/gii": "3.0.x-dev",
-        "ziiframework/faker": "3.0.x-dev"
+        "ziiframework/faker": "3.0.x-dev",
+        "codeception/codeception": "^4.1",
+        "codeception/module-phpbrowser": "^1.0",
+        "codeception/module-asserts": "^1.2",
+        "codeception/module-rest": "^1.2"
     },
     "config": {
         "process-timeout": 1800,
@@ -35,6 +40,12 @@
         "post-create-project-cmd": [
             "yii\\composer\\Installer::postCreateProject",
             "yii\\composer\\Installer::postInstall"
+        ],
+        "redo-install": [
+            "rm -rf vendor/",
+            "rm -f composer.lock",
+            "@composer self-update -vvv",
+            "@composer install -vvv"
         ]
     },
     "extra": {
