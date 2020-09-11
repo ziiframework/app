@@ -37,25 +37,18 @@ class CeptCase extends CodeceptionUnit
      */
     protected function mockApplication(): void
     {
-        $config = require __DIR__ . '/../../config/test.php';
+        $config = require __DIR__ . '/../../config/test-cli.php';
 
-        if (isset($config['language'])) {
-            $this->assertSame('en-US', $config['language']);
-        }
-        if (isset($config['timeZone'])) {
-            $this->assertSame('Asia/Shanghai', $config['timeZone']);
-        }
-        if (isset($config['components']['mailer']['useFileTransport'])) {
-            $this->assertTrue($config['components']['mailer']['useFileTransport']);
-        }
-        if (isset($config['controllerNamespace'])) {
-            $this->assertSame('app\\commands', $config['controllerNamespace']);
-        }
-
-        if (isset($config['class'])) {
-            $this->assertSame(CliApplication::class, $config['class']);
-            unset($config['class']);
-        }
+        $this->assertSame('Asia/Shanghai', $config['timeZone']);
+        $this->assertTrue($config['components']['mailer']['useFileTransport']);
+        $this->assertSame('app\\commands', $config['controllerNamespace']);
+        $this->assertSame(CliApplication::class, $config['class']);
+        unset($config['class']);
+        $this->assertArrayNotHasKey('user', $config['components']);
+        $this->assertArrayNotHasKey('session', $config['components']);
+        $this->assertSame('yii\\console\\ErrorHandler', $config['components']['errorHandler']['class']);
+        $this->assertSame('yii\\console\\Request', $config['components']['request']['class']);
+        $this->assertSame('yii\\console\\Response', $config['components']['response']['class']);
 
         try {
             new CliApplication($config);
