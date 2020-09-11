@@ -1,0 +1,38 @@
+name: Yii2-CI
+
+on:
+  push:
+    branches: [ master ]
+
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  yii2-tests:
+    name: PHP ${{ matrix.php }} on ${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        php: ['7.2', '7.3', '7.4']
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Composer Install
+        run: |
+          rm composer.lock
+          composer install --prefer-dist --no-interaction --optimize-autoloader
+
+      - name: Directory Setup
+        run: |
+          chmod -R 777 ./runtime
+          chmod -R 644 ./runtime/.gitignore
+
+      - name: Codecept Run
+        run: vendor/bin/codecept run unit
