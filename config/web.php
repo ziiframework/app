@@ -7,7 +7,7 @@ $cc_config = [
     'id' => 'xxx_web_application',
     'name' => 'xxx',
     'controllerNamespace' => 'app\controllers',
-    'defaultRoute' => 'index/index',
+    'defaultRoute' => 'site/index',
     'components' => [
         'errorHandler' => $cc_components[yii\web\ErrorHandler::class](),
         'response' => $cc_components[yii\web\Response::class](),
@@ -22,7 +22,7 @@ $cc_config = [
     'as hostControl' => [
         'class' => yii\filters\HostControl::class,
         'allowedHosts' => [
-            '*.xxx.com',
+            '*.zii.com',
         ],
     ],
 ];
