@@ -1,75 +1,44 @@
-<?php
+<?php declare(strict_types=1);
 
-$params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
+$cc_components = $cc_components ?? require __DIR__ . '/components.php';
 
-$config = [
-    'id' => 'basic',
-    'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
-    'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
-    ],
+$cc_config = [
+    'class' => yii\web\Application::class,
+    'id' => 'xxx_web_application',
+    'name' => 'xxx',
+    'controllerNamespace' => 'app\controllers',
+    'defaultRoute' => 'index/index',
     'components' => [
-        'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'testCookieValidationKey',
-        ],
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-        ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
-        ],
-        'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
+        'errorHandler' => $cc_components[yii\web\ErrorHandler::class](),
+        'response' => $cc_components[yii\web\Response::class](),
+        'urlManager' => $cc_components[yii\web\UrlManager::class]([
+            'rest.rules.controller' => [
+                'keep/placeholder',
             ],
-        ],
-        'db' => $db,
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+        ]),
     ],
-    'params' => $params,
+    'on beforeRequest' => static function (): void {
+    },
+    'as hostControl' => [
+        'class' => yii\filters\HostControl::class,
+        'allowedHosts' => [
+            '*.xxx.com',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
-
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+    $cc_config['bootstrap'][] = 'debug';
+    $cc_config['modules']['debug'] = [
+        'class' => yii\debug\Module::class,
+        'panels' => [
+            'queue' => yii\queue\debug\Panel::class,
+        ],
+        'controllerNamespace' => 'yii\debug\controllers',
+        'allowedIPs' => ['*'],
     ];
 }
 
-return $config;
+unset($cc_config['class']);
+
+return $cc_config;

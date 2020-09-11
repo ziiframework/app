@@ -13,7 +13,9 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.3.0",
+        "ext-json": "*",
         "ziiframework/zii": "3.0.x-dev",
+        "ziiframework/queue": "3.0.x-dev",
         "ziiframework/bootstrap": "3.0.x-dev",
         "ziiframework/swiftmailer": "3.0.x-dev",
         "guzzlehttp/guzzle": "~7.0.1"

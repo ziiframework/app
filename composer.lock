@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f76178eaeb0f14144c2629c94e49283",
+    "content-hash": "70dd288f892462666304d9ec30930ef7",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -1374,17 +1374,173 @@
             "time": "2020-07-14T12:35:20+00:00"
         },
         {
+            "name": "symfony/polyfill-php80",
+            "version": "v1.18.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/d87d5766cbf48d72388a9f6b85f280c8ad51f981",
+                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.0.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-14T12:35:20+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v5.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "1864216226af21eb76d9477f691e7cbf198e0402"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/1864216226af21eb76d9477f691e7cbf198e0402",
+                "reference": "1864216226af21eb76d9477f691e7cbf198e0402",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/polyfill-php80": "^1.15"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-07-23T08:36:24+00:00"
+        },
+        {
             "name": "ziiframework/bootstrap",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/bootstrap.git",
-                "reference": "b64932bb9f7c4e4a45abbd731d5cfe25b07e7cc0"
+                "reference": "331416e33693f460bd9517b68c78b2dda70f57cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/bootstrap/zipball/b64932bb9f7c4e4a45abbd731d5cfe25b07e7cc0",
-                "reference": "b64932bb9f7c4e4a45abbd731d5cfe25b07e7cc0",
+                "url": "https://api.github.com/repos/ziiframework/bootstrap/zipball/331416e33693f460bd9517b68c78b2dda70f57cb",
+                "reference": "331416e33693f460bd9517b68c78b2dda70f57cb",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1423,12 +1579,12 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "zii bootstrap",
+            "description": "zii-framework bootstrap",
             "keywords": [
                 "bootstrap",
-                "zii"
+                "zii-framework"
             ],
-            "time": "2020-09-11T02:59:45+00:00"
+            "time": "2020-09-11T15:19:05+00:00"
         },
         {
             "name": "ziiframework/composer",
@@ -1490,17 +1646,105 @@
             "time": "2020-09-11T14:42:29+00:00"
         },
         {
+            "name": "ziiframework/queue",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ziiframework/queue.git",
+                "reference": "b5382e15f986eea8d609624e0eaa92300749713f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/b5382e15f986eea8d609624e0eaa92300749713f",
+                "reference": "b5382e15f986eea8d609624e0eaa92300749713f",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.3.0",
+                "symfony/process": "^3.3||^4.0||^5.0",
+                "ziiframework/zii": "3.0.x-dev"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": ">=2.4",
+                "enqueue/amqp-lib": "^0.8||^0.9.10",
+                "enqueue/stomp": "^0.8.39",
+                "jeremeamia/superclosure": "*",
+                "pda/pheanstalk": "v3.*",
+                "php-amqplib/php-amqplib": "*",
+                "phpunit/phpunit": "^8.5",
+                "ziiframework/debug": "*",
+                "ziiframework/gii": "*",
+                "ziiframework/redis": "*"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Need for aws SQS.",
+                "enqueue/amqp-lib": "Need for AMQP interop queue.",
+                "enqueue/stomp": "Need for Stomp queue.",
+                "ext-gearman": "Need for Gearman queue.",
+                "ext-pcntl": "Need for process signals.",
+                "pda/pheanstalk": "Need for Beanstalk queue.",
+                "php-amqplib/php-amqplib": "Need for AMQP queue.",
+                "ziiframework/redis": "Need for Redis queue."
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\queue\\": "src",
+                    "yii\\queue\\amqp\\": "src/drivers/amqp",
+                    "yii\\queue\\amqp_interop\\": "src/drivers/amqp_interop",
+                    "yii\\queue\\beanstalk\\": "src/drivers/beanstalk",
+                    "yii\\queue\\db\\": "src/drivers/db",
+                    "yii\\queue\\file\\": "src/drivers/file",
+                    "yii\\queue\\gearman\\": "src/drivers/gearman",
+                    "yii\\queue\\redis\\": "src/drivers/redis",
+                    "yii\\queue\\sync\\": "src/drivers/sync",
+                    "yii\\queue\\sqs\\": "src/drivers/sqs",
+                    "yii\\queue\\stomp\\": "src/drivers/stomp"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Yii Team",
+                    "email": "team@yiiframework.com",
+                    "homepage": "http://www.yiiframework.com/team",
+                    "role": "Founder and project lead"
+                }
+            ],
+            "description": "zii-framework queue extension",
+            "keywords": [
+                "extension",
+                "queue",
+                "zii-framework"
+            ],
+            "time": "2020-09-11T15:52:04+00:00"
+        },
+        {
             "name": "ziiframework/swiftmailer",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/swiftmailer.git",
-                "reference": "08c0977295abffacfda8ca83205ae9273578b6a6"
+                "reference": "8cc78d19a33710ad98ecd3602e0d5e6b17926f3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/swiftmailer/zipball/08c0977295abffacfda8ca83205ae9273578b6a6",
-                "reference": "08c0977295abffacfda8ca83205ae9273578b6a6",
+                "url": "https://api.github.com/repos/ziiframework/swiftmailer/zipball/8cc78d19a33710ad98ecd3602e0d5e6b17926f3c",
+                "reference": "8cc78d19a33710ad98ecd3602e0d5e6b17926f3c",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1544,7 +1788,7 @@
                 "swiftmailer",
                 "zii-framework"
             ],
-            "time": "2020-09-11T03:27:28+00:00"
+            "time": "2020-09-11T15:05:15+00:00"
         },
         {
             "name": "ziiframework/zii",
@@ -5428,92 +5672,6 @@
             "time": "2020-07-14T12:35:20+00:00"
         },
         {
-            "name": "symfony/polyfill-php80",
-            "version": "v1.18.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/d87d5766cbf48d72388a9f6b85f280c8ad51f981",
-                "reference": "d87d5766cbf48d72388a9f6b85f280c8ad51f981",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": ">=7.0.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.18-dev"
-                },
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ],
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ion Bazan",
-                    "email": "ion.bazan@gmail.com"
-                },
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-07-14T12:35:20+00:00"
-        },
-        {
             "name": "symfony/service-contracts",
             "version": "v2.2.0",
             "source": {
@@ -5882,12 +6040,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/debug.git",
-                "reference": "55231357868e84f485a1a610aaf599fa662ae0ee"
+                "reference": "adc511420194cedc7f7b60b0c2e6767fb45a153c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/debug/zipball/55231357868e84f485a1a610aaf599fa662ae0ee",
-                "reference": "55231357868e84f485a1a610aaf599fa662ae0ee",
+                "url": "https://api.github.com/repos/ziiframework/debug/zipball/adc511420194cedc7f7b60b0c2e6767fb45a153c",
+                "reference": "adc511420194cedc7f7b60b0c2e6767fb45a153c",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5929,12 +6087,12 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "zii debug",
+            "description": "zii-framework debug",
             "keywords": [
                 "debug",
-                "zii"
+                "zii-framework"
             ],
-            "time": "2020-09-11T03:04:38+00:00"
+            "time": "2020-09-11T15:17:17+00:00"
         },
         {
             "name": "ziiframework/faker",
@@ -5942,12 +6100,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/faker.git",
-                "reference": "0b805a2a7536375b5843fab20313c42bad7fcaaa"
+                "reference": "bd0a246526b668c1e9d5b09b17a6e3d0b6e800f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/faker/zipball/0b805a2a7536375b5843fab20313c42bad7fcaaa",
-                "reference": "0b805a2a7536375b5843fab20313c42bad7fcaaa",
+                "url": "https://api.github.com/repos/ziiframework/faker/zipball/bd0a246526b668c1e9d5b09b17a6e3d0b6e800f1",
+                "reference": "bd0a246526b668c1e9d5b09b17a6e3d0b6e800f1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5986,12 +6144,12 @@
                     "role": "Founder and project lead"
                 }
             ],
-            "description": "zii faker",
+            "description": "zii-framework faker",
             "keywords": [
                 "faker",
-                "zii"
+                "zii-framework"
             ],
-            "time": "2020-09-11T03:08:25+00:00"
+            "time": "2020-09-11T15:15:14+00:00"
         },
         {
             "name": "ziiframework/gii",
@@ -5999,12 +6157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/gii.git",
-                "reference": "e589a069384cc783f73bf72c3c9d073c01dc4377"
+                "reference": "904214a346c18cc09fc3c3773f62fb993ca94c4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/gii/zipball/e589a069384cc783f73bf72c3c9d073c01dc4377",
-                "reference": "e589a069384cc783f73bf72c3c9d073c01dc4377",
+                "url": "https://api.github.com/repos/ziiframework/gii/zipball/904214a346c18cc09fc3c3773f62fb993ca94c4d",
+                "reference": "904214a346c18cc09fc3c3773f62fb993ca94c4d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6046,15 +6204,16 @@
             "description": "zii gii",
             "keywords": [
                 "gii",
-                "zii"
+                "zii-framework"
             ],
-            "time": "2020-09-11T03:10:44+00:00"
+            "time": "2020-09-11T15:08:34+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "ziiframework/zii": 20,
+        "ziiframework/queue": 20,
         "ziiframework/bootstrap": 20,
         "ziiframework/swiftmailer": 20,
         "ziiframework/debug": 20,
