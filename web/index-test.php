@@ -9,7 +9,7 @@ defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'test');
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../vendor/ziiframework/zii/framework/Yii.php';
+require __DIR__ . '/../vendor/ziiframework/zii/src/Yii.php';
 
 $config = require __DIR__ . '/../config/test.php';
 
