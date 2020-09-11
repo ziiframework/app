@@ -11,7 +11,7 @@ Thumbs.db
 
 composer.phar
 phpunit.phar
-/phpunit.xml
+phpunit.xml
 
 /vendor
 
