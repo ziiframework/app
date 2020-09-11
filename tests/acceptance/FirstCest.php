@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+namespace Cept\Acceptance;
+
+use Cept\AcceptanceTester;
 
 class FirstCest
 {

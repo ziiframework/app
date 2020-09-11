@@ -6,8 +6,9 @@
 # Remove this suite if you don't use frameworks
 
 actor: FunctionalTester
+
 modules:
   enabled:
     # add a framework module here
-    - \Helper\Functional
+    - \Cept\Helper\Functional
   step_decorators: ~

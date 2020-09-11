@@ -3,8 +3,11 @@
 # Suite for unit or integration tests.
 
 actor: UnitTester
+
 modules:
   enabled:
     - Asserts
-    - \Helper\Unit
+    - \Cept\Helper\Unit
   step_decorators: ~
+
+bootstrap: './bootstrap.php'
