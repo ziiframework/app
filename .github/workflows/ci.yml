@@ -1,4 +1,4 @@
-name: Yii2-CI
+name: Zii-CI
 
 on:
   push:
@@ -8,21 +8,20 @@ on:
     branches: [ master ]
 
 jobs:
-  yii2-tests:
-    name: PHP ${{ matrix.php }} on ${{ matrix.os }}
-
-    runs-on: ${{ matrix.os }}
-
+  fullstack:
+    name: PHP 7.4 on Ubuntu 20.04
     if: "!contains(github.event.head_commit.message, 'skip ci')"
-
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-        php: ['7.2', '7.3', '7.4']
-
+    runs-on: ubuntu-latest
+    container: charescape/web:3.0.3
     steps:
       - uses: actions/checkout@v2
+      - name: Setup env
+        run: |
+          echo '127.0.0.1 app.zii.com' >> /etc/hosts
+          echo 'pwd' && pwd
+          echo 'ls' && ls
+          /bin/cp  test/_nginx/nginx.conf  /usr/local/nginx/conf/nginx.conf
+          echo 'reload nginx' && nginx -t && nginx -s reload
 
       - name: Composer Install
         run: |
@@ -34,5 +33,5 @@ jobs:
           chmod -R 777 ./runtime
           chmod -R 644 ./runtime/.gitignore
 
-      - name: Codecept Run
-        run: vendor/bin/codecept run unit
+      - name: Codeception
+        run: vendor/bin/codecept run --steps

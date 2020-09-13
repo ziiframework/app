@@ -8,13 +8,13 @@ return [
             'dsn' => 'mysql:' . implode(
                     ';',
                     [
-                        'dbname=xxx',
-                        'host=rm-xxx.mysql.rds.aliyuncs.com',
+                        'dbname=testdb',
+                        'host=localhost',
                         'charset=utf8mb4',
                     ]
                 ) . ';',
-            'username' => 'xxx',
-            'password' => base64_encode('xxx') . 'xxx',
+            'username' => 'root',
+            'password' => 'root12345',
         ]),
         'mailer' => $cc_components[yii\swiftmailer\Mailer::class]([
             'useFileTransport' => true,
