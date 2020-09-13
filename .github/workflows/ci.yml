@@ -20,7 +20,7 @@ jobs:
           echo '127.0.0.1 app.zii.com' >> /etc/hosts
           echo 'pwd' && pwd
           echo 'ls' && ls
-          /bin/cp  test/_nginx/nginx.conf  /usr/local/nginx/conf/nginx.conf
+          /bin/cp  ./tests/_nginx/nginx.conf  /usr/local/nginx/conf/nginx.conf
           echo 'reload nginx' && nginx -t && nginx -s reload
 
       - name: Composer Install
