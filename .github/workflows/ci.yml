@@ -21,12 +21,11 @@ jobs:
           echo '------pwd------' && pwd
           echo '------ls------' && ls
           /bin/cp  ./tests/_nginx/nginx.conf  /usr/local/nginx/conf/nginx.conf
-          echo '------reload nginx------' && /usr/local/nginx -t && /usr/local/nginx -s reload
 
       - name: Composer Install
         run: |
           rm composer.lock
-          composer install --prefer-dist --no-interaction --optimize-autoloader
+          /usr/local/php/bin/php /usr/local/bin/composer.phar install --prefer-dist --no-interaction --optimize-autoloader
 
       - name: Directory Setup
         run: |
@@ -34,4 +33,4 @@ jobs:
           chmod -R 644 ./runtime/.gitignore
 
       - name: Codeception
-        run: vendor/bin/codecept run --steps
+        run: /usr/local/php/bin/php vendor/bin/codecept run --steps
