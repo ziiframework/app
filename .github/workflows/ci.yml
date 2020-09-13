@@ -18,10 +18,10 @@ jobs:
       - name: Setup env
         run: |
           echo '127.0.0.1 app.zii.com' >> /etc/hosts
-          echo 'pwd' && pwd
-          echo 'ls' && ls
+          echo '------pwd------' && pwd
+          echo '------ls------' && ls
           /bin/cp  ./tests/_nginx/nginx.conf  /usr/local/nginx/conf/nginx.conf
-          echo 'reload nginx' && nginx -t && nginx -s reload
+          echo '------reload nginx------' && /usr/local/nginx -t && /usr/local/nginx -s reload
 
       - name: Composer Install
         run: |
