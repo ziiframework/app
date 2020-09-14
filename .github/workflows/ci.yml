@@ -29,7 +29,6 @@ jobs:
       - name: Copy Directory
         run: |
           /bin/cp ./web/index-test.php ./web/index.php
-          echo '---ls web---' && ls ./web
           cp -r ../app /var/www/yiitest
           chown -R www-data:www-data /var/www/
 
@@ -37,13 +36,16 @@ jobs:
         run: |
           /etc/my_init.d/runapp.sh
           echo '127.0.0.1 app.yiitest.com' >> /etc/hosts
-          cat /etc/hosts
 
-      - name: Check Service
+      - name: Check Service Ready
         run: |
           ps -aux | grep mysql
           ps -aux | grep php
           ps -aux | grep nginx
+
+      - name: Import Sql Files
+        run: |
+          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./tests/_data/init.sql
 
       - name: Codeception
         run: /usr/local/php/bin/php vendor/bin/codecept run --steps
