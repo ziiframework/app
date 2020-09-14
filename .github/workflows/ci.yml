@@ -31,6 +31,7 @@ jobs:
           /bin/cp ./web/index-test.php ./web/index.php
           echo '---ls web---' && ls ./web
           cp -r ../app /var/www/yiitest
+          chown -R www-data:www-data /var/www/
 
       - name: Start Service
         run: |
