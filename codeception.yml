@@ -14,6 +14,11 @@ extensions:
     - Codeception\Extension\RunFailed
 
 modules:
+  config:
+    Db:
+      dsn: 'mysql:host=localhost;dbname=testdb0'
+      user: 'root'
+      password: 'root12345'
   enabled:
     - Db:
       dsn: 'mysql:host=localhost;dbname=testdb0'
