@@ -34,6 +34,14 @@ jobs:
       - name: Start Service
         run: |
           /etc/my_init.d/runapp.sh
+          echo '127.0.0.1 app.yiitest.com' >> /etc/hosts
+          cat /etc/hosts
+
+      - name: Check Service
+        run: |
+          ps -aux | grep mysql
+          ps -aux | grep php
+          ps -aux | grep nginx
 
       - name: Codeception
         run: /usr/local/php/bin/php vendor/bin/codecept run --steps

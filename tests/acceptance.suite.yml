@@ -9,6 +9,6 @@ actor: AcceptanceTester
 modules:
   enabled:
     - PhpBrowser:
-        url: http://app.zii.com
+        url: http://app.yiitest.com
     - \Zept\AcceptanceHelper
 step_decorators: ~
