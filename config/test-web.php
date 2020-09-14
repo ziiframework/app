@@ -4,7 +4,6 @@ $cc_components = $cc_components ?? require __DIR__ . '/components.php';
 
 return yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/base.php',
-    require __DIR__ . '/test-local.php',
     [
         'id' => 'xxx_test_web_application',
         'name' => 'xxx Test Web Application',
@@ -12,6 +11,18 @@ return yii\helpers\ArrayHelper::merge(
         'controllerNamespace' => 'app\controllers',
         'defaultRoute' => 'site/index',
         'components' => [
+            'db' => $cc_components[yii\db\Connection::class]([
+                'dsn' => 'mysql:' . implode(
+                        ';',
+                        [
+                            'dbname=testdb0',
+                            'host=127.0.0.1',
+                            'charset=utf8mb4',
+                        ]
+                    ) . ';',
+                'username' => 'root',
+                'password' => 'root12345',
+            ]),
             'request' => $cc_components[yii\web\Request::class]([
                 'cookieValidationKey' => 'testCookieValidationKey',
                 'csrfCookie.secure' => false,

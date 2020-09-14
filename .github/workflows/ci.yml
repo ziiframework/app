@@ -28,8 +28,9 @@ jobs:
 
       - name: Copy Directory
         run: |
+          /bin/cp ./web/index-test.php ./web/index.php
+          echo '---ls web---' && ls ./web
           cp -r ../app /var/www/yiitest
-          echo '---ls---' && ls /var/www/yiitest
 
       - name: Start Service
         run: |
