@@ -8,8 +8,8 @@ on:
     branches: [ master ]
 
 jobs:
-  fullstack:
-    name: PHP 7.4 on Ubuntu 20.04
+  localstack:
+    name: PHP-7.4 MySql-8.0 Nginx-1.19
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     container: charescape/web:3.0.4
@@ -47,5 +47,5 @@ jobs:
         run: |
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./tests/_data/init.sql
 
-      - name: Codeception
+      - name: Codeception Tests
         run: /usr/local/php/bin/php vendor/bin/codecept run --steps
