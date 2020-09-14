@@ -1,18 +1,7 @@
-
-.idea
-nbproject
-
-.buildpath
-.project
-.settings
-
 Thumbs.db
 .DS_Store
 
-composer.phar
-phpunit.phar
-phpunit.xml
-
+/.idea
 /vendor
 
 env-local.php

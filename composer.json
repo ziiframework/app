@@ -1,81 +1,84 @@
 {
-    "name": "ziiframework/app",
-    "description": "zii-framework app",
-    "keywords": ["zii-framework", "app"],
-    "homepage": "https://github.com/ziiframework/app",
-    "type": "project",
-    "license": "BSD-3-Clause",
-    "support": {
-        "issues": "https://github.com/ziiframework/app/issues?state=open",
-        "source": "https://github.com/ziiframework/app"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "php": ">=7.3.0",
-        "ext-json": "*",
-        "ziiframework/zii": "3.0.x-dev",
-        "ziiframework/queue": "3.0.x-dev",
-        "ziiframework/bootstrap": "3.0.x-dev",
-        "ziiframework/swiftmailer": "3.0.x-dev",
-        "guzzlehttp/guzzle": "~7.0.1"
-    },
-    "require-dev": {
-        "ziiframework/debug": "3.0.x-dev",
-        "ziiframework/gii": "3.0.x-dev",
-        "ziiframework/faker": "3.0.x-dev",
-        "codeception/codeception": "^4.1",
-        "codeception/module-phpbrowser": "^1.0",
-        "codeception/module-asserts": "^1.2",
-        "codeception/module-db": "^1.0",
-        "codeception/module-rest": "^1.2"
-    },
-    "config": {
-        "process-timeout": 1800,
-        "fxp-asset": {
-            "enabled": false
-        }
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "yii\\composer\\Installer::postInstall"
-        ],
-        "post-create-project-cmd": [
-            "yii\\composer\\Installer::postCreateProject",
-            "yii\\composer\\Installer::postInstall"
-        ],
-        "redo-install": [
-            "rm -rf vendor/",
-            "rm -f composer.lock",
-            "@composer self-update -vvv",
-            "@composer install -vvv"
-        ]
-    },
+  "name": "ziiframework/app",
+  "description": "zii-framework app",
+  "keywords": [
+    "zii-framework",
+    "app"
+  ],
+  "homepage": "https://github.com/ziiframework/app",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/ziiframework/app/issues?state=open",
+    "source": "https://github.com/ziiframework/app"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.3.0",
+    "ext-json": "*",
+    "ziiframework/zii": "3.0.x-dev",
+    "ziiframework/queue": "3.0.x-dev",
+    "ziiframework/bootstrap": "3.0.x-dev",
+    "ziiframework/swiftmailer": "3.0.x-dev",
+    "guzzlehttp/guzzle": "~7.0.1"
+  },
+  "require-dev": {
+    "ziiframework/debug": "3.0.x-dev",
+    "ziiframework/gii": "3.0.x-dev",
+    "ziiframework/faker": "3.0.x-dev",
+    "codeception/codeception": "^4.1",
+    "codeception/module-phpbrowser": "^1.0",
+    "codeception/module-asserts": "^1.2",
+    "codeception/module-db": "^1.0",
+    "codeception/module-rest": "^1.2"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "yii\\composer\\Installer::postInstall"
+    ],
+    "post-create-project-cmd": [
+      "yii\\composer\\Installer::postCreateProject",
+      "yii\\composer\\Installer::postInstall"
+    ],
+    "redo-install": [
+      "rm -rf vendor/",
+      "rm -f composer.lock",
+      "@composer self-update -vvv",
+      "@composer install -vvv"
+    ]
+  },
   "autoload": {
     "psr-4": {
       "Zept\\": "tests"
     }
   },
-    "extra": {
-        "yii\\composer\\Installer::postCreateProject": {
-            "setPermission": [
-                {
-                    "runtime": "0777",
-                    "web/assets": "0777",
-                    "yii": "0755"
-                }
-            ]
-        },
-        "yii\\composer\\Installer::postInstall": {
-            "generateCookieValidationKey": [
-                "config/web.php"
-            ]
-        }
-    },
-    "repositories": [
+  "extra": {
+    "yii\\composer\\Installer::postCreateProject": {
+      "setPermission": [
         {
-            "type": "composer",
-            "url": "https://asset-packagist.cn"
+          "runtime": "0777",
+          "web/assets": "0777",
+          "yii": "0755"
         }
-    ]
+      ]
+    },
+    "yii\\composer\\Installer::postInstall": {
+      "generateCookieValidationKey": [
+        "config/web.php"
+      ]
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.cn"
+    }
+  ]
 }
