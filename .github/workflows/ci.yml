@@ -15,11 +15,6 @@ jobs:
     container: charescape/web:3.0.4
     steps:
       - uses: actions/checkout@v2
-      - name: Setup env
-        run: |
-          echo '127.0.0.1 app.zii.com' >> /etc/hosts
-          echo '---pwd---' && pwd
-          echo '---ls---' && ls
 
       - name: Composer Install
         run: |
@@ -35,6 +30,10 @@ jobs:
         run: |
           cp -r ../app /var/www/yiitest
           echo '---ls---' && ls /var/www/yiitest
+
+      - name: Start Service
+        run: |
+          /etc/my_init.d/runapp.sh
 
       - name: Codeception
         run: /usr/local/php/bin/php vendor/bin/codecept run --steps
