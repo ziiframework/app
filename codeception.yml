@@ -12,3 +12,13 @@ actor_suffix: Tester
 extensions:
   enabled:
     - Codeception\Extension\RunFailed
+
+modules:
+  enabled:
+    - Db:
+      dsn: 'mysql:host=localhost;dbname=testdb0'
+      user: 'root'
+      password: 'root12345'
+      cleanup: false # run populator before each test
+      populate: true # run populator before all test
+      populator: '/usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < tests/_data/init.sql'
