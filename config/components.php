@@ -332,7 +332,7 @@ $cc_components[yii\web\Response::class] = static function (array $config = []): 
                     $response->setStatusCode(200);
                 } else {
                     // for UEditor only TODO remove
-                    if (!empty(Yii::$app->getRequest()->get('isue'))) {
+                    if (Yii::$app->getRequest()->get('reformat') === 'ueditor') {
                         $response->format = yii\web\Response::FORMAT_HTML;
                         if (is_array($response->data)) {
                             $response->data = yii\helpers\Json::encode($response->data);
@@ -487,8 +487,14 @@ $cc_components[yii\rbac\DbManager::class] = static function (array $config = [])
  *
  * 配置示例：
  * [
- *   'rest.rules.controller' => [
- *
+ *   'rest.rules' => [
+        [
+            'class' => yii\rest\UrlRule::class,
+            'pluralize' => false,
+            'controller' => [
+                ...
+            ],
+        ],
  *   ]
  * ]
  *
@@ -508,15 +514,12 @@ $cc_components[yii\web\UrlManager::class] = static function (array $config) use 
             'class' => yii\web\UrlRule::class,
         ],
         'rules' => [
-            [
-                'class' => yii\rest\UrlRule::class,
-                'pluralize' => false,
-                'controller' => $config['rest.rules.controller'],
-            ],
+            ...(empty($config['web.rules']) ? [] : $config['web.rules']),
+            ...(empty($config['rest.rules']) ? [] : $config['rest.rules']),
         ],
     ], $config);
 
-    unset($config['rest.rules.controller']);
+    unset($config['web.rules'], $config['rest.rules']);
 
     return $config;
 };

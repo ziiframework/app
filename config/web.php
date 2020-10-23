@@ -12,9 +12,9 @@ $cc_config = [
         'errorHandler' => $cc_components[yii\web\ErrorHandler::class](),
         'response' => $cc_components[yii\web\Response::class](),
         'urlManager' => $cc_components[yii\web\UrlManager::class]([
-            'rest.rules.controller' => [
-                'keep/placeholder',
-            ],
+            'enableStrictParsing' => false,
+            'web.rules' => [],
+            'rest.rules' => [],
         ]),
     ],
     'on beforeRequest' => static function (): void {

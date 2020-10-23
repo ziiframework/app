@@ -2,8 +2,14 @@
 
 // This file is used in the following environments: production, development and testing
 
-$cc_params = $cc_params ?? require __DIR__ . '/params.php';
 $cc_components = $cc_components ?? require __DIR__ . '/components.php';
+
+if (!isset($cc_params) || !is_array($cc_params)) {
+    $cc_params = [];
+    if (file_exists(__DIR__ . '/params.php')) {
+        $cc_params = require __DIR__ . '/params.php';
+    }
+}
 
 $cc_config = [
     'class' => yii\base\Application::class,
@@ -17,7 +23,7 @@ $cc_config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'timeZone' => 'Asia/Shanghai',
-    'params' => $cc_params,
+    'params' => array_merge([], $cc_params),
     'version' => '1.0.0',
     'components' => [
         'cache' => $cc_components[yii\caching\DbCache::class](),
