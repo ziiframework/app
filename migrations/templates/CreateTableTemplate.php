@@ -19,11 +19,11 @@ class CreateTableTemplate extends Migration
     protected const ON_UPDATE_SETNULL = 'SET NULL';
     protected const ON_UPDATE_RESTRICT = 'RESTRICT';
 
-    protected $table;
-    protected $comment;
+    protected string $table;
+    protected string $comment;
 
-    protected $addlist = [];
-    protected $indexlist = [];
+    protected array $addlist = [];
+    protected array $indexlist = [];
 
     /**
      * {@inheritdoc}
@@ -41,7 +41,7 @@ class CreateTableTemplate extends Migration
         }
 
         $c = [];
-        $c['id'] = 'int NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "ID"';
+        $c['id'] = 'int NOT NULL AUTO_INCREMENT PRIMARY KEY';
 //        $z = $this->withDefault ? [
 //            'ip' => $this->string(254)->null()->comment('IP'),
 //            'cu' => $this->integer()->null()->comment('CU'),

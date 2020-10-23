@@ -7,7 +7,6 @@
 
 namespace app\commands;
 
-use yii\console\Controller;
 use yii\console\ExitCode;
 
 /**
@@ -18,14 +17,14 @@ use yii\console\ExitCode;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class HelloController extends Controller
+final class HelloController extends BasicCommandController
 {
     /**
      * This command echoes what you have entered as the message.
      * @param string $message the message to be echoed.
      * @return int Exit code
      */
-    public function actionIndex($message = 'hello world')
+    public function actionIndex($message = 'hello world'): int
     {
         echo $message . "\n";
 

@@ -16,3 +16,5 @@ indent_size = 2
 
 [modules/**/views/**/*.php]
 indent_size = 2
+[modules/**/views/**/*.js]
+indent_size = 2

@@ -47,5 +47,9 @@ jobs:
         run: |
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./tests/_data/init.sql
 
-      - name: Codeception Tests
+      - name: Database Migration
+        run: |
+          /usr/local/php/bin/php ./yii-test migrate/up --interactive=0
+
+      - name: Codeception Cest
         run: /usr/local/php/bin/php vendor/bin/codecept run --steps
