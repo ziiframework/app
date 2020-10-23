@@ -12,3 +12,5 @@ modules:
         url: http://app.yiitest.com
     - \Zept\AcceptanceHelper
 step_decorators: ~
+
+bootstrap: './bootstrap2.php'
