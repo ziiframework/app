@@ -17,9 +17,31 @@ class FirstCest
     {
     }
 
-    public function frontpageWorks(AcceptanceTester $I)
+    public function homePageWorks(AcceptanceTester $I)
     {
         $I->amOnPage('/');
+        $I->seeResponseCodeIsSuccessful();
         $I->see('Home');
+    }
+
+    public function loginPageWorks(AcceptanceTester $I)
+    {
+        $I->amOnPage('/site/login');
+        $I->seeResponseCodeIsSuccessful();
+        $I->see('Login');
+    }
+
+    public function signupPageWorks(AcceptanceTester $I)
+    {
+        $I->amOnPage('/site/signup');
+        $I->seeResponseCodeIsSuccessful();
+        $I->see('Signup');
+    }
+
+    public function contactPageWorks(AcceptanceTester $I)
+    {
+        $I->amOnPage('/site/contact');
+        $I->seeResponseCodeIsSuccessful();
+        $I->see('Contact');
     }
 }
