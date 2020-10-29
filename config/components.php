@@ -476,6 +476,10 @@ $cc_components[yii\swiftmailer\Mailer::class] = static function (array $config =
 $cc_components[yii\rbac\DbManager::class] = static function (array $config = []) use ($cc_components): array {
     return array_merge([
         'class' => yii\rbac\DbManager::class,
+        'itemTable' => '{{%dbauth_item}}',
+        'itemChildTable' => '{{%dbauth_item_child}}',
+        'assignmentTable' => '{{%dbauth_assignment}}',
+        'ruleTable' => '{{%dbauth_rule}}',
         'cache' => $cc_components[yii\caching\DbCache::class]([
             'keyPrefix' => 'rbac_',
         ]),
