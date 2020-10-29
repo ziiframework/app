@@ -31,13 +31,6 @@ class FirstCest
         $I->see('Login');
     }
 
-    public function signupPageWorks(AcceptanceTester $I)
-    {
-        $I->amOnPage('/site/signup');
-        $I->seeResponseCodeIsSuccessful();
-        $I->see('Signup');
-    }
-
     public function contactPageWorks(AcceptanceTester $I)
     {
         $I->amOnPage('/site/contact');
