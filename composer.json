@@ -17,6 +17,7 @@
   "require": {
     "php": ">=7.3.0",
     "ext-json": "*",
+    "ext-pdo": "*",
     "ziiframework/zii": "3.0.x-dev",
     "ziiframework/queue": "3.0.x-dev",
     "ziiframework/bootstrap": "3.0.x-dev",

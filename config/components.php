@@ -34,8 +34,8 @@ $cc_components[yii\db\Connection::class] = static function (array $config) use (
     return array_merge([
         'class' => yii\db\Connection::class,
         'attributes' => [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // 错误报告模式：exception
 //            PDO::ATTR_CASE => PDO::CASE_NATURAL, // 保留数据库驱动返回的列名
-//            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // 错误报告模式：exception
 //            PDO::ATTR_ORACLE_NULLS => PDO::NULL_NATURAL, // 空字符串<=>NULL：保持原样
 //            PDO::ATTR_STRINGIFY_FETCHES => false, // 提取的时候将数值转换为字符串：No
 //            PDO::ATTR_TIMEOUT => 5, // 数据库连接超时时间：5s
