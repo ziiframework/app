@@ -16,6 +16,7 @@ $cc_config = [
     'controllerMap' => [
         'migrate' => [
             'class' => yii\console\controllers\MigrateController::class,
+            'migrationTable' => '{{%dbmigration}}',
             // for migration without a namespace, `migrationPath` is required to specify the path
             'migrationPath' => [
                 // '@yii/rbac/migrations',
