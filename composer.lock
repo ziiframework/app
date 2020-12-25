@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "067a38ec34071b25d9c3bce95785bb03",
+    "content-hash": "2dbd0022652a7adb265acafc96802bf7",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -3344,12 +3344,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "d5961914bf7f90e81af509b81e51450bff419815"
+                "reference": "49da07b20a780d3fca9fe12e1db27975a2910c18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/d5961914bf7f90e81af509b81e51450bff419815",
-                "reference": "d5961914bf7f90e81af509b81e51450bff419815",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/49da07b20a780d3fca9fe12e1db27975a2910c18",
+                "reference": "49da07b20a780d3fca9fe12e1db27975a2910c18",
                 "shasum": ""
             },
             "conflict": {
@@ -3506,8 +3506,8 @@
                 "scheb/two-factor-bundle": ">=0,<3.26|>=4,<4.11",
                 "sensiolabs/connect": "<4.2.3",
                 "serluck/phpwhois": "<=4.2.6",
-                "shopware/core": "<=6.3.2",
-                "shopware/platform": "<=6.3.2",
+                "shopware/core": "<=6.3.4",
+                "shopware/platform": "<=6.3.4",
                 "shopware/shopware": "<5.6.9",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
                 "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
@@ -3653,7 +3653,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-12-08T15:02:56+00:00"
+            "time": "2020-12-21T18:11:20+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -5741,16 +5741,16 @@
         },
         {
             "name": "ziiframework/debug",
-            "version": "3.1.1",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/debug.git",
-                "reference": "fbd88ca8ed44fce64347e58dc6cf02cba1ac205e"
+                "reference": "d3074af86f756148ae06739c58c97f13ad3bea39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/debug/zipball/fbd88ca8ed44fce64347e58dc6cf02cba1ac205e",
-                "reference": "fbd88ca8ed44fce64347e58dc6cf02cba1ac205e",
+                "url": "https://api.github.com/repos/ziiframework/debug/zipball/d3074af86f756148ae06739c58c97f13ad3bea39",
+                "reference": "d3074af86f756148ae06739c58c97f13ad3bea39",
                 "shasum": ""
             },
             "require": {
@@ -5791,7 +5791,7 @@
                 "debug",
                 "zii-framework"
             ],
-            "time": "2020-11-17T15:30:28+00:00"
+            "time": "2020-12-25T04:15:54+00:00"
         },
         {
             "name": "ziiframework/faker",
