@@ -27,7 +27,7 @@
   "require-dev": {
     "ziiframework/debug": "~3.1.1",
     "ziiframework/gii": "~3.1.1",
-    "ziiframework/faker": "~3.1.1",
+    "ziiframework/faker": "~3.1.2",
     "roave/security-advisories": "dev-master",
     "codeception/codeception": "^4.1",
     "codeception/module-phpbrowser": "^1.0",
