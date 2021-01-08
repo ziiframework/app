@@ -52,6 +52,7 @@ jobs:
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/cache.sql
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/rbac.sql
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/session.sql
+          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/queue.sql
 
       - name: Database Migration
         run: |
