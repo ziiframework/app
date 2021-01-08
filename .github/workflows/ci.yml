@@ -8,7 +8,7 @@ on:
     branches: [ master ]
 
 jobs:
-  localstack:
+  build:
     name: PHP-7.4 MySql-8.0 Nginx-1.19
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
@@ -28,8 +28,12 @@ jobs:
 
       - name: Copy Directory
         run: |
-          /bin/cp ./web/index-test.php ./web/index.php
-          cp -r ../app /var/www/yiitest
+          rm -f     ./web/index.php
+          cp        ./web/index-test.php  ./web/index.php
+
+          mkdir -p    /var/www/yiitest
+          cp -r  ./*  /var/www/yiitest/
+
           chown -R www-data:www-data /var/www/
 
       - name: Start Service
