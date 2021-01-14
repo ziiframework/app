@@ -59,7 +59,10 @@
   "autoload": {
     "psr-4": {
       "Zept\\": "tests"
-    }
+    },
+    "exclude-from-classmap": [
+      "/tests/"
+    ]
   },
   "extra": {
     "yii\\composer\\Installer::postCreateProject": {
