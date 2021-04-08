@@ -9,54 +9,102 @@ on:
 
 jobs:
   build:
-    name: PHP-7.4 MySql-8.0 Nginx-1.19
+    name: "PHP-7.4 MySql-8.0 Nginx-1.19"
     if: "!contains(github.event.head_commit.message, 'skip ci')"
+
     runs-on: ubuntu-latest
-    container: charescape/web:3.0.4
+
+    env:
+      PHP_CMD: '/usr/local/php/bin/php'
+      COMPOSER_CMD: '/usr/local/bin/composer.phar'
+
+    container: charescape/web:4.1.2
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Composer Install
-        run: |
-          rm composer.lock
-          /usr/local/php/bin/php /usr/local/bin/composer.phar install --prefer-dist --no-interaction --optimize-autoloader
+      - name: "Composer self-update"
+        run: ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} self-update -vvv
 
-      - name: Directory Setup
+      - name: "Composer install for localhost"
         run: |
-          chmod -R 777 ./runtime
-          chmod -R 644 ./runtime/.gitignore
+          mkdir -p       /var/www/yiitest
+          cp    -r  ./*  /var/www/yiitest/
+          chmod -R 777   /var/www/yiitest/runtime
+          chmod    644   /var/www/yiitest/runtime/.gitignore
+          rm -f          /var/www/yiitest/web/index.php
+          cp             /var/www/yiitest/web/index-test.php  /var/www/yiitest/web/index.php
 
-      - name: Copy Directory
-        run: |
-          rm -f     ./web/index.php
-          cp        ./web/index-test.php  ./web/index.php
-
-          mkdir -p    /var/www/yiitest
-          cp -r  ./*  /var/www/yiitest/
+          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/yiitest/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
 
           chown -R www-data:www-data /var/www/
 
-      - name: Start Service
+      - name: "Composer install for testing"
         run: |
-          /etc/my_init.d/runapp.sh
-          echo '127.0.0.1 app.yiitest.com' >> /etc/hosts
+          chmod -R 777 ./runtime
+          chmod    644 ./runtime/.gitignore
+          rm -f        ./web/index.php
+          cp           ./web/index-test.php  ./web/index.php
+          rm -f        ./tests/_generated/*
 
-      - name: Check Service Ready
+          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --no-interaction
+
+      - name: "Start localhost"
+        run: /etc/my_init.d/runapp.sh
+
+      - name: "Update hosts file"
+        run: echo '127.0.0.1 app.yiitest.com' | tee -a /etc/hosts
+
+      - name: "Check localhost"
         run: |
           ps -aux | grep mysql
           ps -aux | grep php
           ps -aux | grep nginx
 
-      - name: Import Sql Files
+      - name: "Database migration"
         run: |
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/cache.sql
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/rbac.sql
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/session.sql
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/queue.sql
 
-      - name: Database Migration
-        run: |
-          /usr/local/php/bin/php ./yii-test migrate/up --interactive=0
+          ${{ env.PHP_CMD }}  ./yii-test  migrate/up  --interactive=0
 
-      - name: Codeception Cest
-        run: /usr/local/php/bin/php vendor/bin/codecept run --steps
+          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./tests/_data/seed.sql
+
+      - name: "Codeception testing"
+        id: id_Codeception_Cest
+        run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run --steps
+        continue-on-error: true
+
+      - name: "Upload debug pack"
+        uses: actions/upload-artifact@v2
+        with:
+          name: debug-pack
+          retention-days: 3
+          path: |
+            tests/
+            !tests/api/**/*.php
+            !tests/unit/**/*.php
+            !tests/acceptance/**/*.php
+            !tests/functional/**/*.php
+
+            /var/www/yiitest/runtime/
+            !/var/www/yiitest/runtime/**/*.data
+
+            /var/www/yiitest/web/
+            !/var/www/yiitest/web/**/*.css
+            !/var/www/yiitest/web/**/*.js
+            !/var/www/yiitest/web/**/*.map
+            !/var/www/yiitest/web/**/*.woff2
+            !/var/www/yiitest/web/**/*.woff
+            !/var/www/yiitest/web/**/*.eot
+            !/var/www/yiitest/web/**/*.ttf
+            !/var/www/yiitest/web/**/*.svg
+            !/var/www/yiitest/web/**/*.jpg
+            !/var/www/yiitest/web/**/*.jpeg
+            !/var/www/yiitest/web/**/*.png
+
+      - name: "Finish CI"
+        if: steps.id_Codeception_Cest.outcome == 'failure'
+        run: exit 1
