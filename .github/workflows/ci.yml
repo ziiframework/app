@@ -70,8 +70,6 @@ jobs:
 
           ${{ env.PHP_CMD }}  ./yii-test  migrate/up  --interactive=0
 
-          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./tests/_data/seed.sql
-
       - name: "Codeception testing"
         id: id_Codeception_Cest
         run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run --steps
