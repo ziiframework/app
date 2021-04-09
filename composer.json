@@ -18,11 +18,15 @@
     "php": ">=7.3.0",
     "ext-json": "*",
     "ext-pdo": "*",
+    "ext-mbstring": "*",
+    "symfony/polyfill-php80": "*",
     "ziiframework/zii": "~3.1.1",
     "ziiframework/queue": "~3.1.1",
     "ziiframework/bootstrap": "~3.1.1",
     "ziiframework/swiftmailer": "~3.1.1",
-    "guzzlehttp/guzzle": "~7.2.0"
+    "guzzlehttp/guzzle": "^7.2",
+    "symfony/yaml": "^5.2",
+    "charescape/php-functions": "1.0.x-dev"
   },
   "require-dev": {
     "ziiframework/debug": "~3.1.1",
@@ -33,13 +37,9 @@
     "codeception/module-phpbrowser": "^1.0",
     "codeception/module-asserts": "^1.2",
     "codeception/module-db": "^1.0",
-    "codeception/module-rest": "^1.2"
-  },
-  "config": {
-    "process-timeout": 1800,
-    "fxp-asset": {
-      "enabled": false
-    }
+    "codeception/module-rest": "^1.2",
+    "codeception/lib-innerbrowser": "^1.4",
+    "nette/php-generator": "^3.5"
   },
   "scripts": {
     "post-install-cmd": [
@@ -79,11 +79,5 @@
         "config/web.php"
       ]
     }
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.cn"
-    }
-  ]
+  }
 }
