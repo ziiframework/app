@@ -26,6 +26,7 @@
     "ziiframework/swiftmailer": "~3.2.2",
     "guzzlehttp/guzzle": "^7.2",
     "symfony/yaml": "^5.2",
+    "monolog/monolog": "^2.2",
     "charescape/php-functions": "1.0.x-dev"
   },
   "require-dev": {
@@ -56,13 +57,21 @@
       "@composer install -vvv"
     ]
   },
+  "config": {
+    "platform": {
+      "php": "7.3"
+    },
+    "sort-packages": true
+  },
   "autoload": {
     "psr-4": {
-      "Zept\\": "tests"
-    },
-    "exclude-from-classmap": [
-      "/tests/"
-    ]
+      "Zpp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Zept\\": "tests/"
+    }
   },
   "extra": {
     "yii\\composer\\Installer::postCreateProject": {
