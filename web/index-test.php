@@ -8,12 +8,22 @@ if (!isset($_SERVER['SERVER_NAME']) || $_SERVER['SERVER_NAME'] !== 'app.yiitest.
     die('You are not allowed to access this file.');
 }
 
+error_reporting(-1);
+
 require __DIR__ . '/../env-test.php';
 require __DIR__ . '/../env.php';
 
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/../vendor/ziiframework/zii/src/Yii.php';
 
-$config = require __DIR__ . '/../config/test-web.php';
+$ztmp_config_for_testing = require __DIR__ . '/../config/test-web.php';
 
-(new yii\web\Application($config))->run();
+if (
+    isset($_SERVER['REQUEST_URI'])
+    && in_array($_SERVER['REQUEST_URI'], ['/output-config', '/output-config'], true)
+) {
+    print_r($ztmp_config_for_testing);
+    exit;
+}
+
+(new yii\web\Application($ztmp_config_for_testing))->run();
