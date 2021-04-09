@@ -17,8 +17,8 @@
 
 if (!isset($frameworkPath)) {
     $searchPaths = array(
-        dirname(__FILE__) . '/vendor/yiisoft/yii2',
-        dirname(__FILE__) . '/../vendor/yiisoft/yii2',
+        __DIR__ . '/vendor/ziiframework/zii/src',
+        __DIR__ . '/../vendor/ziiframework/zii/src',
     );
     foreach ($searchPaths as $path) {
         if (is_dir($path)) {

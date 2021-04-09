@@ -1,3 +1,20 @@
+* text=auto eol=lf
 
-/.github            export-ignore
-/.gitattributes     export-ignore
+*.php  text eol=lf diff=php
+*.css  text
+*.js   text
+*.txt  text
+*.md   text
+*.xml  text
+*.json text
+*.bat  text
+*.sql  text
+*.yml  text
+*.yaml text
+
+# Fonts
+*.ttf     binary
+*.eot     binary
+*.otf     binary
+*.woff    binary
+*.woff2   binary

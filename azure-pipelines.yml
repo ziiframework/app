@@ -1,0 +1,68 @@
+# PHP
+# Test and package your PHP project.
+# Add steps that run tests, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/php
+
+trigger:
+  - main
+  - master
+
+pool:
+  vmImage: ubuntu-latest
+
+container: charescape/web:4.1.2
+
+variables:
+  PHP_CMD: '/usr/local/php/bin/php'
+  COMPOSER_CMD: '/usr/local/bin/composer.phar'
+
+steps:
+  - script: sudo $(PHP_CMD) $(COMPOSER_CMD) self-update -vvv
+    displayName: "Composer self-update"
+
+  - script: |
+      sudo mkdir -p       /var/www/yiitest
+      sudo cp    -r  ./*  /var/www/yiitest/
+      sudo chmod -R 777   /var/www/yiitest/runtime
+      sudo chmod    644   /var/www/yiitest/runtime/.gitignore
+      sudo rm -f          /var/www/yiitest/web/index.php
+      sudo cp             /var/www/yiitest/web/index-test.php  /var/www/yiitest/web/index.php
+
+      sudo $(PHP_CMD) $(COMPOSER_CMD) install --working-dir=/var/www/yiitest/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
+
+      sudo chown -R www-data:www-data /var/www/
+    displayName: "Composer install localhost"
+
+  - script: |
+      sudo chmod -R 777 ./runtime
+      sudo chmod    644 ./runtime/.gitignore
+      sudo rm -f        ./web/index.php
+      sudo cp           ./web/index-test.php  ./web/index.php
+      sudo rm -f        ./tests/_generated/*
+
+      sudo $(PHP_CMD) $(COMPOSER_CMD) install --no-interaction
+    displayName: "Composer install testing"
+
+  - script: sudo /etc/my_init.d/runapp.sh
+    displayName: "Start localhost"
+
+  - script: echo '127.0.0.1 app.yiitest.com' | sudo tee -a /etc/hosts
+    displayName: "Update hosts file"
+
+  - script: |
+      sudo ps -aux | grep mysql
+      sudo ps -aux | grep php
+      sudo ps -aux | grep nginx
+    displayName: "Check localhost"
+
+  - script: |
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/cache.sql
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/rbac.sql
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/session.sql
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/queue.sql
+
+      sudo $(PHP_CMD)  ./yii-test  migrate/up  --interactive=0
+    displayName: "Database migration"
+
+  - script: sudo $(PHP_CMD) ./vendor/bin/codecept run --steps
+    displayName: "Codeception testing"

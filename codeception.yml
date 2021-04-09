@@ -13,6 +13,11 @@ extensions:
   enabled:
     - Codeception\Extension\RunFailed
 
+settings:
+  memory_limit: 1024M
+  colors: true
+
+# https://codeception.com/docs/06-ModulesAndHelpers
 modules:
   config:
     Db:
@@ -20,6 +25,7 @@ modules:
       user: 'root'
       password: 'root12345'
   enabled:
+    - Asserts
     - Db:
       dsn: 'mysql:host=127.0.0.1;dbname=testdb0'
       user: 'root'
