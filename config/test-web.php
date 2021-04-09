@@ -9,7 +9,7 @@ return yii\helpers\ArrayHelper::merge(
     [
         'id' => 'xxx_test_web_application',
         'name' => 'xxx Test Web Application',
-        'bootstrap' => ['debug'],
+        // 'bootstrap' => ['debug'],
         'controllerNamespace' => 'app\controllers',
         'defaultRoute' => 'site/index',
         'components' => [
@@ -57,14 +57,14 @@ return yii\helpers\ArrayHelper::merge(
             ],
         ],
         'modules' => [
-            'debug' => [
-                'class' => yii\debug\Module::class,
-                'panels' => [
-                    'queue' => yii\queue\debug\Panel::class,
-                ],
-                'controllerNamespace' => 'yii\debug\controllers',
-                'allowedIPs' => ['*'],
-            ],
+//            'debug' => [
+//                'class' => yii\debug\Module::class,
+//                'panels' => [
+//                    'queue' => yii\queue\debug\Panel::class,
+//                ],
+//                'controllerNamespace' => 'yii\debug\controllers',
+//                'allowedIPs' => ['*'],
+//            ],
         ],
     ]
 );
