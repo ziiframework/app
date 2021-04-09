@@ -157,17 +157,6 @@ $cc_components[yii\i18n\Formatter::class] = static function (array $config = [])
 $cc_components[yii\i18n\I18N::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\i18n\I18N::class,
-        'translations' => [
-            'app' => [
-                'class' => yii\i18n\PhpMessageSource::class,
-                'sourceLanguage' => 'en-US',
-                'basePath' => '@app/langfiles',
-                'fileMap' => [
-                    'app' => 'app.php',
-                    'app/error' => 'error.php',
-                ],
-            ],
-        ],
     ], $config);
 };
 

@@ -1,13 +1,15 @@
 <?php declare(strict_types=1);
 
-$cc_components = $cc_components ?? require __DIR__ . '/components.php';
+$cc_components = $cc_components ?? (require __DIR__ . '/components.php');
+
+$cc_enable_strict_parsing = true;
 
 return yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/base.php',
     [
         'id' => 'xxx_test_web_application',
         'name' => 'xxx Test Web Application',
-        'language' => 'en-US',
+        'bootstrap' => ['debug'],
         'controllerNamespace' => 'app\controllers',
         'defaultRoute' => 'site/index',
         'components' => [
@@ -38,11 +40,31 @@ return yii\helpers\ArrayHelper::merge(
             ]),
             'errorHandler' => $cc_components[yii\web\ErrorHandler::class](),
             'response' => $cc_components[yii\web\Response::class](),
+
             'urlManager' => $cc_components[yii\web\UrlManager::class]([
-                'rest.rules' => [],
+                'enableStrictParsing' => $cc_enable_strict_parsing,
+                'web.rules' => array_merge(
+                    require __DIR__ . '/routes_web.php',
+                ),
             ]),
         ],
         'on beforeRequest' => static function (): void {
         },
+        'as hostControl' => [
+            'class' => yii\filters\HostControl::class,
+            'allowedHosts' => [
+                '*.yiitest.com',
+            ],
+        ],
+        'modules' => [
+            'debug' => [
+                'class' => yii\debug\Module::class,
+                'panels' => [
+                    'queue' => yii\queue\debug\Panel::class,
+                ],
+                'controllerNamespace' => 'yii\debug\controllers',
+                'allowedIPs' => ['*'],
+            ],
+        ],
     ]
 );

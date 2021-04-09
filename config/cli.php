@@ -2,7 +2,7 @@
 
 // This file is used in the following environments: production, development and testing
 
-$cc_components = $cc_components ?? require __DIR__ . '/components.php';
+$cc_components = $cc_components ?? (require __DIR__ . '/components.php');
 
 $cc_config = [
     'class' => yii\console\Application::class,

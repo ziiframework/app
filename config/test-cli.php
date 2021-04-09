@@ -1,6 +1,6 @@
 <?php
 
-$cc_components = $cc_components ?? require __DIR__ . '/components.php';
+$cc_components = $cc_components ?? (require __DIR__ . '/components.php');
 
 return yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/base.php',
