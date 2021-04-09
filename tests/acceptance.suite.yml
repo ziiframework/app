@@ -8,9 +8,7 @@ actor: AcceptanceTester
 
 modules:
   enabled:
+    - \Zept\AcceptanceHelper
     - PhpBrowser:
         url: http://app.yiitest.com
-    - \Zept\AcceptanceHelper
 step_decorators: ~
-
-bootstrap: './bootstrap2.php'
