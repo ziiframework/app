@@ -31,7 +31,6 @@ jobs:
           mkdir -p       /var/www/yiitest
           cp    -r  ./*  /var/www/yiitest/
           chmod -R 777   /var/www/yiitest/runtime
-          chmod    644   /var/www/yiitest/runtime/.gitignore
           rm -f          /var/www/yiitest/web/index.php
           cp             /var/www/yiitest/web/index-test.php  /var/www/yiitest/web/index.php
 
@@ -42,7 +41,6 @@ jobs:
       - name: "Composer install for testing"
         run: |
           chmod -R 777 ./runtime
-          chmod    644 ./runtime/.gitignore
           rm -f        ./web/index.php
           cp           ./web/index-test.php  ./web/index.php
           rm -f        ./tests/_generated/*

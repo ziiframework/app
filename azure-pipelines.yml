@@ -24,7 +24,6 @@ steps:
       sudo mkdir -p       /var/www/yiitest
       sudo cp    -r  ./*  /var/www/yiitest/
       sudo chmod -R 777   /var/www/yiitest/runtime
-      sudo chmod    644   /var/www/yiitest/runtime/.gitignore
       sudo rm -f          /var/www/yiitest/web/index.php
       sudo cp             /var/www/yiitest/web/index-test.php  /var/www/yiitest/web/index.php
 
@@ -35,7 +34,6 @@ steps:
 
   - script: |
       sudo chmod -R 777 ./runtime
-      sudo chmod    644 ./runtime/.gitignore
       sudo rm -f        ./web/index.php
       sudo cp           ./web/index-test.php  ./web/index.php
       sudo rm -f        ./tests/_generated/*
