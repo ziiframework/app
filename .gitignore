@@ -6,3 +6,6 @@
 
 /env-local.php
 /*.log
+
+/runtime/logs/*
+!/runtime/logs/.gitkeep
