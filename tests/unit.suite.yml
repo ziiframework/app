@@ -10,4 +10,4 @@ modules:
     - \Zept\UnitHelper
   step_decorators: ~
 
-bootstrap: './bootstrap.php'
+# bootstrap: './bootstrap.php'
