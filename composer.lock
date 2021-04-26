@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "659c0c3cafa161e1ce1d255b76ec46fb",
+    "content-hash": "b1b77c385f7e29ec432a04014c835a70",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1952,16 +1952,16 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.2.7",
+            "version": "3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "ca53aba0a1f85e9c3b1f86ef28e78ac874aff2df"
+                "reference": "0e2e47d0110594606209d7bb6b95af003fb3fccb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/ca53aba0a1f85e9c3b1f86ef28e78ac874aff2df",
-                "reference": "ca53aba0a1f85e9c3b1f86ef28e78ac874aff2df",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/0e2e47d0110594606209d7bb6b95af003fb3fccb",
+                "reference": "0e2e47d0110594606209d7bb6b95af003fb3fccb",
                 "shasum": ""
             },
             "require": {
@@ -2018,7 +2018,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2021-03-25T14:20:08+00:00"
+            "time": "2021-04-26T05:48:52+00:00"
         }
     ],
     "packages-dev": [
