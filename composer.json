@@ -39,7 +39,7 @@
     "codeception/module-asserts": "^1.2",
     "codeception/module-db": "^1.0",
     "codeception/module-rest": "^1.2",
-    "codeception/lib-innerbrowser": "^1.4",
+    "codeception/lib-innerbrowser": "^1.5",
     "nette/php-generator": "^3.5"
   },
   "scripts": {
