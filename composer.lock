@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0d94d7e9b2ffef6773c70a377ed618d",
+    "content-hash": "6af5285eaab91cfd3fdb838f9c465df8",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1764,21 +1764,21 @@
         },
         {
             "name": "ziiframework/bootstrap",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/bootstrap.git",
-                "reference": "2e981bfbe326966f1165abf58edf7961e42eb1a6"
+                "reference": "6fb02b062a397f0742dc2a44108239ba03af803d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/bootstrap/zipball/2e981bfbe326966f1165abf58edf7961e42eb1a6",
-                "reference": "2e981bfbe326966f1165abf58edf7961e42eb1a6",
+                "url": "https://api.github.com/repos/ziiframework/bootstrap/zipball/6fb02b062a397f0742dc2a44108239ba03af803d",
+                "reference": "6fb02b062a397f0742dc2a44108239ba03af803d",
                 "shasum": ""
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5",
-                "ziiframework/zii": "~3.1.4"
+                "ziiframework/zii": ">=3.1.4"
             },
             "type": "yii2-extension",
             "extra": {
@@ -1812,7 +1812,7 @@
                 "issues": "https://github.com/ziiframework/bootstrap/issues",
                 "source": "https://github.com/ziiframework/bootstrap"
             },
-            "time": "2021-03-26T03:45:03+00:00"
+            "time": "2021-05-07T08:59:08+00:00"
         },
         {
             "name": "ziiframework/composer",
@@ -1873,22 +1873,22 @@
         },
         {
             "name": "ziiframework/queue",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/queue.git",
-                "reference": "5355271bb4f20fa55a7a1403d7c79eb4f41f2262"
+                "reference": "43e3ef78c685502aaa26350da5d69a64f45eb03f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/queue/zipball/5355271bb4f20fa55a7a1403d7c79eb4f41f2262",
-                "reference": "5355271bb4f20fa55a7a1403d7c79eb4f41f2262",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/43e3ef78c685502aaa26350da5d69a64f45eb03f",
+                "reference": "43e3ef78c685502aaa26350da5d69a64f45eb03f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.3.0",
                 "symfony/process": "^3.3||^4.0||^5.0",
-                "ziiframework/zii": "~3.2.4"
+                "ziiframework/zii": ">=3.2.4"
             },
             "require-dev": {
                 "aws/aws-sdk-php": ">=2.4",
@@ -1954,7 +1954,7 @@
                 "issues": "https://github.com/ziiframework/queue/issues",
                 "source": "https://github.com/ziiframework/queue"
             },
-            "time": "2021-03-26T02:58:21+00:00"
+            "time": "2021-05-07T09:03:55+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
@@ -2013,16 +2013,16 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.2.9",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "63b609d311594ae6f981b6e3f694b8a54ce6716d"
+                "reference": "68e732b5847574dfad72388929b6272f87e6cf3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/63b609d311594ae6f981b6e3f694b8a54ce6716d",
-                "reference": "63b609d311594ae6f981b6e3f694b8a54ce6716d",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/68e732b5847574dfad72388929b6272f87e6cf3c",
+                "reference": "68e732b5847574dfad72388929b6272f87e6cf3c",
                 "shasum": ""
             },
             "require": {
@@ -2037,7 +2037,6 @@
             },
             "require-dev": {
                 "cebe/indent": "^1.0",
-                "cweagans/composer-patches": "^1.6",
                 "phpunit/phpunit": "^8.5"
             },
             "bin": [
@@ -2065,7 +2064,7 @@
                 {
                     "name": "Yii Team",
                     "email": "team@yiiframework.com",
-                    "homepage": "http://www.yiiframework.com/team",
+                    "homepage": "https://www.yiiframework.com/team",
                     "role": "Founder and project lead"
                 }
             ],
@@ -2079,7 +2078,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2021-05-07T06:24:32+00:00"
+            "time": "2021-08-14T05:58:52+00:00"
         }
     ],
     "packages-dev": [
@@ -6475,27 +6474,27 @@
         },
         {
             "name": "ziiframework/debug",
-            "version": "3.4.1",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/debug.git",
-                "reference": "daac84ce545720c0261d200c0902c998f29e26d2"
+                "reference": "7f28455dbdc53762d5acb6a03a5e509194939fa4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/debug/zipball/daac84ce545720c0261d200c0902c998f29e26d2",
-                "reference": "daac84ce545720c0261d200c0902c998f29e26d2",
+                "url": "https://api.github.com/repos/ziiframework/debug/zipball/7f28455dbdc53762d5acb6a03a5e509194939fa4",
+                "reference": "7f28455dbdc53762d5acb6a03a5e509194939fa4",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "opis/closure": "^3.3",
                 "php": ">=7.3",
-                "ziiframework/zii": "~3.1.1|~3.2.4"
+                "ziiframework/zii": ">=3.2.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5",
-                "ziiframework/swiftmailer": "~3.1.1|~3.2.1"
+                "ziiframework/swiftmailer": ">=3.2.1"
             },
             "type": "yii2-extension",
             "extra": {
@@ -6516,7 +6515,7 @@
                 {
                     "name": "Yii Team",
                     "email": "team@yiiframework.com",
-                    "homepage": "http://www.yiiframework.com/team",
+                    "homepage": "https://www.yiiframework.com/team",
                     "role": "Founder and project lead"
                 }
             ],
@@ -6529,25 +6528,25 @@
                 "issues": "https://github.com/ziiframework/debug/issues",
                 "source": "https://github.com/ziiframework/debug"
             },
-            "time": "2021-03-26T04:07:32+00:00"
+            "time": "2021-08-14T10:35:05+00:00"
         },
         {
             "name": "ziiframework/faker",
-            "version": "3.2.3",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/faker.git",
-                "reference": "67752b6b4c0215c573cd7c29e2e3839fbaffd359"
+                "reference": "7fe2e9704fe461429440ec0c02236e3247a62304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/faker/zipball/67752b6b4c0215c573cd7c29e2e3839fbaffd359",
-                "reference": "67752b6b4c0215c573cd7c29e2e3839fbaffd359",
+                "url": "https://api.github.com/repos/ziiframework/faker/zipball/7fe2e9704fe461429440ec0c02236e3247a62304",
+                "reference": "7fe2e9704fe461429440ec0c02236e3247a62304",
                 "shasum": ""
             },
             "require": {
                 "fakerphp/faker": "~1.9|~1.10",
-                "ziiframework/zii": "~3.1.1|~3.2.4"
+                "ziiframework/zii": ">=3.1.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5"
@@ -6584,25 +6583,25 @@
                 "issues": "https://github.com/ziiframework/faker/issues",
                 "source": "https://github.com/ziiframework/faker"
             },
-            "time": "2021-03-26T04:24:57+00:00"
+            "time": "2021-05-07T09:07:53+00:00"
         },
         {
             "name": "ziiframework/gii",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/gii.git",
-                "reference": "2a43f822765cb0229052c18da54c9500c4b4e42b"
+                "reference": "f6789983f21215d51454aa312018192ed6e2287c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/gii/zipball/2a43f822765cb0229052c18da54c9500c4b4e42b",
-                "reference": "2a43f822765cb0229052c18da54c9500c4b4e42b",
+                "url": "https://api.github.com/repos/ziiframework/gii/zipball/f6789983f21215d51454aa312018192ed6e2287c",
+                "reference": "f6789983f21215d51454aa312018192ed6e2287c",
                 "shasum": ""
             },
             "require": {
                 "phpspec/php-diff": "^1.1.0",
-                "ziiframework/zii": "~3.1.1|~3.2.4"
+                "ziiframework/zii": ">=3.1.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5"
@@ -6639,7 +6638,7 @@
                 "issues": "https://github.com/ziiframework/gii/issues",
                 "source": "https://github.com/ziiframework/gii"
             },
-            "time": "2021-03-26T04:19:29+00:00"
+            "time": "2021-05-07T09:08:51+00:00"
         }
     ],
     "aliases": [],
