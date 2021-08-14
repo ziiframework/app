@@ -23,7 +23,7 @@
     "ziiframework/zii": "~3.2.7",
     "ziiframework/queue": "~3.2.2",
     "ziiframework/bootstrap": "~3.2.2",
-    "ziiframework/swiftmailer": "~3.2.2",
+    "ziiframework/swiftmailer": "~3.3.0",
     "guzzlehttp/guzzle": "^7.2",
     "symfony/yaml": "^5.2",
     "monolog/monolog": "^2.2",
