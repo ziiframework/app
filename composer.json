@@ -20,8 +20,8 @@
     "ext-pdo": "*",
     "ext-mbstring": "*",
     "symfony/polyfill-php80": "*",
-    "ziiframework/zii": "~3.2.7",
-    "ziiframework/queue": "~3.2.2",
+    "ziiframework/zii": "~3.4.0",
+    "ziiframework/queue": "~3.3.0",
     "ziiframework/bootstrap": "~3.2.2",
     "ziiframework/swiftmailer": "~3.3.0",
     "guzzlehttp/guzzle": "^7.2",
@@ -30,9 +30,9 @@
     "charescape/php-functions": "1.0.x-dev"
   },
   "require-dev": {
-    "ziiframework/debug": "~3.4.1",
+    "ziiframework/debug": "~3.5.0",
     "ziiframework/gii": "~3.2.2",
-    "ziiframework/faker": "~3.2.3",
+    "ziiframework/faker": "~3.3.0",
     "roave/security-advisories": "dev-master",
     "codeception/codeception": "^4.1",
     "codeception/module-phpbrowser": "^1.0",
