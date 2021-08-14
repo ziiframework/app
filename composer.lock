@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "659c0c3cafa161e1ce1d255b76ec46fb",
+    "content-hash": "a0d94d7e9b2ffef6773c70a377ed618d",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1958,21 +1958,21 @@
         },
         {
             "name": "ziiframework/swiftmailer",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/swiftmailer.git",
-                "reference": "1ff1377644d8aec24cd0599837f146d87211f733"
+                "reference": "de564712e4bd3644584a5bc3254fc186fa913e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/swiftmailer/zipball/1ff1377644d8aec24cd0599837f146d87211f733",
-                "reference": "1ff1377644d8aec24cd0599837f146d87211f733",
+                "url": "https://api.github.com/repos/ziiframework/swiftmailer/zipball/de564712e4bd3644584a5bc3254fc186fa913e41",
+                "reference": "de564712e4bd3644584a5bc3254fc186fa913e41",
                 "shasum": ""
             },
             "require": {
                 "swiftmailer/swiftmailer": "~6.0",
-                "ziiframework/zii": "~3.1.1|~3.2.4"
+                "ziiframework/zii": ">=3.1.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5"
@@ -2009,7 +2009,7 @@
                 "issues": "https://github.com/ziiframework/swiftmailer/issues",
                 "source": "https://github.com/ziiframework/swiftmailer"
             },
-            "time": "2021-03-26T03:58:35+00:00"
+            "time": "2021-05-07T09:01:31+00:00"
         },
         {
             "name": "ziiframework/zii",
