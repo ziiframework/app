@@ -22,7 +22,7 @@
     "symfony/polyfill-php80": "*",
     "ziiframework/zii": "~3.4.0",
     "ziiframework/queue": "~3.3.0",
-    "ziiframework/bootstrap": "~3.2.2",
+    "ziiframework/bootstrap": "~3.3.0",
     "ziiframework/swiftmailer": "~3.3.0",
     "guzzlehttp/guzzle": "^7.2",
     "symfony/yaml": "^5.2",
@@ -31,7 +31,7 @@
   },
   "require-dev": {
     "ziiframework/debug": "~3.5.0",
-    "ziiframework/gii": "~3.2.2",
+    "ziiframework/gii": "~3.3.0",
     "ziiframework/faker": "~3.3.0",
     "roave/security-advisories": "dev-master",
     "codeception/codeception": "^4.1",
