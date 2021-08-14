@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0d94d7e9b2ffef6773c70a377ed618d",
+    "content-hash": "964cb29bbffdbc5f75807caa6e689870",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1764,21 +1764,21 @@
         },
         {
             "name": "ziiframework/bootstrap",
-            "version": "3.2.2",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/bootstrap.git",
-                "reference": "2e981bfbe326966f1165abf58edf7961e42eb1a6"
+                "reference": "6fb02b062a397f0742dc2a44108239ba03af803d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/bootstrap/zipball/2e981bfbe326966f1165abf58edf7961e42eb1a6",
-                "reference": "2e981bfbe326966f1165abf58edf7961e42eb1a6",
+                "url": "https://api.github.com/repos/ziiframework/bootstrap/zipball/6fb02b062a397f0742dc2a44108239ba03af803d",
+                "reference": "6fb02b062a397f0742dc2a44108239ba03af803d",
                 "shasum": ""
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5",
-                "ziiframework/zii": "~3.1.4"
+                "ziiframework/zii": ">=3.1.4"
             },
             "type": "yii2-extension",
             "extra": {
@@ -1812,7 +1812,7 @@
                 "issues": "https://github.com/ziiframework/bootstrap/issues",
                 "source": "https://github.com/ziiframework/bootstrap"
             },
-            "time": "2021-03-26T03:45:03+00:00"
+            "time": "2021-05-07T08:59:08+00:00"
         },
         {
             "name": "ziiframework/composer",
