@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dd2bcde07bd8d840bee7863d1439cff",
+    "content-hash": "628cf4120590fc6fc70a66c36b469d7c",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1963,34 +1963,34 @@
         },
         {
             "name": "ziiframework/queue",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/queue.git",
-                "reference": "43e3ef78c685502aaa26350da5d69a64f45eb03f"
+                "reference": "37f3f122668c273cdd03cd8856004cf601e35d32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/queue/zipball/43e3ef78c685502aaa26350da5d69a64f45eb03f",
-                "reference": "43e3ef78c685502aaa26350da5d69a64f45eb03f",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/37f3f122668c273cdd03cd8856004cf601e35d32",
+                "reference": "37f3f122668c273cdd03cd8856004cf601e35d32",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.3.0",
-                "symfony/process": "^3.3||^4.0||^5.0",
-                "ziiframework/zii": ">=3.2.4"
+                "php": ">=7.4.0",
+                "symfony/process": "^5.0",
+                "ziiframework/zii": ">=3.5.1"
             },
             "require-dev": {
-                "aws/aws-sdk-php": ">=2.4",
-                "enqueue/amqp-lib": "^0.8||^0.9.10",
+                "aws/aws-sdk-php": ">=3.198.3",
+                "enqueue/amqp-lib": "^0.8.42",
                 "enqueue/stomp": "^0.8.39",
                 "jeremeamia/superclosure": "*",
                 "pda/pheanstalk": "v3.*",
                 "php-amqplib/php-amqplib": "*",
                 "phpunit/phpunit": "^8.5",
-                "ziiframework/debug": "~3.4.0",
-                "ziiframework/gii": "~3.2.1",
-                "ziiframework/redis": "~3.2.1"
+                "ziiframework/debug": ">=3.5.0",
+                "ziiframework/gii": ">=3.3.0",
+                "ziiframework/redis": ">=3.2.1"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Need for aws SQS.",
@@ -2044,7 +2044,7 @@
                 "issues": "https://github.com/ziiframework/queue/issues",
                 "source": "https://github.com/ziiframework/queue"
             },
-            "time": "2021-05-07T09:03:55+00:00"
+            "time": "2021-12-14T15:48:54+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
@@ -4200,12 +4200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "aaf5d29aa54f39be4945b0ceeb1f3d9fdb7af8ee"
+                "reference": "24af7780733bcdb3a22c3377e4318aa9c1945cc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/aaf5d29aa54f39be4945b0ceeb1f3d9fdb7af8ee",
-                "reference": "aaf5d29aa54f39be4945b0ceeb1f3d9fdb7af8ee",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/24af7780733bcdb3a22c3377e4318aa9c1945cc5",
+                "reference": "24af7780733bcdb3a22c3377e4318aa9c1945cc5",
                 "shasum": ""
             },
             "conflict": {
@@ -4329,7 +4329,7 @@
                 "illuminate/cookie": ">=4,<=4.0.11|>=4.1,<=4.1.99999|>=4.2,<=4.2.99999|>=5,<=5.0.99999|>=5.1,<=5.1.99999|>=5.2,<=5.2.99999|>=5.3,<=5.3.99999|>=5.4,<=5.4.99999|>=5.5,<=5.5.49|>=5.6,<=5.6.99999|>=5.7,<=5.7.99999|>=5.8,<=5.8.99999|>=6,<6.18.31|>=7,<7.22.4",
                 "illuminate/database": "<6.20.26|>=7,<7.30.5|>=8,<8.40",
                 "illuminate/encryption": ">=4,<=4.0.11|>=4.1,<=4.1.31|>=4.2,<=4.2.22|>=5,<=5.0.35|>=5.1,<=5.1.46|>=5.2,<=5.2.45|>=5.3,<=5.3.31|>=5.4,<=5.4.36|>=5.5,<5.5.40|>=5.6,<5.6.15",
-                "illuminate/view": ">=7,<7.1.2",
+                "illuminate/view": "<6.20.42|>=7,<7.30.6|>=8,<8.75",
                 "impresscms/impresscms": "<=1.4.2",
                 "in2code/femanager": "<5.5.1|>=6,<6.3.1",
                 "intelliants/subrion": "<=4.2.1",
@@ -4621,7 +4621,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-10T21:12:50+00:00"
+            "time": "2021-12-14T15:17:22+00:00"
         },
         {
             "name": "sebastian/cli-parser",
