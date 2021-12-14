@@ -70,7 +70,9 @@ jobs:
         continue-on-error: true
 
       - name: "ll"
-        run: ls -l
+        run: |
+          ls -l
+          cat ./php_errors.log
 
       - name: "Codeception testing"
         id: id_Codeception_Cest
