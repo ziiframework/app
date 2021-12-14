@@ -15,12 +15,12 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": ">=7.3.0",
+    "php": ">=7.4.0",
     "ext-json": "*",
     "ext-pdo": "*",
     "ext-mbstring": "*",
     "symfony/polyfill-php80": "*",
-    "ziiframework/zii": "~3.4.0",
+    "ziiframework/zii": "~3.5.0",
     "ziiframework/queue": "~3.3.0",
     "ziiframework/bootstrap": "~3.3.0",
     "ziiframework/swiftmailer": "~3.3.0",
@@ -59,7 +59,7 @@
   },
   "config": {
     "platform": {
-      "php": "7.3"
+      "php": "7.4"
     },
     "sort-packages": true
   },
