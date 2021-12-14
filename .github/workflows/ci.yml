@@ -67,6 +67,7 @@ jobs:
           /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/queue.sql
 
           ${{ env.PHP_CMD }}  ./yii-test  migrate/up  --interactive=0
+        continue-on-error: true
 
       - name: "Codeception testing"
         id: id_Codeception_Cest
