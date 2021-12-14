@@ -69,9 +69,6 @@ jobs:
           ${{ env.PHP_CMD }}  ./yii-test  migrate/up  --interactive=0
         continue-on-error: true
 
-      - name: "ll"
-        run: ls -l
-
       - name: "Codeception testing"
         id: id_Codeception_Cest
         run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run --steps
