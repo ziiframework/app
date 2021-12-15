@@ -1963,31 +1963,31 @@
         },
         {
             "name": "ziiframework/queue",
-            "version": "3.4.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/queue.git",
-                "reference": "37f3f122668c273cdd03cd8856004cf601e35d32"
+                "reference": "bd732daccdbfe7ae89d1d43d7e65cc1993789253"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/queue/zipball/37f3f122668c273cdd03cd8856004cf601e35d32",
-                "reference": "37f3f122668c273cdd03cd8856004cf601e35d32",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/bd732daccdbfe7ae89d1d43d7e65cc1993789253",
+                "reference": "bd732daccdbfe7ae89d1d43d7e65cc1993789253",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4.0",
-                "symfony/process": "^5.0",
+                "symfony/process": "^3.3||^4.0||^5.0",
                 "ziiframework/zii": ">=3.5.1"
             },
             "require-dev": {
-                "aws/aws-sdk-php": ">=3.198.3",
-                "enqueue/amqp-lib": "^0.8.42",
+                "aws/aws-sdk-php": ">=2.4",
+                "enqueue/amqp-lib": "^0.8||^0.9.10",
                 "enqueue/stomp": "^0.8.39",
                 "jeremeamia/superclosure": "*",
                 "pda/pheanstalk": "v3.*",
                 "php-amqplib/php-amqplib": "*",
-                "phpunit/phpunit": "^8.5",
+                "phpunit/phpunit": "~4.4",
                 "ziiframework/debug": ">=3.5.0",
                 "ziiframework/gii": ">=3.3.0",
                 "ziiframework/redis": ">=3.2.1"
@@ -1999,7 +1999,8 @@
                 "ext-gearman": "Need for Gearman queue.",
                 "ext-pcntl": "Need for process signals.",
                 "pda/pheanstalk": "Need for Beanstalk queue.",
-                "php-amqplib/php-amqplib": "Need for AMQP queue."
+                "php-amqplib/php-amqplib": "Need for AMQP queue.",
+                "ziiframework/redis": "Need for Redis queue."
             },
             "type": "yii2-extension",
             "extra": {
@@ -2030,7 +2031,7 @@
                 {
                     "name": "Yii Team",
                     "email": "team@yiiframework.com",
-                    "homepage": "http://www.yiiframework.com/team",
+                    "homepage": "https://www.yiiframework.com/team",
                     "role": "Founder and project lead"
                 }
             ],
@@ -2044,7 +2045,7 @@
                 "issues": "https://github.com/ziiframework/queue/issues",
                 "source": "https://github.com/ziiframework/queue"
             },
-            "time": "2021-12-14T15:48:54+00:00"
+            "time": "2021-12-15T10:52:53+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
@@ -4200,12 +4201,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "24af7780733bcdb3a22c3377e4318aa9c1945cc5"
+                "reference": "92e217f7d613827eb7545586b3aafc616e878022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/24af7780733bcdb3a22c3377e4318aa9c1945cc5",
-                "reference": "24af7780733bcdb3a22c3377e4318aa9c1945cc5",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/92e217f7d613827eb7545586b3aafc616e878022",
+                "reference": "92e217f7d613827eb7545586b3aafc616e878022",
                 "shasum": ""
             },
             "conflict": {
@@ -4334,6 +4335,7 @@
                 "in2code/femanager": "<5.5.1|>=6,<6.3.1",
                 "intelliants/subrion": "<=4.2.1",
                 "ivankristianto/phpwhois": "<=4.3",
+                "jackalope/jackalope-doctrine-dbal": "<1.7.4",
                 "james-heinrich/getid3": "<1.9.21",
                 "joomla/archive": "<1.1.10",
                 "joomla/session": "<1.3.1",
@@ -4621,7 +4623,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-14T15:17:22+00:00"
+            "time": "2021-12-14T21:11:48+00:00"
         },
         {
             "name": "sebastian/cli-parser",
