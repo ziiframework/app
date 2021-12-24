@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "628cf4120590fc6fc70a66c36b469d7c",
+    "content-hash": "9bc95723280e31f005e8f4752c18fb46",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1905,16 +1905,16 @@
         },
         {
             "name": "ziiframework/composer",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/composer.git",
-                "reference": "f0336a2e84783265ae946dad1a516012b9b86f60"
+                "reference": "a79ea4056831deccf89e4d182644911e224ecccd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/composer/zipball/f0336a2e84783265ae946dad1a516012b9b86f60",
-                "reference": "f0336a2e84783265ae946dad1a516012b9b86f60",
+                "url": "https://api.github.com/repos/ziiframework/composer/zipball/a79ea4056831deccf89e4d182644911e224ecccd",
+                "reference": "a79ea4056831deccf89e4d182644911e224ecccd",
                 "shasum": ""
             },
             "require": {
@@ -1959,7 +1959,7 @@
                 "issues": "https://github.com/ziiframework/composer/issues",
                 "source": "https://github.com/ziiframework/composer"
             },
-            "time": "2021-11-21T14:17:02+00:00"
+            "time": "2021-12-24T06:10:20+00:00"
         },
         {
             "name": "ziiframework/queue",
@@ -2104,16 +2104,16 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.5.1",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "c6c814c13ab4ca0306a205fabd6bd02b9ee2dbb3"
+                "reference": "592416518291053b732fb6d00bbd29c1a626bb76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/c6c814c13ab4ca0306a205fabd6bd02b9ee2dbb3",
-                "reference": "c6c814c13ab4ca0306a205fabd6bd02b9ee2dbb3",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/592416518291053b732fb6d00bbd29c1a626bb76",
+                "reference": "592416518291053b732fb6d00bbd29c1a626bb76",
                 "shasum": ""
             },
             "require": {
@@ -2171,7 +2171,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2021-12-14T15:04:32+00:00"
+            "time": "2021-12-24T06:31:28+00:00"
         }
     ],
     "packages-dev": [
