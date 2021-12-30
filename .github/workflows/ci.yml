@@ -29,12 +29,12 @@ jobs:
       - name: "Composer install localhost"
         run: |
           mkdir -p       /var/www/repos/yiitest
-          cp    -r  ./*  /var/www/yiitest/
-          chmod -R 777   /var/www/yiitest/runtime
-          rm -f          /var/www/yiitest/web/index.php
-          cp             /var/www/yiitest/web/index-test.php  /var/www/yiitest/web/index.php
+          cp    -r  ./*  /var/www/repos/yiitest/
+          chmod -R 777   /var/www/repos/yiitest/runtime
+          rm -f          /var/www/repos/yiitest/web/index.php
+          cp             /var/www/repos/yiitest/web/index-test.php  /var/www/repos/yiitest/web/index.php
 
-          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/yiitest/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
+          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/repos/yiitest/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
 
           chown -R www-data:www-data /var/www/
 
@@ -85,21 +85,21 @@ jobs:
             !tests/acceptance/**/*.php
             !tests/functional/**/*.php
 
-            /var/www/yiitest/runtime/
-            !/var/www/yiitest/runtime/**/*.data
+            /var/www/repos/yiitest/runtime/
+            !/var/www/repos/yiitest/runtime/**/*.data
 
-            /var/www/yiitest/web/
-            !/var/www/yiitest/web/**/*.css
-            !/var/www/yiitest/web/**/*.js
-            !/var/www/yiitest/web/**/*.map
-            !/var/www/yiitest/web/**/*.woff2
-            !/var/www/yiitest/web/**/*.woff
-            !/var/www/yiitest/web/**/*.eot
-            !/var/www/yiitest/web/**/*.ttf
-            !/var/www/yiitest/web/**/*.svg
-            !/var/www/yiitest/web/**/*.jpg
-            !/var/www/yiitest/web/**/*.jpeg
-            !/var/www/yiitest/web/**/*.png
+            /var/www/repos/yiitest/web/
+            !/var/www/repos/yiitest/web/**/*.css
+            !/var/www/repos/yiitest/web/**/*.js
+            !/var/www/repos/yiitest/web/**/*.map
+            !/var/www/repos/yiitest/web/**/*.woff2
+            !/var/www/repos/yiitest/web/**/*.woff
+            !/var/www/repos/yiitest/web/**/*.eot
+            !/var/www/repos/yiitest/web/**/*.ttf
+            !/var/www/repos/yiitest/web/**/*.svg
+            !/var/www/repos/yiitest/web/**/*.jpg
+            !/var/www/repos/yiitest/web/**/*.jpeg
+            !/var/www/repos/yiitest/web/**/*.png
 
       - name: "Finish CI"
         if: steps.id_Codeception_Cest.outcome == 'failure'
