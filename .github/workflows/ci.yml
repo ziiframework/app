@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: "PHP-7.4 MySql-8.0 Nginx-1.19"
+    name: "PHP-8.0 MySql-8.0 Nginx-1.19"
     if: "!contains(github.event.head_commit.message, 'skip ci')"
 
     runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
       PHP_CMD: '/usr/local/php/bin/php'
       COMPOSER_CMD: '/usr/local/bin/composer.phar'
 
-    container: charescape/web:4.1.2
+    container: charescape/web:5.4.1
 
     steps:
       - uses: actions/checkout@v2.4.0
@@ -26,9 +26,9 @@ jobs:
       - name: "Composer self-update"
         run: ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} self-update -vvv
 
-      - name: "Composer install for localhost"
+      - name: "Composer install localhost"
         run: |
-          mkdir -p       /var/www/yiitest
+          mkdir -p       /var/www/repos/yiitest
           cp    -r  ./*  /var/www/yiitest/
           chmod -R 777   /var/www/yiitest/runtime
           rm -f          /var/www/yiitest/web/index.php
