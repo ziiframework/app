@@ -54,10 +54,10 @@ steps:
     displayName: "Check localhost"
 
   - script: |
-      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/cache.sql
-      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/rbac.sql
-      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/session.sql
-      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/queue.sql
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/cache.sql
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/rbac.sql
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/session.sql
+      sudo /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/queue.sql
 
       sudo $(PHP_CMD)  ./yii-test  migrate/up  --interactive=0
     displayName: "Database migration"

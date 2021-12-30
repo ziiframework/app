@@ -17,7 +17,7 @@ return yii\helpers\ArrayHelper::merge(
                 'dsn' => 'mysql:' . implode(
                         ';',
                         [
-                            'dbname=testdb0',
+                            'dbname=test0db',
                             'host=127.0.0.1',
                             'charset=utf8mb4',
                         ]
