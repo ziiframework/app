@@ -22,7 +22,7 @@ abstract class AbstractBaseQueue extends BaseObject implements JobInterface, Ret
         return new Logger(
             'Queue',
             [
-                new StreamHandler(ZDIR_RUNTIME . sprintf('/logs/queue.%s.log', date('Y-m')), Logger::INFO),
+                new StreamHandler(ZDIR_SHARED . '/runtime' . sprintf('/logs/queue.%s.log', date('Y-m')), Logger::INFO),
             ],
             [],
             new DateTimeZone(Yii::$app->timeZone)

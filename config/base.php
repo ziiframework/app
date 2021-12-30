@@ -13,7 +13,11 @@ if (!isset($cc_params) || !is_array($cc_params)) {
 
 $cc_config = [
     'class' => yii\base\Application::class,
-    'basePath' => dirname(__DIR__),
+    'basePath' => ZDIR_ROOT,
+    'vendorPath' => ZDIR_ROOT . '/vendor',
+    'runtimePath' => ZDIR_SHARED . '/runtime',
+    'viewPath' => ZDIR_ROOT . '/views',
+    'layoutPath' => ZDIR_ROOT . '/views/layouts',
     'layout' => 'default',
     'language' => 'zh-CN',
     'sourceLanguage' => 'zh-CN',
@@ -47,11 +51,6 @@ $cc_config = [
     'modules' => [
     ],
 ];
-
-$cc_config['vendorPath'] = $cc_config['basePath'] . '/vendor';
-$cc_config['runtimePath'] = $cc_config['basePath'] . '/runtime';
-$cc_config['viewPath'] = $cc_config['basePath'] . '/views';
-$cc_config['layoutPath'] = $cc_config['viewPath'] . '/layouts';
 
 unset($cc_config['class']);
 
