@@ -28,19 +28,25 @@ jobs:
 
       - name: "Composer install localhost"
         run: |
-          mkdir -p       /var/www/repos/yiitest
-          cp    -r  ./*  /var/www/repos/yiitest/
-          chmod -R 777   /var/www/repos/yiitest/runtime
-          rm -f          /var/www/repos/yiitest/web/index.php
-          cp             /var/www/repos/yiitest/web/index-test.php  /var/www/repos/yiitest/web/index.php
+          mkdir -p       /var/www/repos/yiitest/1
+          mkdir -p       /var/www/repos/yiitest/2
+          mkdir -p       /var/www/repos/yiitest/3
 
-          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/repos/yiitest/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
+          mkdir -p       /var/www/repos/yiitest/shared/runtime
+          chmod -R 777   /var/www/repos/yiitest/shared/runtime
+
+          cp -r ./*      /var/www/repos/yiitest/3/
+          rm -f          /var/www/repos/yiitest/3/web/index.php
+          cp             /var/www/repos/yiitest/3/web/index-test.php  /var/www/repos/yiitest/3/web/index.php
+
+          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/repos/yiitest/3/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
+
+          ln -s /var/www/repos/yiitest/3 /var/www/repos/yiitest/latest
 
           chown -R www-data:www-data /var/www/
 
-      - name: "Composer install for testing"
+      - name: "Composer install testing"
         run: |
-          chmod -R 777 ./runtime
           rm -f        ./web/index.php
           cp           ./web/index-test.php  ./web/index.php
           rm -f        ./tests/_generated/*
@@ -48,7 +54,7 @@ jobs:
           ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --no-interaction
 
       - name: "Start localhost"
-        run: /etc/my_init.d/runapp.sh
+        run: /etc/my_init.d/runapps.sh
 
       - name: "Update hosts file"
         run: echo '127.0.0.1 app.yiitest.com' | tee -a /etc/hosts
@@ -61,19 +67,19 @@ jobs:
 
       - name: "Database migration"
         run: |
-          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/cache.sql
-          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/rbac.sql
-          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/session.sql
-          /usr/local/mysql/bin/mysql -uroot -proot12345 testdb0 < ./migrations/sql/queue.sql
+          /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/cache.sql
+          /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/rbac.sql
+          /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/session.sql
+          /usr/local/mysql/bin/mysql -uroot -proot12345 test0db < ./migrations/sql/queue.sql
 
-          ${{ env.PHP_CMD }}  ./yii-test  migrate/up  --interactive=0
+          ${{ env.PHP_CMD }}  /var/www/repos/yiitest/3/yii-test  migrate/up  --interactive=0
 
-      - name: "Codeception testing"
+      - name: "🧪"
         id: id_Codeception_Cest
-        run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run --steps
+        run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run
         continue-on-error: true
 
-      - name: "Upload debug pack"
+      - name: "📦"
         uses: actions/upload-artifact@v2
         with:
           name: debug-pack
@@ -85,21 +91,23 @@ jobs:
             !tests/acceptance/**/*.php
             !tests/functional/**/*.php
 
-            /var/www/repos/yiitest/runtime/
-            !/var/www/repos/yiitest/runtime/**/*.data
+            /var/www/repos/yiitest/shared/runtime/
+            !/var/www/repos/yiitest/shared/runtime/**/*.data
 
-            /var/www/repos/yiitest/web/
-            !/var/www/repos/yiitest/web/**/*.css
-            !/var/www/repos/yiitest/web/**/*.js
-            !/var/www/repos/yiitest/web/**/*.map
-            !/var/www/repos/yiitest/web/**/*.woff2
-            !/var/www/repos/yiitest/web/**/*.woff
-            !/var/www/repos/yiitest/web/**/*.eot
-            !/var/www/repos/yiitest/web/**/*.ttf
-            !/var/www/repos/yiitest/web/**/*.svg
-            !/var/www/repos/yiitest/web/**/*.jpg
-            !/var/www/repos/yiitest/web/**/*.jpeg
-            !/var/www/repos/yiitest/web/**/*.png
+            /var/www/repos/yiitest/shared/logs/
+
+            /var/www/repos/yiitest/web/3/
+            !/var/www/repos/yiitest/web/3/**/*.css
+            !/var/www/repos/yiitest/web/3/**/*.js
+            !/var/www/repos/yiitest/web/3/**/*.map
+            !/var/www/repos/yiitest/web/3/**/*.woff2
+            !/var/www/repos/yiitest/web/3/**/*.woff
+            !/var/www/repos/yiitest/web/3/**/*.eot
+            !/var/www/repos/yiitest/web/3/**/*.ttf
+            !/var/www/repos/yiitest/web/3/**/*.svg
+            !/var/www/repos/yiitest/web/3/**/*.jpg
+            !/var/www/repos/yiitest/web/3/**/*.jpeg
+            !/var/www/repos/yiitest/web/3/**/*.png
 
       - name: "Finish CI"
         if: steps.id_Codeception_Cest.outcome == 'failure'
