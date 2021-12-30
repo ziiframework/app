@@ -41,19 +41,14 @@
     "codeception/lib-innerbrowser": "^2.0",
     "nette/php-generator": "^3.6"
   },
-  "scripts": {
-    "redo-install": [
-      "rm -rf vendor/",
-      "rm -f composer.lock",
-      "@composer self-update -vvv",
-      "@composer install -vvv"
-    ]
-  },
   "config": {
     "platform": {
       "php": "7.4"
     },
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "ziiframework/composer": true
+    }
   },
   "autoload": {
     "psr-4": {
@@ -64,5 +59,13 @@
     "psr-4": {
       "Zept\\": "tests/"
     }
+  },
+  "scripts": {
+    "redo-install": [
+      "rm -rf vendor/",
+      "rm -f composer.lock",
+      "@composer self-update -vvv",
+      "@composer install -vvv"
+    ]
   }
 }
