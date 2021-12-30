@@ -65,7 +65,7 @@ CONF;
     protected function fetchUrlHttpStatusText(string $url)
     {
         // By default get_headers uses a GET request to fetch the headers.
-        $headers = get_headers($url, 1);
+        $headers = get_headers($url, PHP_MAJOR_VERSION >= 8 ? true : 1);
 
         return is_array($headers) && isset($headers[0]) ? $headers[0] : null;
     }
@@ -73,7 +73,7 @@ CONF;
     protected function fetchUrlContentType(string $url)
     {
         // By default get_headers uses a GET request to fetch the headers.
-        $headers = get_headers($url, 1);
+        $headers = get_headers($url, PHP_MAJOR_VERSION >= 8 ? true : 1);
 
         return is_array($headers) && isset($headers['Content-Type']) ? $headers['Content-Type'] : null;
     }
@@ -81,7 +81,7 @@ CONF;
     protected function fetchUrlContentLength(string $url)
     {
         // By default get_headers uses a GET request to fetch the headers.
-        $headers = get_headers($url, 1);
+        $headers = get_headers($url, PHP_MAJOR_VERSION >= 8 ? true : 1);
 
         return is_array($headers) && isset($headers['Content-Length']) ? $headers['Content-Length'] : null;
     }
@@ -89,7 +89,7 @@ CONF;
     protected function fetchUrlRedirectLocation(string $url)
     {
         // By default get_headers uses a GET request to fetch the headers.
-        $headers = get_headers($url, 1);
+        $headers = get_headers($url, PHP_MAJOR_VERSION >= 8 ? true : 1);
 
         return is_array($headers) && isset($headers['Location']) ? $headers['Location'] : null;
     }
