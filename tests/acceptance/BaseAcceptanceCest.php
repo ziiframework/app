@@ -17,12 +17,16 @@ class BaseAcceptanceCest
         $I->amOnPage($this->prefixLang('/output-config'));
 
         $conf = <<<CONF
-[basePath] => /var/www/yiitest
+[basePath] => /var/www/repos/yiitest/3
+[vendorPath] => /var/www/repos/yiitest/3/vendor
+[runtimePath] => /var/www/repos/yiitest/shared/runtime
+[layoutPath] => /var/www/repos/yiitest/3/views/layouts
+[viewPath] => /var/www/repos/yiitest/3/views
 [layout] => default
 [sourceLanguage] => zh-CN
 [timeZone] => Asia/Shanghai
 
-[dsn] => mysql:dbname=testdb0;host=127.0.0.1;charset=utf8mb4;
+[dsn] => mysql:dbname=test0db;host=127.0.0.1;charset=utf8mb4;
 [username] => root
 [password] => root12345
 
