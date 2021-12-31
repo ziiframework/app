@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b48b58b30434aa91d658dd10947dc5f0",
+    "content-hash": "f23e4c5f305959d9813c11792ae1e682",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1433,16 +1433,16 @@
         },
         {
             "name": "ziiframework/queue",
-            "version": "3.4.1",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/queue.git",
-                "reference": "bd732daccdbfe7ae89d1d43d7e65cc1993789253"
+                "reference": "0c811d60dd5ca29a2b08eb62ae4ba94600b28a0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/queue/zipball/bd732daccdbfe7ae89d1d43d7e65cc1993789253",
-                "reference": "bd732daccdbfe7ae89d1d43d7e65cc1993789253",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/0c811d60dd5ca29a2b08eb62ae4ba94600b28a0f",
+                "reference": "0c811d60dd5ca29a2b08eb62ae4ba94600b28a0f",
                 "shasum": ""
             },
             "require": {
@@ -1458,9 +1458,9 @@
                 "pda/pheanstalk": "v3.*",
                 "php-amqplib/php-amqplib": "*",
                 "phpunit/phpunit": "~4.4",
-                "ziiframework/debug": ">=3.5.0",
-                "ziiframework/gii": ">=3.3.0",
-                "ziiframework/redis": ">=3.2.1"
+                "ziiframework/debug": "*",
+                "ziiframework/gii": "*",
+                "ziiframework/redis": "*"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Need for aws SQS.",
@@ -1480,17 +1480,17 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\queue\\": "src",
-                    "yii\\queue\\amqp\\": "src/drivers/amqp",
-                    "yii\\queue\\amqp_interop\\": "src/drivers/amqp_interop",
-                    "yii\\queue\\beanstalk\\": "src/drivers/beanstalk",
-                    "yii\\queue\\db\\": "src/drivers/db",
-                    "yii\\queue\\file\\": "src/drivers/file",
-                    "yii\\queue\\gearman\\": "src/drivers/gearman",
-                    "yii\\queue\\redis\\": "src/drivers/redis",
-                    "yii\\queue\\sync\\": "src/drivers/sync",
-                    "yii\\queue\\sqs\\": "src/drivers/sqs",
-                    "yii\\queue\\stomp\\": "src/drivers/stomp"
+                    "yii\\queue\\": "src/",
+                    "yii\\queue\\amqp\\": "src/drivers/amqp/",
+                    "yii\\queue\\amqp_interop\\": "src/drivers/amqp_interop/",
+                    "yii\\queue\\beanstalk\\": "src/drivers/beanstalk/",
+                    "yii\\queue\\db\\": "src/drivers/db/",
+                    "yii\\queue\\file\\": "src/drivers/file/",
+                    "yii\\queue\\gearman\\": "src/drivers/gearman/",
+                    "yii\\queue\\redis\\": "src/drivers/redis/",
+                    "yii\\queue\\sync\\": "src/drivers/sync/",
+                    "yii\\queue\\sqs\\": "src/drivers/sqs/",
+                    "yii\\queue\\stomp\\": "src/drivers/stomp/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1501,8 +1501,7 @@
                 {
                     "name": "Yii Team",
                     "email": "team@yiiframework.com",
-                    "homepage": "https://www.yiiframework.com/team",
-                    "role": "Founder and project lead"
+                    "homepage": "https://www.yiiframework.com/team"
                 }
             ],
             "description": "zii-framework queue extension",
@@ -1515,7 +1514,7 @@
                 "issues": "https://github.com/ziiframework/queue/issues",
                 "source": "https://github.com/ziiframework/queue"
             },
-            "time": "2021-12-15T10:52:53+00:00"
+            "time": "2021-12-31T15:33:39+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
