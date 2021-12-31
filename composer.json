@@ -23,7 +23,7 @@
     "ziiframework/zii": "~3.5.0",
     "ziiframework/queue": "~3.4.0",
     "ziiframework/bootstrap": "~3.3.0",
-    "ziiframework/swiftmailer": "~3.3.0",
+    "ziiframework/swiftmailer": "~3.4.0",
     "symfony/yaml": "^5.4.2",
     "monolog/monolog": "^2.3.5",
     "charescape/php-functions": "1.0.x-dev"
