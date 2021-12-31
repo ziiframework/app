@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b27c7d0ad57952c30c03691ea35d9684",
+    "content-hash": "08358d59e34c329bab1af986acf4be25",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1375,16 +1375,16 @@
         },
         {
             "name": "ziiframework/composer",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/composer.git",
-                "reference": "40e33a2651bba9f2f7a86a735dea8ec191dd9703"
+                "reference": "e474341f534696eec22686a23bfab865ce40083b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/composer/zipball/40e33a2651bba9f2f7a86a735dea8ec191dd9703",
-                "reference": "40e33a2651bba9f2f7a86a735dea8ec191dd9703",
+                "url": "https://api.github.com/repos/ziiframework/composer/zipball/e474341f534696eec22686a23bfab865ce40083b",
+                "reference": "e474341f534696eec22686a23bfab865ce40083b",
                 "shasum": ""
             },
             "require": {
@@ -1429,38 +1429,26 @@
                 "issues": "https://github.com/ziiframework/composer/issues",
                 "source": "https://github.com/ziiframework/composer"
             },
-            "time": "2021-12-27T10:52:12+00:00"
+            "time": "2021-12-31T09:08:30+00:00"
         },
         {
             "name": "ziiframework/queue",
-            "version": "3.4.1",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/queue.git",
-                "reference": "bd732daccdbfe7ae89d1d43d7e65cc1993789253"
+                "reference": "e070162bdacd326802d901328fa8e1adfc6e6429"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/queue/zipball/bd732daccdbfe7ae89d1d43d7e65cc1993789253",
-                "reference": "bd732daccdbfe7ae89d1d43d7e65cc1993789253",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/e070162bdacd326802d901328fa8e1adfc6e6429",
+                "reference": "e070162bdacd326802d901328fa8e1adfc6e6429",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4.0",
                 "symfony/process": "^3.3||^4.0||^5.0",
                 "ziiframework/zii": ">=3.5.1"
-            },
-            "require-dev": {
-                "aws/aws-sdk-php": ">=2.4",
-                "enqueue/amqp-lib": "^0.8||^0.9.10",
-                "enqueue/stomp": "^0.8.39",
-                "jeremeamia/superclosure": "*",
-                "pda/pheanstalk": "v3.*",
-                "php-amqplib/php-amqplib": "*",
-                "phpunit/phpunit": "~4.4",
-                "ziiframework/debug": ">=3.5.0",
-                "ziiframework/gii": ">=3.3.0",
-                "ziiframework/redis": ">=3.2.1"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Need for aws SQS.",
@@ -1480,17 +1468,17 @@
             },
             "autoload": {
                 "psr-4": {
-                    "yii\\queue\\": "src",
-                    "yii\\queue\\amqp\\": "src/drivers/amqp",
-                    "yii\\queue\\amqp_interop\\": "src/drivers/amqp_interop",
-                    "yii\\queue\\beanstalk\\": "src/drivers/beanstalk",
-                    "yii\\queue\\db\\": "src/drivers/db",
-                    "yii\\queue\\file\\": "src/drivers/file",
-                    "yii\\queue\\gearman\\": "src/drivers/gearman",
-                    "yii\\queue\\redis\\": "src/drivers/redis",
-                    "yii\\queue\\sync\\": "src/drivers/sync",
-                    "yii\\queue\\sqs\\": "src/drivers/sqs",
-                    "yii\\queue\\stomp\\": "src/drivers/stomp"
+                    "yii\\queue\\": "src/",
+                    "yii\\queue\\amqp\\": "src/drivers/amqp/",
+                    "yii\\queue\\amqp_interop\\": "src/drivers/amqp_interop/",
+                    "yii\\queue\\beanstalk\\": "src/drivers/beanstalk/",
+                    "yii\\queue\\db\\": "src/drivers/db/",
+                    "yii\\queue\\file\\": "src/drivers/file/",
+                    "yii\\queue\\gearman\\": "src/drivers/gearman/",
+                    "yii\\queue\\redis\\": "src/drivers/redis/",
+                    "yii\\queue\\sync\\": "src/drivers/sync/",
+                    "yii\\queue\\sqs\\": "src/drivers/sqs/",
+                    "yii\\queue\\stomp\\": "src/drivers/stomp/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1501,8 +1489,7 @@
                 {
                     "name": "Yii Team",
                     "email": "team@yiiframework.com",
-                    "homepage": "https://www.yiiframework.com/team",
-                    "role": "Founder and project lead"
+                    "homepage": "https://www.yiiframework.com/team"
                 }
             ],
             "description": "zii-framework queue extension",
@@ -1515,7 +1502,7 @@
                 "issues": "https://github.com/ziiframework/queue/issues",
                 "source": "https://github.com/ziiframework/queue"
             },
-            "time": "2021-12-15T10:52:53+00:00"
+            "time": "2021-12-31T09:57:48+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
@@ -1574,16 +1561,16 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.5.4",
+            "version": "3.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "d35ef8f95cf01517662f24495a431081cd119f4b"
+                "reference": "c27bf8a49d220f7fecef172ca886ea01e45b9cc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/d35ef8f95cf01517662f24495a431081cd119f4b",
-                "reference": "d35ef8f95cf01517662f24495a431081cd119f4b",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/c27bf8a49d220f7fecef172ca886ea01e45b9cc7",
+                "reference": "c27bf8a49d220f7fecef172ca886ea01e45b9cc7",
                 "shasum": ""
             },
             "require": {
@@ -1596,7 +1583,7 @@
                 "lib-pcre": "*",
                 "php": ">=7.4.0",
                 "symfony/polyfill-php80": "^1.23",
-                "ziiframework/composer": "~3.4.0"
+                "ziiframework/composer": ">=3.5.0"
             },
             "require-dev": {
                 "cebe/indent": "^1.0",
@@ -1641,7 +1628,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2021-12-27T10:58:16+00:00"
+            "time": "2021-12-31T09:15:16+00:00"
         }
     ],
     "packages-dev": [
@@ -6803,5 +6790,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
