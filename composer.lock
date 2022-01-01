@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f23e4c5f305959d9813c11792ae1e682",
+    "content-hash": "60b8ca062369462e8f4f1232e3835eae",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1322,58 +1322,6 @@
             "time": "2021-12-16T21:58:21+00:00"
         },
         {
-            "name": "ziiframework/bootstrap",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ziiframework/bootstrap.git",
-                "reference": "6fb02b062a397f0742dc2a44108239ba03af803d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/bootstrap/zipball/6fb02b062a397f0742dc2a44108239ba03af803d",
-                "reference": "6fb02b062a397f0742dc2a44108239ba03af803d",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5",
-                "ziiframework/zii": ">=3.1.4"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "yii\\bootstrap\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Yii Team",
-                    "email": "team@yiiframework.com",
-                    "homepage": "http://www.yiiframework.com/team",
-                    "role": "Founder and project lead"
-                }
-            ],
-            "description": "zii-framework bootstrap",
-            "keywords": [
-                "bootstrap",
-                "zii-framework"
-            ],
-            "support": {
-                "issues": "https://github.com/ziiframework/bootstrap/issues",
-                "source": "https://github.com/ziiframework/bootstrap"
-            },
-            "time": "2021-05-07T08:59:08+00:00"
-        },
-        {
             "name": "ziiframework/composer",
             "version": "3.5.0",
             "source": {
@@ -2310,71 +2258,6 @@
             "time": "2020-11-10T18:47:58+00:00"
         },
         {
-            "name": "fakerphp/faker",
-            "version": "v1.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "b85e9d44eae8c52cca7aa0939483611f7232b669"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FakerPHP/Faker/zipball/b85e9d44eae8c52cca7aa0939483611f7232b669",
-                "reference": "b85e9d44eae8c52cca7aa0939483611f7232b669",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0",
-                "psr/container": "^1.0 || ^2.0",
-                "symfony/deprecation-contracts": "^2.2 || ^3.0"
-            },
-            "conflict": {
-                "fzaninotto/faker": "*"
-            },
-            "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.4.1",
-                "ext-intl": "*",
-                "symfony/phpunit-bridge": "^4.4 || ^5.2"
-            },
-            "suggest": {
-                "ext-curl": "Required by Faker\\Provider\\Image to download images.",
-                "ext-dom": "Required by Faker\\Provider\\HtmlLorem for generating random HTML.",
-                "ext-iconv": "Required by Faker\\Provider\\ru_RU\\Text::realText() for generating real Russian text.",
-                "ext-mbstring": "Required for multibyte Unicode string functionality."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "v1.17-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Faker\\": "src/Faker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Zaninotto"
-                }
-            ],
-            "description": "Faker is a PHP library that generates fake data for you.",
-            "keywords": [
-                "data",
-                "faker",
-                "fixtures"
-            ],
-            "support": {
-                "issues": "https://github.com/FakerPHP/Faker/issues",
-                "source": "https://github.com/FakerPHP/Faker/tree/v1.17.0"
-            },
-            "time": "2021-12-05T17:14:47+00:00"
-        },
-        {
             "name": "guzzlehttp/guzzle",
             "version": "7.4.1",
             "source": {
@@ -3032,71 +2915,6 @@
             "time": "2021-11-30T19:35:32+00:00"
         },
         {
-            "name": "opis/closure",
-            "version": "3.6.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/opis/closure.git",
-                "reference": "06e2ebd25f2869e54a306dda991f7db58066f7f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/06e2ebd25f2869e54a306dda991f7db58066f7f6",
-                "reference": "06e2ebd25f2869e54a306dda991f7db58066f7f6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "jeremeamia/superclosure": "^2.0",
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Opis\\Closure\\": "src/"
-                },
-                "files": [
-                    "functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marius Sarca",
-                    "email": "marius.sarca@gmail.com"
-                },
-                {
-                    "name": "Sorin Sarca",
-                    "email": "sarca_sorin@hotmail.com"
-                }
-            ],
-            "description": "A library that can be used to serialize closures (anonymous functions) and arbitrary objects.",
-            "homepage": "https://opis.io/closure",
-            "keywords": [
-                "anonymous functions",
-                "closure",
-                "function",
-                "serializable",
-                "serialization",
-                "serialize"
-            ],
-            "support": {
-                "issues": "https://github.com/opis/closure/issues",
-                "source": "https://github.com/opis/closure/tree/3.6.2"
-            },
-            "time": "2021-04-09T13:42:10+00:00"
-        },
-        {
             "name": "phar-io/manifest",
             "version": "2.0.3",
             "source": {
@@ -3366,47 +3184,6 @@
                 "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
             },
             "time": "2021-10-02T14:08:47+00:00"
-        },
-        {
-            "name": "phpspec/php-diff",
-            "version": "v1.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpspec/php-diff.git",
-                "reference": "fc1156187f9f6c8395886fe85ed88a0a245d72e9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/php-diff/zipball/fc1156187f9f6c8395886fe85ed88a0a245d72e9",
-                "reference": "fc1156187f9f6c8395886fe85ed88a0a245d72e9",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Diff": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Boulton",
-                    "homepage": "http://github.com/chrisboulton"
-                }
-            ],
-            "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays).",
-            "support": {
-                "source": "https://github.com/phpspec/php-diff/tree/v1.1.3"
-            },
-            "time": "2020-09-18T13:47:07+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -3898,27 +3675,22 @@
         },
         {
             "name": "psr/container",
-            "version": "2.0.2",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/513e0666f7216c7459170d56df27dfcefe1689ea",
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -3945,9 +3717,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.2"
+                "source": "https://github.com/php-fig/container/tree/1.1.2"
             },
-            "time": "2021-11-05T16:47:00+00:00"
+            "time": "2021-11-05T16:50:12+00:00"
         },
         {
             "name": "psr/event-dispatcher",
@@ -6365,29 +6137,37 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v1.1.2",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "191afdcb5804db960d26d8566b7e9a2843cab3a0"
+                "reference": "1ab11b933cd6bc5464b08e81e2c5b07dec58b0fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/191afdcb5804db960d26d8566b7e9a2843cab3a0",
-                "reference": "191afdcb5804db960d26d8566b7e9a2843cab3a0",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/1ab11b933cd6bc5464b08e81e2c5b07dec58b0fc",
+                "reference": "1ab11b933cd6bc5464b08e81e2c5b07dec58b0fc",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": ">=7.2.5",
+                "psr/container": "^1.1",
+                "symfony/deprecation-contracts": "^2.1"
+            },
+            "conflict": {
+                "ext-psr": "<1.1|>=2"
             },
             "suggest": {
-                "psr/container": "",
                 "symfony/service-implementation": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-main": "2.5-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -6420,9 +6200,23 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v1.1.2"
+                "source": "https://github.com/symfony/service-contracts/tree/v2.5.0"
             },
-            "time": "2019-05-28T07:50:59+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-11-04T16:48:04+00:00"
         },
         {
             "name": "symfony/string",
@@ -6617,174 +6411,6 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.10.0"
             },
             "time": "2021-03-09T10:59:23+00:00"
-        },
-        {
-            "name": "ziiframework/debug",
-            "version": "3.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ziiframework/debug.git",
-                "reference": "7f28455dbdc53762d5acb6a03a5e509194939fa4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/debug/zipball/7f28455dbdc53762d5acb6a03a5e509194939fa4",
-                "reference": "7f28455dbdc53762d5acb6a03a5e509194939fa4",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "opis/closure": "^3.3",
-                "php": ">=7.3",
-                "ziiframework/zii": ">=3.2.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5",
-                "ziiframework/swiftmailer": ">=3.2.1"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "yii\\debug\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Yii Team",
-                    "email": "team@yiiframework.com",
-                    "homepage": "https://www.yiiframework.com/team",
-                    "role": "Founder and project lead"
-                }
-            ],
-            "description": "zii-framework debug",
-            "keywords": [
-                "debug",
-                "zii-framework"
-            ],
-            "support": {
-                "issues": "https://github.com/ziiframework/debug/issues",
-                "source": "https://github.com/ziiframework/debug"
-            },
-            "time": "2021-08-14T10:35:05+00:00"
-        },
-        {
-            "name": "ziiframework/faker",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ziiframework/faker.git",
-                "reference": "7fe2e9704fe461429440ec0c02236e3247a62304"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/faker/zipball/7fe2e9704fe461429440ec0c02236e3247a62304",
-                "reference": "7fe2e9704fe461429440ec0c02236e3247a62304",
-                "shasum": ""
-            },
-            "require": {
-                "fakerphp/faker": "~1.9|~1.10",
-                "ziiframework/zii": ">=3.1.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "yii\\faker\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Yii Team",
-                    "email": "team@yiiframework.com",
-                    "homepage": "http://www.yiiframework.com/team",
-                    "role": "Founder and project lead"
-                }
-            ],
-            "description": "zii-framework faker",
-            "keywords": [
-                "faker",
-                "zii-framework"
-            ],
-            "support": {
-                "issues": "https://github.com/ziiframework/faker/issues",
-                "source": "https://github.com/ziiframework/faker"
-            },
-            "time": "2021-05-07T09:07:53+00:00"
-        },
-        {
-            "name": "ziiframework/gii",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ziiframework/gii.git",
-                "reference": "f6789983f21215d51454aa312018192ed6e2287c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/gii/zipball/f6789983f21215d51454aa312018192ed6e2287c",
-                "reference": "f6789983f21215d51454aa312018192ed6e2287c",
-                "shasum": ""
-            },
-            "require": {
-                "phpspec/php-diff": "^1.1.0",
-                "ziiframework/zii": ">=3.1.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "yii\\gii\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Yii Team",
-                    "email": "team@yiiframework.com",
-                    "homepage": "http://www.yiiframework.com/team",
-                    "role": "Founder and project lead"
-                }
-            ],
-            "description": "zii gii",
-            "keywords": [
-                "gii",
-                "zii-framework"
-            ],
-            "support": {
-                "issues": "https://github.com/ziiframework/gii/issues",
-                "source": "https://github.com/ziiframework/gii"
-            },
-            "time": "2021-05-07T09:08:51+00:00"
         }
     ],
     "aliases": [],
@@ -6805,5 +6431,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
