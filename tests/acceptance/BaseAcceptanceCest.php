@@ -44,7 +44,9 @@ class BaseAcceptanceCest
 [id] => xxx_test_web_application
 [name] => xxx Test Web Application
 
-] => *.yiitest.com
+[allowedHosts] => Array
+[0] => yiitest.com
+[1] => *.yiitest.com
 CONF;
 
         $this->seeEveryLineInSource($I, $conf);
