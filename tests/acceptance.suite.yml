@@ -14,6 +14,6 @@ modules:
         browser: chrome
           capabilities:
             chromeOptions:
-              args: [ "--headless", "--disable-gpu" ]
+              args: ["--headless", "--disable-gpu"]
         window_size: 1920x1080
 step_decorators: ~
