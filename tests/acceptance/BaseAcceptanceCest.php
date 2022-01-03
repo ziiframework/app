@@ -11,6 +11,8 @@ class BaseAcceptanceCest
 {
     public const HTTP_STATUS_200 = 'HTTP/1.1 200 OK';
     public const HTTP_STATUS_301 = 'HTTP/1.1 301 Moved Permanently';
+    public const HTTP_STATUS_404 = 'HTTP/1.1 404 Not Found';
+    public const HTTP_STATUS_403 = 'HTTP/1.1 403 Forbidden';
 
     public function _before(AcceptanceTester $I): void
     {
@@ -96,8 +98,10 @@ CONF;
 
     protected function seeEveryLineInSource(AcceptanceTester $I, string $lines): void
     {
+        $src = $I->grabPageSource();
+
         foreach (pf_split_string_using_rn($lines) as $line) {
-            if (_is_full_string($line)) {
+            if (pf_is_string_filled($line)) {
                 // reduce low-level mistakes
                 if (mb_strpos_utf8($line, 'www.xxx.test') !== false) {
                     $line = str_replace('www.xxx.test', 'app.yiitest.com', $line);
@@ -105,7 +109,7 @@ CONF;
                     $I->markTestIncomplete();
                 }
 
-                $I->seeInSource($line);
+                $I->assertStringContainsString($line, $src);
             }
         }
     }
@@ -113,7 +117,7 @@ CONF;
     protected function dontSeeAnyLineInSource(AcceptanceTester $I, string $lines): void
     {
         foreach (pf_split_string_using_rn($lines) as $line) {
-            if (_is_full_string($line)) {
+            if (pf_is_string_filled($line)) {
                 $I->dontSeeInSource($line);
             }
         }
