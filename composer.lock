@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b41d5a3cd350d9a53621c31919b623e0",
+    "content-hash": "38b4b72bcb3fbd0e49890f59e8cde700",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2562,55 +2562,6 @@
                 "source": "https://github.com/Codeception/Stub/tree/4.0.0"
             },
             "time": "2021-12-07T14:39:17+00:00"
-        },
-        {
-            "name": "dbrekelmans/bdi",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dbrekelmans/bdi.git",
-                "reference": "bdc41bd339558242bf748b99c394a78e2dfbdb4f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dbrekelmans/bdi/zipball/bdc41bd339558242bf748b99c394a78e2dfbdb4f",
-                "reference": "bdc41bd339558242bf748b99c394a78e2dfbdb4f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ext-zip": "*",
-                "ext-zlib": "*",
-                "php": "^7.2|^8.0"
-            },
-            "bin": [
-                "bdi",
-                "bdi.phar"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniël Brekelmans",
-                    "homepage": "https://github.com/dbrekelmans"
-                },
-                {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/dbrekelmans/bdi/graphs/contributors"
-                }
-            ],
-            "description": "PHAR distribution of dbrekelmans/browser-driver-installer.",
-            "homepage": "https://github.com/dbrekelmans/bdi",
-            "keywords": [
-                "browser-driver-installer"
-            ],
-            "support": {
-                "source": "https://github.com/dbrekelmans/bdi/tree/1.0"
-            },
-            "time": "2021-10-16T09:40:32+00:00"
         },
         {
             "name": "doctrine/instantiator",
