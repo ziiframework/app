@@ -78,6 +78,7 @@ jobs:
       - name: "🛠️"
         run: |
           ${{ env.PHP_CMD }} ./vendor/bin/bdi detect
+          ${{ env.PHP_CMD }} ./vendor/bin/bdi detect drivers
 
       - name: "🧪"
         id: id_Codeception_Cest
