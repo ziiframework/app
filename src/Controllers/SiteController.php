@@ -9,8 +9,8 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-use app\models\ContactForm;
+use Zpp\Models\LoginForm;
+use Zpp\Models\ContactForm;
 
 class SiteController extends Controller
 {
@@ -48,6 +48,7 @@ class SiteController extends Controller
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
+                'view' => '/error.php',
             ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
@@ -61,7 +62,7 @@ class SiteController extends Controller
      */
     public function actionIndex(): string
     {
-        return $this->render('index');
+        return $this->render('/index.php');
     }
 
     /**
@@ -81,7 +82,7 @@ class SiteController extends Controller
         }
 
         $model->password = '';
-        return $this->render('login', [
+        return $this->render('/login.php', [
             'model' => $model,
         ]);
     }
@@ -109,7 +110,7 @@ class SiteController extends Controller
 
             return $this->refresh();
         }
-        return $this->render('contact', [
+        return $this->render('/contact.php', [
             'model' => $model,
         ]);
     }
@@ -119,6 +120,6 @@ class SiteController extends Controller
      */
     public function actionAbout(): string
     {
-        return $this->render('about');
+        return $this->render('/about.php');
     }
 }
