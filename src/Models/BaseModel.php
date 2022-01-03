@@ -25,6 +25,7 @@ abstract class BaseModel extends ActiveRecord
             'attributeTypes' => [],
             'typecastAfterValidate' => true,
             'typecastBeforeSave' => false,
+            'typecastAfterSave' => false,
             'typecastAfterFind' => true,
         ];
 
