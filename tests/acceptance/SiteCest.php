@@ -13,7 +13,7 @@ final class SiteCest extends BaseAcceptanceCest
         parent::_before($I);
 
         $I->amOnPage($this->prefixLang('/output-config'));
-        // $I->makeHtmlSnapshot();
+        $I->makeHtmlSnapshot();
 
         $conf = <<<CONF
 [language] => zh-CN
