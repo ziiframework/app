@@ -11,6 +11,7 @@ modules:
     - \Zept\AcceptanceHelper
     - WebDriver:
         url: http://app.yiitest.com
+        port: 80
         browser: chrome
         capabilities:
           chromeOptions:
