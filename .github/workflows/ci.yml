@@ -37,7 +37,7 @@ jobs:
           mkdir -p       /var/www/repos/yiitest/3
 
           mkdir -p       /var/www/repos/yiitest/shared/runtime
-          chmod -R 777   /var/www/repos/yiitest/shared/runtime
+          chmod -R 777   /var/www/repos/yiitest/shared
 
           cp -r ./*      /var/www/repos/yiitest/3/
           rm -f          /var/www/repos/yiitest/3/web/index.php
@@ -53,6 +53,7 @@ jobs:
         run: |
           rm -f        ./web/index.php
           cp           ./web/index-test.php  ./web/index.php
+
           rm -f        ./tests/_generated/*
 
           ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --no-interaction
@@ -61,13 +62,9 @@ jobs:
         run: /etc/my_init.d/runapps.sh
 
       - name: "Update hosts file"
-        run: echo '127.0.0.1 app.yiitest.com' | tee -a /etc/hosts
-
-      - name: "Check localhost"
         run: |
-          ps -aux | grep mysql
-          ps -aux | grep php
-          ps -aux | grep nginx
+          echo '127.0.0.1 yiitest.com' | tee -a /etc/hosts
+          echo '127.0.0.1 app.yiitest.com' | tee -a /etc/hosts
 
       - name: "Database migration"
         run: |
