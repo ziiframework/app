@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-$cc_components = $cc_components ?? [];
+$ztmp_components = $ztmp_components ?? [];
 
 /**
  * 缓存组件（db驱动）.
@@ -8,7 +8,7 @@ $cc_components = $cc_components ?? [];
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\caching\DbCache::class] = static function (array $config = []): array {
+$ztmp_components[yii\caching\DbCache::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\caching\DbCache::class,
         'cacheTable' => '{{%dbcache}}',
@@ -30,7 +30,7 @@ $cc_components[yii\caching\DbCache::class] = static function (array $config = []
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\db\Connection::class] = static function (array $config) use ($cc_components): array {
+$ztmp_components[yii\db\Connection::class] = static function (array $config) use ($ztmp_components): array {
     return array_merge([
         'class' => yii\db\Connection::class,
         'attributes' => [
@@ -42,15 +42,15 @@ $cc_components[yii\db\Connection::class] = static function (array $config) use (
 //            PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true, // 使用缓冲查询
         ],
         'enableSchemaCache' => true,
-        'schemaCache' => $cc_components[yii\caching\DbCache::class]([
+        'schemaCache' => $ztmp_components[yii\caching\DbCache::class]([
             'keyPrefix' => 'dbsh_',
         ]),
         'enableQueryCache' => true,
-        'queryCache' => $cc_components[yii\caching\DbCache::class]([
+        'queryCache' => $ztmp_components[yii\caching\DbCache::class]([
             'keyPrefix' => 'dbqe_',
         ]),
         'charset' => 'utf8mb4',
-        'serverStatusCache' => $cc_components[yii\caching\DbCache::class]([
+        'serverStatusCache' => $ztmp_components[yii\caching\DbCache::class]([
             'keyPrefix' => 'dbst_',
         ]),
         'enableLogging' => !YII_ENV_PROD, // 生产环境提升性能 https://github.com/yiisoft/yii2/issues/12528
@@ -70,7 +70,7 @@ $cc_components[yii\db\Connection::class] = static function (array $config) use (
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\web\Cookie::class] = static function (array $config): array {
+$ztmp_components[yii\web\Cookie::class] = static function (array $config): array {
     if (isset($config['secure']) && is_bool($config['secure'])) {
         $secure = $config['secure'];
     } else {
@@ -97,7 +97,7 @@ $cc_components[yii\web\Cookie::class] = static function (array $config): array {
  * @param string $level 日志记录等级
  * @return array 合并后的配置数组
  */
-$cc_components[yii\log\FileTarget::class] = static function (string $level): array {
+$ztmp_components[yii\log\FileTarget::class] = static function (string $level): array {
     return [
         'class' => yii\log\FileTarget::class,
         'except' => [
@@ -120,17 +120,17 @@ $cc_components[yii\log\FileTarget::class] = static function (string $level): arr
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\log\Dispatcher::class] = static function (array $config = []) use ($cc_components): array {
+$ztmp_components[yii\log\Dispatcher::class] = static function (array $config = []) use ($ztmp_components): array {
     return array_merge([
         'class' => yii\log\Dispatcher::class,
         'traceLevel' => YII_DEBUG ? 3 : 0,
         'targets' => YII_DEBUG ? [
-            $cc_components[yii\log\FileTarget::class]('info'),
-            $cc_components[yii\log\FileTarget::class]('warning'),
-            $cc_components[yii\log\FileTarget::class]('error'),
+            $ztmp_components[yii\log\FileTarget::class]('info'),
+            $ztmp_components[yii\log\FileTarget::class]('warning'),
+            $ztmp_components[yii\log\FileTarget::class]('error'),
         ] : [
-            $cc_components[yii\log\FileTarget::class]('warning'),
-            $cc_components[yii\log\FileTarget::class]('error'),
+            $ztmp_components[yii\log\FileTarget::class]('warning'),
+            $ztmp_components[yii\log\FileTarget::class]('error'),
         ],
     ], $config);
 };
@@ -141,7 +141,7 @@ $cc_components[yii\log\Dispatcher::class] = static function (array $config = [])
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\i18n\Formatter::class] = static function (array $config = []): array {
+$ztmp_components[yii\i18n\Formatter::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\i18n\Formatter::class,
         'defaultTimeZone' => 'Asia/Shanghai',
@@ -154,7 +154,7 @@ $cc_components[yii\i18n\Formatter::class] = static function (array $config = [])
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\i18n\I18N::class] = static function (array $config = []): array {
+$ztmp_components[yii\i18n\I18N::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\i18n\I18N::class,
     ], $config);
@@ -166,7 +166,7 @@ $cc_components[yii\i18n\I18N::class] = static function (array $config = []): arr
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\caching\FileCache::class] = static function (array $config = []): array {
+$ztmp_components[yii\caching\FileCache::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\caching\FileCache::class,
         'keyPrefix' => 'fcc_',
@@ -179,7 +179,7 @@ $cc_components[yii\caching\FileCache::class] = static function (array $config = 
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\web\ErrorHandler::class] = static function (array $config = []): array {
+$ztmp_components[yii\web\ErrorHandler::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\web\ErrorHandler::class,
         'displayVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION'],
@@ -192,7 +192,7 @@ $cc_components[yii\web\ErrorHandler::class] = static function (array $config = [
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\console\ErrorHandler::class] = static function (array $config = []): array {
+$ztmp_components[yii\console\ErrorHandler::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\console\ErrorHandler::class,
     ], $config);
@@ -210,7 +210,7 @@ $cc_components[yii\console\ErrorHandler::class] = static function (array $config
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\web\Request::class] = static function (array $config) use ($cc_components): array {
+$ztmp_components[yii\web\Request::class] = static function (array $config) use ($ztmp_components): array {
     if (!isset($config['cookieValidationKey'])) {
         throw new yii\base\InvalidConfigException('cookieValidationKey must be set.');
     }
@@ -230,7 +230,7 @@ $cc_components[yii\web\Request::class] = static function (array $config) use ($c
             'text/json' => yii\web\JsonParser::class,
         ], // TODO 增加 XmlParser
         'isConsoleRequest' => false,
-        'csrfCookie' => $cc_components[yii\web\Cookie::class]([
+        'csrfCookie' => $ztmp_components[yii\web\Cookie::class]([
             'name' => '_csrf',
             'secure' => $secure,
         ]),
@@ -246,7 +246,7 @@ $cc_components[yii\web\Request::class] = static function (array $config) use ($c
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\web\Response::class] = static function (array $config = []): array {
+$ztmp_components[yii\web\Response::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\web\Response::class,
         'formatters' => [
@@ -344,7 +344,7 @@ $cc_components[yii\web\Response::class] = static function (array $config = []): 
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\web\DbSession::class] = static function (array $config = []): array {
+$ztmp_components[yii\web\DbSession::class] = static function (array $config = []): array {
     if (isset($config['cookieParams.secure']) && is_bool($config['cookieParams.secure'])) {
         $secure = $config['cookieParams.secure'];
     } else {
@@ -382,7 +382,7 @@ $cc_components[yii\web\DbSession::class] = static function (array $config = []):
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\web\User::class] = static function (array $config = []) use ($cc_components): array {
+$ztmp_components[yii\web\User::class] = static function (array $config = []) use ($ztmp_components): array {
     if (isset($config['identityCookie.secure']) && is_bool($config['identityCookie.secure'])) {
         $secure = $config['identityCookie.secure'];
     } else {
@@ -400,7 +400,7 @@ $cc_components[yii\web\User::class] = static function (array $config = []) use (
         'enableAutoLogin' => true,
         'enableSession' => true,
         'identityClass' => app\models\User::class,
-        'identityCookie' => $cc_components[yii\web\Cookie::class]([
+        'identityCookie' => $ztmp_components[yii\web\Cookie::class]([
             'name' => '_identity',
             'secure' => $secure,
         ]),
@@ -421,7 +421,7 @@ $cc_components[yii\web\User::class] = static function (array $config = []) use (
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\queue\db\Queue::class] = static function (array $config = []): array {
+$ztmp_components[yii\queue\db\Queue::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\queue\db\Queue::class,
         'tableName' => '{{%dbqueue}}',
@@ -439,7 +439,7 @@ $cc_components[yii\queue\db\Queue::class] = static function (array $config = [])
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\swiftmailer\Mailer::class] = static function (array $config = []): array {
+$ztmp_components[yii\swiftmailer\Mailer::class] = static function (array $config = []): array {
     return yii\helpers\ArrayHelper::merge([
         'class' => yii\swiftmailer\Mailer::class,
         'viewPath' => '@app/mail',
@@ -462,14 +462,14 @@ $cc_components[yii\swiftmailer\Mailer::class] = static function (array $config =
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\rbac\DbManager::class] = static function (array $config = []) use ($cc_components): array {
+$ztmp_components[yii\rbac\DbManager::class] = static function (array $config = []) use ($ztmp_components): array {
     return array_merge([
         'class' => yii\rbac\DbManager::class,
         'itemTable' => '{{%dbauth_item}}',
         'itemChildTable' => '{{%dbauth_item_child}}',
         'assignmentTable' => '{{%dbauth_assignment}}',
         'ruleTable' => '{{%dbauth_rule}}',
-        'cache' => $cc_components[yii\caching\DbCache::class]([
+        'cache' => $ztmp_components[yii\caching\DbCache::class]([
             'keyPrefix' => 'rbac_',
         ]),
     ], $config);
@@ -494,10 +494,10 @@ $cc_components[yii\rbac\DbManager::class] = static function (array $config = [])
  * @param array $config 配置数组
  * @return array 合并后的配置数组
  */
-$cc_components[yii\web\UrlManager::class] = static function (array $config) use ($cc_components): array {
+$ztmp_components[yii\web\UrlManager::class] = static function (array $config) use ($ztmp_components): array {
     $config = array_merge([
         'class' => yii\web\UrlManager::class,
-        'cache' => $cc_components[yii\caching\DbCache::class]([
+        'cache' => $ztmp_components[yii\caching\DbCache::class]([
             'keyPrefix' => 'uri_',
         ]),
         'enablePrettyUrl' => true,
@@ -517,4 +517,4 @@ $cc_components[yii\web\UrlManager::class] = static function (array $config) use 
     return $config;
 };
 
-return $cc_components;
+return $ztmp_components;
