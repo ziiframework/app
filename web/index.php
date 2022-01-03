@@ -15,4 +15,6 @@ $ztmp_config = yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/../config/web-local.php'
 );
 
+unset($ztmp_config['class']);
+
 (new yii\web\Application($ztmp_config))->run();

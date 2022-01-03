@@ -25,4 +25,6 @@ if (in_array($_SERVER['REQUEST_URI'] ?? null, ['/output-config', '/output-config
     exit;
 }
 
+unset($ztmp_config['class']);
+
 (new yii\web\Application($ztmp_config))->run();
