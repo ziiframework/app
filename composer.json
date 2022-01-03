@@ -17,15 +17,16 @@
   "require": {
     "php": ">=7.4.0",
     "ext-json": "*",
-    "ext-pdo": "*",
     "ext-mbstring": "*",
+    "ext-pdo": "*",
+    "charescape/php-functions": "1.0.x-dev",
+    "monolog/monolog": "^2.3.0",
+    "symfony/http-client": "^5.4",
     "symfony/polyfill-php80": "*",
-    "ziiframework/zii": "~3.5.0",
+    "symfony/yaml": "^5.4.0",
     "ziiframework/queue": "~3.5.0",
     "ziiframework/swiftmailer": "~3.4.0",
-    "symfony/yaml": "^5.4.0",
-    "monolog/monolog": "^2.3.0",
-    "charescape/php-functions": "1.0.x-dev"
+    "ziiframework/zii": "~3.5.0"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",
