@@ -35,7 +35,8 @@
     "codeception/module-db": "^2.0",
     "codeception/module-rest": "^2.0",
     "codeception/lib-innerbrowser": "^2.0",
-    "nette/php-generator": "^3.6"
+    "nette/php-generator": "^3.6",
+    "ziiframework/faker": "~3.4.0"
   },
   "config": {
     "platform": {
