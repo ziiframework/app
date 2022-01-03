@@ -44,7 +44,7 @@ jobs:
           cp             /var/www/repos/yiitest/3/web/index-test.php  /var/www/repos/yiitest/3/web/index.php
 
           rm -f          /var/www/repos/yiitest/3/composer.lock
-          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/repos/yiitest/3/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
+          ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/repos/yiitest/3 --no-interaction --no-dev --prefer-dist --optimize-autoloader
 
           ln -s /var/www/repos/yiitest/3 /var/www/repos/yiitest/latest
 
