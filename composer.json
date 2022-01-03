@@ -35,6 +35,7 @@
     "codeception/module-db": "^2.0",
     "codeception/module-phpbrowser": "^2.0",
     "codeception/module-rest": "^2.0",
+    "codeception/module-webdriver": "^2.0",
     "dbrekelmans/bdi": "^1.0",
     "nette/php-generator": "^3.6",
     "roave/security-advisories": "dev-master",

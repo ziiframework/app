@@ -9,6 +9,12 @@ actor: AcceptanceTester
 modules:
   enabled:
     - \Zept\AcceptanceHelper
-    - PhpBrowser:
+    - WebDriver:
         url: http://app.yiitest.com
+        port: 9515
+        browser: chrome
+        capabilities:
+          chromeOptions:
+            args: ["--headless", "--disable-gpu", "--no-sandbox"]
+        window_size: 1200x1200
 step_decorators: ~

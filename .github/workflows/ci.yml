@@ -22,7 +22,7 @@ jobs:
       PHP_CMD: '/usr/local/php/bin/php'
       COMPOSER_CMD: '/usr/local/bin/composer.phar'
 
-    container: charescape/web:5.4.1
+    container: charescape/web:5.5.0
 
     steps:
       - uses: actions/checkout@v2.4.0
@@ -43,6 +43,7 @@ jobs:
           rm -f          /var/www/repos/yiitest/3/web/index.php
           cp             /var/www/repos/yiitest/3/web/index-test.php  /var/www/repos/yiitest/3/web/index.php
 
+          rm -f /var/www/repos/yiitest/3/composer.lock
           ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --working-dir=/var/www/repos/yiitest/3/ --no-interaction --no-dev --prefer-dist --optimize-autoloader
 
           ln -s /var/www/repos/yiitest/3 /var/www/repos/yiitest/latest
@@ -56,6 +57,7 @@ jobs:
 
           rm -f        ./tests/_generated/*
 
+          rm -f        ./composer.lock
           ${{ env.PHP_CMD }} ${{ env.COMPOSER_CMD }} install --no-interaction
 
       - name: "Start localhost"
@@ -78,6 +80,9 @@ jobs:
       - name: "🛠️"
         run: |
           ${{ env.PHP_CMD }} ./vendor/bin/bdi detect
+          ${{ env.PHP_CMD }} ./vendor/bin/bdi detect drivers
+          ls -l
+          ./chromedriver --url-base=/wd/hub --headless --disable-gpu --no-sandbox --window-size=1200,1200  >/dev/null 2>&1 &
 
       - name: "🧪"
         id: id_Codeception_Cest

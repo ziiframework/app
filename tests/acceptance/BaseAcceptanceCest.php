@@ -49,7 +49,7 @@ class BaseAcceptanceCest
 [1] => *.yiitest.com
 CONF;
 
-        $this->seeEveryLineInSource($I, $conf);
+        //$this->seeEveryLineInSource($I, $conf);
     }
 
     protected function prefixDomain(string $uri): string
