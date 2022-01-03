@@ -2,9 +2,9 @@
 
 $ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
-$cc_enable_strict_parsing = true;
+$ztmp_enable_strict_parsing = true;
 
-$cc_config = [
+$ztmp_config = [
     'class' => yii\web\Application::class,
     'id' => 'xxx_web_application',
     'name' => 'xxx',
@@ -14,7 +14,7 @@ $cc_config = [
         'errorHandler' => $ztmp_components[yii\web\ErrorHandler::class](),
         'response' => $ztmp_components[yii\web\Response::class](),
         'urlManager' => $ztmp_components[yii\web\UrlManager::class]([
-            'enableStrictParsing' => $cc_enable_strict_parsing,
+            'enableStrictParsing' => $ztmp_enable_strict_parsing,
             'web.rules' => array_merge(
                 require __DIR__ . '/routes_web.php',
             ),
@@ -33,8 +33,8 @@ $cc_config = [
 ];
 
 if (YII_ENV_DEV) {
-    $cc_config['bootstrap'][] = 'debug';
-    $cc_config['modules']['debug'] = [
+    $ztmp_config['bootstrap'][] = 'debug';
+    $ztmp_config['modules']['debug'] = [
         'class' => yii\debug\Module::class,
         'panels' => [
             'queue' => yii\queue\debug\Panel::class,
@@ -44,6 +44,6 @@ if (YII_ENV_DEV) {
     ];
 }
 
-unset($cc_config['class']);
+unset($ztmp_config['class']);
 
-return $cc_config;
+return $ztmp_config;

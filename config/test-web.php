@@ -2,7 +2,7 @@
 
 $ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
-$cc_enable_strict_parsing = true;
+$ztmp_enable_strict_parsing = true;
 
 return yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/base.php',
@@ -42,7 +42,7 @@ return yii\helpers\ArrayHelper::merge(
             'response' => $ztmp_components[yii\web\Response::class](),
 
             'urlManager' => $ztmp_components[yii\web\UrlManager::class]([
-                'enableStrictParsing' => $cc_enable_strict_parsing,
+                'enableStrictParsing' => $ztmp_enable_strict_parsing,
                 'web.rules' => array_merge(
                     require __DIR__ . '/routes_web.php',
                 ),
