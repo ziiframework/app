@@ -19,7 +19,7 @@ return yii\helpers\ArrayHelper::merge(
         'id' => 'xxx_test_web_application',
         'name' => 'xxx Test Web Application',
         'controllerNamespace' => 'Zpp\Controllers',
-        'defaultRoute' => 'home/index',
+        'defaultRoute' => 'site/index',
         'components' => [
             'db' => $ztmp_components[yii\db\Connection::class]([
                 'dsn' => 'mysql:' . implode(
