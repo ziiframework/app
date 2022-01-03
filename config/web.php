@@ -5,13 +5,20 @@ use Symfony\Component\Yaml\Yaml;
 $ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
 $ztmp_enable_strict_parsing = true;
+if (isset($_SERVER['REQUEST_URI'])) {
+    if (strpos($_SERVER['REQUEST_URI'], '/miniprogram/') === 0) {
+        $ztmp_enable_strict_parsing = false;
+    } else if (strpos($_SERVER['REQUEST_URI'], '/workbench/') === 0) {
+        $ztmp_enable_strict_parsing = false;
+    }
+}
 
 $ztmp_config = [
     'class' => yii\web\Application::class,
     'id' => 'xxx_web_application',
     'name' => 'xxx',
-    'controllerNamespace' => 'app\controllers',
-    'defaultRoute' => 'site/index',
+    'controllerNamespace' => 'Zpp\Controllers',
+    'defaultRoute' => 'home/index',
     'components' => [
         'errorHandler' => $ztmp_components[yii\web\ErrorHandler::class](),
         'response' => $ztmp_components[yii\web\Response::class](),
