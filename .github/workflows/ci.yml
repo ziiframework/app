@@ -77,7 +77,7 @@ jobs:
 
       - name: "🛠️"
         run: |
-          vendor/bin/bdi detect
+          ${{ env.PHP_CMD }} ./vendor/bin/bdi detect
 
       - name: "🧪"
         id: id_Codeception_Cest
