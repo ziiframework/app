@@ -81,6 +81,7 @@ jobs:
         run: |
           ${{ env.PHP_CMD }} ./vendor/bin/bdi detect
           ${{ env.PHP_CMD }} ./vendor/bin/bdi detect drivers
+          chromedriver --url-base=/wd/hub
 
       - name: "🧪"
         id: id_Codeception_Cest
