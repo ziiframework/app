@@ -20,9 +20,9 @@ class BaseAcceptanceCest
 [basePath] => /var/www/repos/yiitest/3
 [vendorPath] => /var/www/repos/yiitest/3/vendor
 [runtimePath] => /var/www/repos/yiitest/shared/runtime
-[layoutPath] => /var/www/repos/yiitest/3/views/layouts
-[viewPath] => /var/www/repos/yiitest/3/views
-[layout] => default
+[layoutPath] => /var/www/repos/yiitest/3/pages
+[viewPath] => /var/www/repos/yiitest/3/pages
+[layout] => layout.php
 [sourceLanguage] => zh-CN
 [timeZone] => Asia/Shanghai
 
