@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-$cc_components = $cc_components ?? (require __DIR__ . '/components.php');
+$ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
 $cc_enable_strict_parsing = true;
 
@@ -13,7 +13,7 @@ return yii\helpers\ArrayHelper::merge(
         'controllerNamespace' => 'app\controllers',
         'defaultRoute' => 'site/index',
         'components' => [
-            'db' => $cc_components[yii\db\Connection::class]([
+            'db' => $ztmp_components[yii\db\Connection::class]([
                 'dsn' => 'mysql:' . implode(
                         ';',
                         [
@@ -25,23 +25,23 @@ return yii\helpers\ArrayHelper::merge(
                 'username' => 'root',
                 'password' => 'root12345',
             ]),
-            'request' => $cc_components[yii\web\Request::class]([
+            'request' => $ztmp_components[yii\web\Request::class]([
                 'cookieValidationKey' => 'testCookieValidationKey',
                 'csrfCookie.secure' => false,
             ]),
-            'session' => $cc_components[yii\web\DbSession::class]([
+            'session' => $ztmp_components[yii\web\DbSession::class]([
                 'cookieParams.secure' => false,
             ]),
-            'user' => $cc_components[yii\web\User::class]([
+            'user' => $ztmp_components[yii\web\User::class]([
                 'identityCookie.secure' => false,
             ]),
-            'mailer' => $cc_components[yii\swiftmailer\Mailer::class]([
+            'mailer' => $ztmp_components[yii\swiftmailer\Mailer::class]([
                 'useFileTransport' => true,
             ]),
-            'errorHandler' => $cc_components[yii\web\ErrorHandler::class](),
-            'response' => $cc_components[yii\web\Response::class](),
+            'errorHandler' => $ztmp_components[yii\web\ErrorHandler::class](),
+            'response' => $ztmp_components[yii\web\Response::class](),
 
-            'urlManager' => $cc_components[yii\web\UrlManager::class]([
+            'urlManager' => $ztmp_components[yii\web\UrlManager::class]([
                 'enableStrictParsing' => $cc_enable_strict_parsing,
                 'web.rules' => array_merge(
                     require __DIR__ . '/routes_web.php',

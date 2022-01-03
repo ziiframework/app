@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-$cc_components = $cc_components ?? (require __DIR__ . '/components.php');
+$ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
 $cc_enable_strict_parsing = true;
 
@@ -11,9 +11,9 @@ $cc_config = [
     'controllerNamespace' => 'app\controllers',
     'defaultRoute' => 'site/index',
     'components' => [
-        'errorHandler' => $cc_components[yii\web\ErrorHandler::class](),
-        'response' => $cc_components[yii\web\Response::class](),
-        'urlManager' => $cc_components[yii\web\UrlManager::class]([
+        'errorHandler' => $ztmp_components[yii\web\ErrorHandler::class](),
+        'response' => $ztmp_components[yii\web\Response::class](),
+        'urlManager' => $ztmp_components[yii\web\UrlManager::class]([
             'enableStrictParsing' => $cc_enable_strict_parsing,
             'web.rules' => array_merge(
                 require __DIR__ . '/routes_web.php',
