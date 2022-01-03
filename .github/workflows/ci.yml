@@ -77,10 +77,6 @@ jobs:
 
           ${{ env.PHP_CMD }}  /var/www/repos/yiitest/3/yii-test  migrate/up  --interactive=0
 
-      - name: "🛠️"
-        run: |
-          ${{ env.PHP_CMD }} ./vendor/bin/bdi detect
-
       - name: "🧪"
         id: id_Codeception_Cest
         run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run
