@@ -8,8 +8,8 @@ return yii\helpers\ArrayHelper::merge(
         'class' => yii\console\Application::class,
         'id' => 'xxx_test_cli_application',
         'name' => 'xxx Test Cli Application',
-        'language' => 'en-US',
-        'controllerNamespace' => 'app\commands',
+        'language' => 'en',
+        'controllerNamespace' => 'Zpp\Commands',
         'aliases' => [
             '@tests' => '@app/tests',
         ],
@@ -24,7 +24,8 @@ return yii\helpers\ArrayHelper::merge(
                 ],
                 // for migrations that contain namespaces, `migrationNamespaces` is required to specify the path
                 'migrationNamespaces' => [
-                    'app\migrations',
+                    'Zpp\Migration',
+                    // 'app\migrations',
                     // 'yii\queue\db\migrations',
                 ],
             ],
