@@ -32,7 +32,7 @@ $ztmp_config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'timeZone' => 'Asia/Shanghai',
-    'version' => '1.0.0',
+    'version' => '3.0.0',
     'params' => array_merge([], $ztmp_secrets),
     'components' => [
         'cache' => $ztmp_components[yii\caching\DbCache::class](),
@@ -40,13 +40,13 @@ $ztmp_config = [
         'formatter' => $ztmp_components[yii\i18n\Formatter::class](),
         'i18n' => $ztmp_components[yii\i18n\I18N::class]([
             'translations' => [
-                't_*' => [
+                't2_*' => [
                     'class' => yii\i18n\PhpMessageSource::class,
                     'sourceLanguage' => 'zh-CN',
                     'basePath' => '@app/lang',
                     'fileMap' => [
-                        't_pool' => 'pool.php',
-                        't_dbf' => 'dbf.php',
+                        't2_pool' => 'pool.php',
+                        't2_dbf' => 'dbf.php',
                     ],
                     'on missingTranslation' => static function (yii\i18n\MissingTranslationEvent $event): void {
                         $zpp = Yii::$app;
