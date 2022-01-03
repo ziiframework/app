@@ -84,7 +84,7 @@ $ztmp_components[yii\web\Cookie::class] = static function (array $config): array
         'name' => $config['name'],
         'expire' => time() + 7200,
         'path' => '/',
-        'domain' => $_SERVER['HTTP_HOST'] ?? '',
+        'domain' => $_SERVER['SERVER_NAME'],
         'httpOnly' => true,
         'secure' => $secure,
         'sameSite' => yii\web\Cookie::SAME_SITE_LAX,
@@ -361,7 +361,7 @@ $ztmp_components[yii\web\DbSession::class] = static function (array $config = []
         'cookieParams' => [
             'lifetime' => 7200,
             'path' => '/',
-            'domain' => $_SERVER['HTTP_HOST'] ?? '',
+            'domain' => $_SERVER['SERVER_NAME'],
             'httpOnly' => true,
             'secure' => $secure,
             'sameSite' => yii\web\Cookie::SAME_SITE_LAX
@@ -399,7 +399,7 @@ $ztmp_components[yii\web\User::class] = static function (array $config = []) use
         'autoRenewCookie' => true,
         'enableAutoLogin' => true,
         'enableSession' => true,
-        'identityClass' => app\models\User::class,
+        'identityClass' => Zpp\Models\User::class,
         'identityCookie' => $ztmp_components[yii\web\Cookie::class]([
             'name' => '_identity',
             'secure' => $secure,
