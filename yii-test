@@ -1,14 +1,16 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 require __DIR__ . '/env-test.php';
 require __DIR__ . '/env.php';
 
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/vendor/ziiframework/zii/src/Yii.php';
 
-$config = require __DIR__ . '/config/test-cli.php';
+$ztmp_config = require __DIR__ . '/config/test-cli.php';
 
-unset($config['class']);
+unset($ztmp_config['class']);
 
-exit((new yii\console\Application($config))->run());
+exit((new yii\console\Application($ztmp_config))->run());

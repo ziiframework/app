@@ -12,10 +12,12 @@ use yii\queue\JobInterface;
 use yii\queue\Queue;
 use yii\queue\RetryableJobInterface;
 
+use Zpp\Queue\RuntimeException as QueueRuntimeException;
+
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
-abstract class AbstractBaseQueue extends BaseObject implements JobInterface, RetryableJobInterface
+abstract class BaseQueue extends BaseObject implements JobInterface, RetryableJobInterface
 {
     protected function logger(): Logger
     {

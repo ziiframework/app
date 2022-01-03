@@ -1,14 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 // This file is used in the following environments: production, development and testing
 
-$cc_components = $cc_components ?? (require __DIR__ . '/components.php');
+$ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
-$cc_config = [
+$ztmp_config = [
     'class' => yii\console\Application::class,
     'id' => 'xxx_cli_application',
     'name' => 'xxx Cli Application',
-    'controllerNamespace' => 'app\commands',
+    'controllerNamespace' => 'Zpp\Commands',
     'aliases' => [
         '@tests' => '@app/tests',
     ],
@@ -24,7 +26,7 @@ $cc_config = [
             ],
             // for migrations that contain namespaces, `migrationNamespaces` is required to specify the path
             'migrationNamespaces' => [
-                'app\migrations',
+                'Zpp\Migration',
                 // 'yii\queue\db\migrations',
             ],
         ],
@@ -34,7 +36,7 @@ $cc_config = [
         ],
     ],
     'components' => [
-        'errorHandler' => $cc_components[yii\console\ErrorHandler::class](),
+        'errorHandler' => $ztmp_components[yii\console\ErrorHandler::class](),
         'request' => [
             'class' => yii\console\Request::class,
         ],
@@ -44,6 +46,6 @@ $cc_config = [
     ],
 ];
 
-unset($cc_config['class']);
+unset($ztmp_config['class']);
 
-return $cc_config;
+return $ztmp_config;

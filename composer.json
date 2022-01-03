@@ -50,7 +50,10 @@
   "autoload": {
     "psr-4": {
       "Zpp\\": "src/"
-    }
+    },
+    "exclude-from-classmap": [
+      "/tests/"
+    ]
   },
   "autoload-dev": {
     "psr-4": {

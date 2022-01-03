@@ -1,6 +1,6 @@
 <?php
 
-$cc_components = $cc_components ?? (require __DIR__ . '/components.php');
+$ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
 return yii\helpers\ArrayHelper::merge(
     require __DIR__ . '/base.php',
@@ -8,8 +8,8 @@ return yii\helpers\ArrayHelper::merge(
         'class' => yii\console\Application::class,
         'id' => 'xxx_test_cli_application',
         'name' => 'xxx Test Cli Application',
-        'language' => 'en-US',
-        'controllerNamespace' => 'app\commands',
+        'language' => 'en',
+        'controllerNamespace' => 'Zpp\Commands',
         'aliases' => [
             '@tests' => '@app/tests',
         ],
@@ -24,7 +24,8 @@ return yii\helpers\ArrayHelper::merge(
                 ],
                 // for migrations that contain namespaces, `migrationNamespaces` is required to specify the path
                 'migrationNamespaces' => [
-                    'app\migrations',
+                    'Zpp\Migration',
+                    // 'app\migrations',
                     // 'yii\queue\db\migrations',
                 ],
             ],
@@ -34,7 +35,7 @@ return yii\helpers\ArrayHelper::merge(
             ],
         ],
         'components' => [
-            'db' => $cc_components[yii\db\Connection::class]([
+            'db' => $ztmp_components[yii\db\Connection::class]([
                 'dsn' => 'mysql:' . implode(
                         ';',
                         [
@@ -46,14 +47,14 @@ return yii\helpers\ArrayHelper::merge(
                 'username' => 'root',
                 'password' => 'root12345',
             ]),
-            'errorHandler' => $cc_components[yii\console\ErrorHandler::class](),
+            'errorHandler' => $ztmp_components[yii\console\ErrorHandler::class](),
             'request' => [
                 'class' => yii\console\Request::class,
             ],
             'response' => [
                 'class' => yii\console\Response::class,
             ],
-            'mailer' => $cc_components[yii\swiftmailer\Mailer::class]([
+            'mailer' => $ztmp_components[yii\swiftmailer\Mailer::class]([
                 'useFileTransport' => true,
             ]),
         ],

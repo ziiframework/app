@@ -10,6 +10,7 @@ paths:
 actor_suffix: Tester
 
 extensions:
+  # array
   enabled:
     - Codeception\Extension\RunFailed
 
@@ -19,11 +20,13 @@ settings:
 
 # https://codeception.com/docs/06-ModulesAndHelpers
 modules:
+  # object
   config:
     Db:
       dsn: 'mysql:host=127.0.0.1;dbname=test0db'
       user: 'root'
       password: 'root12345'
+  # array
   enabled:
     - Asserts
     - Db:
