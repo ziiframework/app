@@ -22,7 +22,7 @@ jobs:
       PHP_CMD: '/usr/local/php/bin/php'
       COMPOSER_CMD: '/usr/local/bin/composer.phar'
 
-    container: charescape/web:5.4.1
+    container: charescape/web:5.5.0
 
     steps:
       - uses: actions/checkout@v2.4.0
