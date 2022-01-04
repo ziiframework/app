@@ -442,9 +442,9 @@ $ztmp_components[yii\queue\db\Queue::class] = static function (array $config = [
 $ztmp_components[yii\swiftmailer\Mailer::class] = static function (array $config = []): array {
     return yii\helpers\ArrayHelper::merge([
         'class' => yii\swiftmailer\Mailer::class,
-        'viewPath' => '@app/mail',
-        'htmlLayout' => '@app/mail/layouts/html',
-        'textLayout' => '@app/mail/layouts/text',
+        'viewPath' => '@app/mailing',
+        'htmlLayout' => '@app/mailing/html-layout.php',
+        'textLayout' => '@app/mailing/text-layout.php',
         'useFileTransport' => false,
         'transport' => [
             'class' => Swift_SmtpTransport::class,
