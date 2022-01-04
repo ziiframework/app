@@ -1899,16 +1899,16 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.5.7",
+            "version": "3.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "0b9023bbe6b955990d4fc092af8f414cd21d5032"
+                "reference": "782478b0956be478d28c9719727e30ec12485be4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/0b9023bbe6b955990d4fc092af8f414cd21d5032",
-                "reference": "0b9023bbe6b955990d4fc092af8f414cd21d5032",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/782478b0956be478d28c9719727e30ec12485be4",
+                "reference": "782478b0956be478d28c9719727e30ec12485be4",
                 "shasum": ""
             },
             "require": {
@@ -1966,7 +1966,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2022-01-03T04:59:05+00:00"
+            "time": "2022-01-04T08:15:12+00:00"
         }
     ],
     "packages-dev": [
