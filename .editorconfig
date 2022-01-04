@@ -11,10 +11,11 @@ trim_trailing_whitespace = true
 [*.php]
 indent_size = 4
 
-[{mail, views}/**/*.php]
+[{mailing, pages}/**/*.php]
 indent_size = 2
 
-[modules/**/views/**/*.php]
+[modules/**/pages/**/*.php]
 indent_size = 2
-[modules/**/views/**/*.js]
+
+[modules/**/pages/**/*.js]
 indent_size = 2
