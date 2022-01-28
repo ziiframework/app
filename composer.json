@@ -23,7 +23,7 @@
     "monolog/monolog": "^2.3.0",
     "symfony/http-client": "^5.4.0",
     "symfony/polyfill-php80": "*",
-    "symfony/yaml": "^5.4.0",
+    "symfony/yaml": "^5.4.3",
     "ziiframework/queue": "~3.5.0",
     "ziiframework/swiftmailer": "~3.4.0",
     "ziiframework/zii": "~3.5.0"
