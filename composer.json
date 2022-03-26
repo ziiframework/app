@@ -21,7 +21,7 @@
     "ext-pdo": "*",
     "charescape/php-functions": "1.0.x-dev",
     "monolog/monolog": "^2.3.0",
-    "symfony/http-client": "^5.4.0",
+    "symfony/http-client": "^5.4.5",
     "symfony/polyfill-php80": "*",
     "symfony/yaml": "^5.4.0",
     "ziiframework/queue": "~3.5.0",
