@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38b4b72bcb3fbd0e49890f59e8cde700",
+    "content-hash": "e6c3734f89f1c46a3a25f1601ba53da6",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -291,12 +291,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "library/"
-                },
                 "files": [
                     "library/HTMLPurifier.composer.php"
                 ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
                 "exclude-from-classmap": [
                     "/library/HTMLPurifier/Language/"
                 ]
@@ -1483,6 +1483,85 @@
             "time": "2022-03-04T08:16:47+00:00"
         },
         {
+            "name": "symfony/polyfill-php81",
+            "version": "v1.25.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php81.git",
+                "reference": "5de4ba2d41b15f9bd0e19b2ab9674135813ec98f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/5de4ba2d41b15f9bd0e19b2ab9674135813ec98f",
+                "reference": "5de4ba2d41b15f9bd0e19b2ab9674135813ec98f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.23-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php81\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.25.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-09-13T13:58:11+00:00"
+        },
+        {
             "name": "symfony/process",
             "version": "v5.4.2",
             "source": {
@@ -1704,16 +1783,16 @@
         },
         {
             "name": "ziiframework/composer",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/composer.git",
-                "reference": "e474341f534696eec22686a23bfab865ce40083b"
+                "reference": "65f4ae5367cc82b2413c3604c386255595ed3309"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/composer/zipball/e474341f534696eec22686a23bfab865ce40083b",
-                "reference": "e474341f534696eec22686a23bfab865ce40083b",
+                "url": "https://api.github.com/repos/ziiframework/composer/zipball/65f4ae5367cc82b2413c3604c386255595ed3309",
+                "reference": "65f4ae5367cc82b2413c3604c386255595ed3309",
                 "shasum": ""
             },
             "require": {
@@ -1722,7 +1801,7 @@
                 "php": ">=7.4.0"
             },
             "require-dev": {
-                "composer/composer": "^2.0",
+                "composer/composer": "^2.2",
                 "phpunit/phpunit": "^8.5"
             },
             "type": "composer-plugin",
@@ -1758,7 +1837,7 @@
                 "issues": "https://github.com/ziiframework/composer/issues",
                 "source": "https://github.com/ziiframework/composer"
             },
-            "time": "2021-12-31T09:08:30+00:00"
+            "time": "2022-04-05T13:38:08+00:00"
         },
         {
             "name": "ziiframework/queue",
@@ -1905,16 +1984,16 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.5.8",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "782478b0956be478d28c9719727e30ec12485be4"
+                "reference": "5c1423254643c32d4eb2800d84a99a3095d0761c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/782478b0956be478d28c9719727e30ec12485be4",
-                "reference": "782478b0956be478d28c9719727e30ec12485be4",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/5c1423254643c32d4eb2800d84a99a3095d0761c",
+                "reference": "5c1423254643c32d4eb2800d84a99a3095d0761c",
                 "shasum": ""
             },
             "require": {
@@ -1923,15 +2002,19 @@
                 "ext-dom": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
+                "ext-pdo": "*",
                 "ezyang/htmlpurifier": "^4.13",
                 "lib-pcre": "*",
                 "php": ">=7.4.0",
-                "symfony/polyfill-php80": "^1.23",
+                "symfony/polyfill-php80": "^1.24",
+                "symfony/polyfill-php81": "^1.25",
                 "ziiframework/composer": ">=3.5.0"
             },
             "require-dev": {
                 "cebe/indent": "^1.0",
-                "phpunit/phpunit": "^9.5"
+                "nette/php-generator": "^3.6",
+                "phpunit/phpunit": "^9.5",
+                "symfony/var-dumper": "^5.4||^6.0"
             },
             "bin": [
                 "src/yii"
@@ -1972,7 +2055,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2022-01-04T08:15:12+00:00"
+            "time": "2022-04-05T13:44:42+00:00"
         }
     ],
     "packages-dev": [
