@@ -20,7 +20,7 @@
     "ext-mbstring": "*",
     "ext-pdo": "*",
     "charescape/php-functions": "1.0.x-dev",
-    "monolog/monolog": "^2.3.0",
+    "monolog/monolog": "^2.6.0",
     "symfony/http-client": "^5.4.0",
     "symfony/polyfill-php80": "*",
     "symfony/yaml": "^5.4.0",
