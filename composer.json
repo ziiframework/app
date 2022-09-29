@@ -29,7 +29,7 @@
     "ziiframework/zii": "~3.5.0"
   },
   "require-dev": {
-    "codeception/codeception": "^4.1",
+    "codeception/codeception": "^4.2",
     "codeception/lib-innerbrowser": "^2.0",
     "codeception/module-asserts": "^2.0",
     "codeception/module-db": "^2.0",
