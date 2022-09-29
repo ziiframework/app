@@ -83,7 +83,7 @@ jobs:
         continue-on-error: true
 
       - name: "📦"
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: debug-pack
           retention-days: 3
