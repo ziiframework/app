@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1dcdf79b8a555b72f275aee3e391c22",
+    "content-hash": "b5e48622904e8eb391d03cb248cf3cf3",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1996,20 +1996,20 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.5.31",
+            "version": "3.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "df979937a210094a19379f2fbc5119cf26bcaf2e"
+                "reference": "938b80c235c75c2306a199b81df2c4a059937fc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/df979937a210094a19379f2fbc5119cf26bcaf2e",
-                "reference": "df979937a210094a19379f2fbc5119cf26bcaf2e",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/938b80c235c75c2306a199b81df2c4a059937fc0",
+                "reference": "938b80c235c75c2306a199b81df2c4a059937fc0",
                 "shasum": ""
             },
             "require": {
-                "cebe/markdown": "^1.0",
+                "cebe/markdown": "^1.2",
                 "ext-ctype": "*",
                 "ext-dom": "*",
                 "ext-json": "*",
@@ -2018,15 +2018,16 @@
                 "ezyang/htmlpurifier": "^4.13",
                 "lib-pcre": "*",
                 "php": ">=7.4.0",
-                "symfony/polyfill-php80": "^1.24",
-                "symfony/polyfill-php81": "^1.25",
-                "ziiframework/composer": ">=3.5.0"
+                "symfony/polyfill-php80": "^1.26",
+                "symfony/polyfill-php81": "^1.26",
+                "ziiframework/composer": ">=3.6.0"
             },
             "require-dev": {
                 "cebe/indent": "^1.0",
                 "nette/php-generator": "^3.6",
+                "phpstan/phpstan": "^1.8",
                 "phpunit/phpunit": "^9.5",
-                "symfony/var-dumper": "^5.4"
+                "symfony/var-dumper": "^5.4||^6.0"
             },
             "bin": [
                 "src/yii"
@@ -2067,7 +2068,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2022-03-26T12:10:38+00:00"
+            "time": "2022-07-25T16:30:08+00:00"
         }
     ],
     "packages-dev": [
