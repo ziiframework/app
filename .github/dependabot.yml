@@ -16,3 +16,7 @@ updates:
     schedule:
       interval: "daily"
     versioning-strategy: "increase"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+    open-pull-requests-limit: 50
