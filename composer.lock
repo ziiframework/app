@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7ba26c41ada6cb379b6c8b06779d7d6",
+    "content-hash": "b1dcdf79b8a555b72f275aee3e391c22",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -6569,20 +6569,20 @@
         },
         {
             "name": "ziiframework/faker",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/faker.git",
-                "reference": "1a17229e966b2660868fc3c64890eb6b015f8ff5"
+                "reference": "43dfe5eca36c01105a00e52f7fd09df37ae35333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/faker/zipball/1a17229e966b2660868fc3c64890eb6b015f8ff5",
-                "reference": "1a17229e966b2660868fc3c64890eb6b015f8ff5",
+                "url": "https://api.github.com/repos/ziiframework/faker/zipball/43dfe5eca36c01105a00e52f7fd09df37ae35333",
+                "reference": "43dfe5eca36c01105a00e52f7fd09df37ae35333",
                 "shasum": ""
             },
             "require": {
-                "fakerphp/faker": "^1.10",
+                "fakerphp/faker": "^1.19",
                 "php": ">=7.4.0",
                 "ziiframework/zii": ">=3.5.0"
             },
@@ -6623,7 +6623,7 @@
                 "issues": "https://github.com/ziiframework/faker/issues",
                 "source": "https://github.com/ziiframework/faker"
             },
-            "time": "2022-01-03T05:25:03+00:00"
+            "time": "2022-04-05T14:04:53+00:00"
         }
     ],
     "aliases": [],
