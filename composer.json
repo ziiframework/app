@@ -24,7 +24,7 @@
     "symfony/http-client": "^5.4|^6.0",
     "symfony/polyfill-php80": "*",
     "symfony/yaml": "^5.4|^6.0",
-    "ziiframework/queue": "~3.5.0",
+    "ziiframework/queue": "~3.6.1",
     "ziiframework/swiftmailer": "~3.5.0",
     "ziiframework/zii": "~3.5.0"
   },
