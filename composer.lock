@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a01670d78791ab1e93b7a0a93ee57a6a",
+    "content-hash": "d7ba26c41ada6cb379b6c8b06779d7d6",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1854,32 +1854,31 @@
         },
         {
             "name": "ziiframework/queue",
-            "version": "3.5.1",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/queue.git",
-                "reference": "0c811d60dd5ca29a2b08eb62ae4ba94600b28a0f"
+                "reference": "ba70ffb4a343e48fc3b79d5f95f0928254c522e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/queue/zipball/0c811d60dd5ca29a2b08eb62ae4ba94600b28a0f",
-                "reference": "0c811d60dd5ca29a2b08eb62ae4ba94600b28a0f",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/ba70ffb4a343e48fc3b79d5f95f0928254c522e3",
+                "reference": "ba70ffb4a343e48fc3b79d5f95f0928254c522e3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4.0",
-                "symfony/process": "^3.3||^4.0||^5.0",
-                "ziiframework/zii": ">=3.5.1"
+                "symfony/process": "^5.0||^6.0",
+                "ziiframework/zii": ">=3.5.25"
             },
             "require-dev": {
-                "aws/aws-sdk-php": ">=2.4",
-                "enqueue/amqp-lib": "^0.8||^0.9.10",
-                "enqueue/stomp": "^0.8.39",
+                "aws/aws-sdk-php": ">=3.212.7",
+                "enqueue/amqp-lib": "^0.10.9",
+                "enqueue/stomp": "^0.10.9",
                 "jeremeamia/superclosure": "*",
                 "pda/pheanstalk": "v3.*",
                 "php-amqplib/php-amqplib": "*",
-                "phpunit/phpunit": "~4.4",
-                "ziiframework/debug": "*",
+                "phpunit/phpunit": "^8.0",
                 "ziiframework/gii": "*",
                 "ziiframework/redis": "*"
             },
@@ -1935,7 +1934,7 @@
                 "issues": "https://github.com/ziiframework/queue/issues",
                 "source": "https://github.com/ziiframework/queue"
             },
-            "time": "2021-12-31T15:33:39+00:00"
+            "time": "2022-04-05T13:49:23+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
