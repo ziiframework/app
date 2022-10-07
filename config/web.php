@@ -6,9 +6,11 @@ $ztmp_components = $ztmp_components ?? (require __DIR__ . '/components.php');
 
 $ztmp_enable_strict_parsing = true;
 if (isset($_SERVER['REQUEST_URI'])) {
-    if (strpos($_SERVER['REQUEST_URI'], '/miniprogram/') === 0) {
+    if (str_starts_with($_SERVER['REQUEST_URI'], '/webapp/')) {
         $ztmp_enable_strict_parsing = false;
-    } else if (strpos($_SERVER['REQUEST_URI'], '/workbench/') === 0) {
+    } else if (str_starts_with($_SERVER['REQUEST_URI'], '/workbench/')) {
+        $ztmp_enable_strict_parsing = false;
+    } else if (str_starts_with($_SERVER['REQUEST_URI'], '/miniprogram/')) {
         $ztmp_enable_strict_parsing = false;
     }
 }

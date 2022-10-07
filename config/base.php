@@ -32,7 +32,7 @@ $ztmp_config = [
         '@npm' => '@vendor/npm-asset',
     ],
     'timeZone' => 'Asia/Shanghai',
-    'version' => '3.0.0',
+    'version' => ZPP_VERSION,
     'params' => array_merge([], $ztmp_secrets),
     'components' => [
         'cache' => $ztmp_components[yii\caching\DbCache::class](),
@@ -52,7 +52,13 @@ $ztmp_config = [
                         $zpp = Yii::$app;
 
                         if ($zpp instanceof yii\web\Application) {
-                            $po = Yaml::parseFile(ZDIR_ROOT . '/' . str_replace('_', '/', $event->category) . '.yml');
+                            $ymlfile = ZDIR_ROOT . '/' . str_replace('_', '/', $event->category) . '.yml';
+
+                            if (!file_exists($ymlfile)) {
+                                return;
+                            }
+
+                            $po = Yaml::parseFile($ymlfile);
 
                             if (!isset($po[$event->message][ZII_LANG_ALIAS[ZII_LANG_CURRENT]])) {
                                 $zpp->putMissingTranslations($event->category, $event->message);

@@ -4,6 +4,8 @@ defined('ZDIR_SHARED') or define('ZDIR_SHARED', dirname(__DIR__) . '/shared');
 
 defined('ZDIR_ROOT') or define('ZDIR_ROOT', __DIR__);
 
+defined('ZPP_VERSION') or define('ZPP_VERSION', '3.0.0');
+
 // for ajax request (https://stackoverflow.com/questions/8163703/cross-domain-ajax-doesnt-send-x-requested-with-header)
 if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strcasecmp($_SERVER['HTTP_X_REQUESTED_WITH'], 'XMLHttpRequest') === 0) {
     // Allow from any origin

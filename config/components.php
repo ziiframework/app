@@ -2,6 +2,16 @@
 
 $ztmp_components = $ztmp_components ?? [];
 
+if (!function_exists('ztmp_version_based_prefix')) {
+    function ztmp_version_based_prefix(string $prefix): string
+    {
+        $pre_chars = \substr($prefix, 0, -1);
+        $last_char = \substr($prefix, -1);
+
+        return $pre_chars . \str_replace('.', '', ZPP_VERSION) . $last_char;
+    }
+}
+
 /**
  * 缓存组件（db驱动）.
  *
@@ -12,7 +22,7 @@ $ztmp_components[yii\caching\DbCache::class] = static function (array $config = 
     return array_merge([
         'class' => yii\caching\DbCache::class,
         'cacheTable' => '{{%dbcache}}',
-        'keyPrefix' => 'gche_',
+        'keyPrefix' => ztmp_version_based_prefix('gche_'),
     ], $config);
 };
 
@@ -41,17 +51,17 @@ $ztmp_components[yii\db\Connection::class] = static function (array $config) use
 //            PDO::ATTR_TIMEOUT => 5, // 数据库连接超时时间：5s
 //            PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true, // 使用缓冲查询
         ],
-        'enableSchemaCache' => true,
+        'enableSchemaCache' => YII_ENV_PROD,
         'schemaCache' => $ztmp_components[yii\caching\DbCache::class]([
-            'keyPrefix' => 'dbsh_',
+            'keyPrefix' => ztmp_version_based_prefix('dbsh_'),
         ]),
-        'enableQueryCache' => true,
+        'enableQueryCache' => YII_ENV_PROD,
         'queryCache' => $ztmp_components[yii\caching\DbCache::class]([
-            'keyPrefix' => 'dbqe_',
+            'keyPrefix' => ztmp_version_based_prefix('dbqe_'),
         ]),
         'charset' => 'utf8mb4',
         'serverStatusCache' => $ztmp_components[yii\caching\DbCache::class]([
-            'keyPrefix' => 'dbst_',
+            'keyPrefix' => ztmp_version_based_prefix('dbst_'),
         ]),
         'enableLogging' => !YII_ENV_PROD, // 生产环境提升性能 https://github.com/yiisoft/yii2/issues/12528
         'enableProfiling' => !YII_ENV_PROD, // 生产环境提升性能 https://github.com/yiisoft/yii2/issues/12528
@@ -98,7 +108,7 @@ $ztmp_components[yii\web\Cookie::class] = static function (array $config): array
  * @return array 合并后的配置数组
  */
 $ztmp_components[yii\log\FileTarget::class] = static function (string $level): array {
-    return [
+    $internalConfig = [
         'class' => yii\log\FileTarget::class,
         'except' => [
             'yii\web\ForbiddenHttpException:*',
@@ -110,8 +120,17 @@ $ztmp_components[yii\log\FileTarget::class] = static function (string $level): a
         'microtime' => true,
         'enableRotation' => false,
         'logFile' => sprintf('@runtime/logs/%s_%s.log', $level, date('Ym')),
-        'maxFileSize' => 102400, // 100M
+        'maxFileSize' => 10240, // 10M
     ];
+
+    if ($level === 'sql::execute') {
+        $internalConfig['levels'] = ['info'];
+        $internalConfig['categories'] = ['yii\\db\\Command::execute'];
+        $internalConfig['logVars'] = [];
+        $internalConfig['logFile'] = sprintf('@runtime/logs/sql-execute-%s.log', date('Ymd'));
+    }
+
+    return $internalConfig;
 };
 
 /**
@@ -121,7 +140,7 @@ $ztmp_components[yii\log\FileTarget::class] = static function (string $level): a
  * @return array 合并后的配置数组
  */
 $ztmp_components[yii\log\Dispatcher::class] = static function (array $config = []) use ($ztmp_components): array {
-    return array_merge([
+    $internalConfig = array_merge([
         'class' => yii\log\Dispatcher::class,
         'traceLevel' => YII_DEBUG ? 3 : 0,
         'targets' => YII_DEBUG ? [
@@ -133,6 +152,12 @@ $ztmp_components[yii\log\Dispatcher::class] = static function (array $config = [
             $ztmp_components[yii\log\FileTarget::class]('error'),
         ],
     ], $config);
+
+    if (php_sapi_name() === 'cli') {
+        $internalConfig['targets'][] = $ztmp_components[yii\log\FileTarget::class]('sql::execute');
+    }
+
+    return $internalConfig;
 };
 
 /**
@@ -169,7 +194,7 @@ $ztmp_components[yii\i18n\I18N::class] = static function (array $config = []): a
 $ztmp_components[yii\caching\FileCache::class] = static function (array $config = []): array {
     return array_merge([
         'class' => yii\caching\FileCache::class,
-        'keyPrefix' => 'fcc_',
+        'keyPrefix' => ztmp_version_based_prefix('fcc_'),
     ], $config);
 };
 
@@ -316,6 +341,10 @@ $ztmp_components[yii\web\Response::class] = static function (array $config = [])
                             $response->data['isOk'] = false;
                             $response->data['retCode'] = 400;
                         }
+                    }
+
+                    if (($originalData['name'] ?? null) === 'LoginRequired' && ($originalData['status'] ?? null) === 403) {
+                        $response->data['isLoginRequired'] = true;
                     }
 
                     $response->setStatusCode(200);
@@ -470,7 +499,7 @@ $ztmp_components[yii\rbac\DbManager::class] = static function (array $config = [
         'assignmentTable' => '{{%dbauth_assignment}}',
         'ruleTable' => '{{%dbauth_rule}}',
         'cache' => $ztmp_components[yii\caching\DbCache::class]([
-            'keyPrefix' => 'rbac_',
+            'keyPrefix' => ztmp_version_based_prefix('rbac_'),
         ]),
     ], $config);
 };
@@ -498,7 +527,7 @@ $ztmp_components[yii\web\UrlManager::class] = static function (array $config) us
     $config = array_merge([
         'class' => yii\web\UrlManager::class,
         'cache' => $ztmp_components[yii\caching\DbCache::class]([
-            'keyPrefix' => 'uri_',
+            'keyPrefix' => ztmp_version_based_prefix('uri_'),
         ]),
         'enablePrettyUrl' => true,
         'enableStrictParsing' => false,
