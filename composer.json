@@ -15,7 +15,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": ">=8.0.0",
+    "php": ">=8.0",
     "ext-json": "*",
     "ext-mbstring": "*",
     "ext-pdo": "*",
@@ -41,7 +41,7 @@
   },
   "config": {
     "platform": {
-      "php": "8.0"
+      "php": "8.0.5"
     },
     "sort-packages": true,
     "allow-plugins": {
