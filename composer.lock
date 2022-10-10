@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e467c4efaa487087891ae81d580d86b6",
+    "content-hash": "ab775d1c2420f680a58959310edb4b83",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -72,22 +72,22 @@
         },
         {
             "name": "charescape/php-functions",
-            "version": "1.2.1",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/charescape/php-functions.git",
-                "reference": "c6dbd6ec08a1bcb738f83fe69ab13f485e5f43c6"
+                "reference": "3a20971c1fd6e9cb1a544f6776fa172af40c7011"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/charescape/php-functions/zipball/c6dbd6ec08a1bcb738f83fe69ab13f485e5f43c6",
-                "reference": "c6dbd6ec08a1bcb738f83fe69ab13f485e5f43c6",
+                "url": "https://api.github.com/repos/charescape/php-functions/zipball/3a20971c1fd6e9cb1a544f6776fa172af40c7011",
+                "reference": "3a20971c1fd6e9cb1a544f6776fa172af40c7011",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^7.3||^8.0",
+                "php": ">=7.4.5",
                 "symfony/string": "^5.4||^6.0"
             },
             "require-dev": {
@@ -122,9 +122,9 @@
             "homepage": "https://github.com/charescape/php-functions",
             "support": {
                 "issues": "https://github.com/charescape/php-functions/issues",
-                "source": "https://github.com/charescape/php-functions/tree/1.2.1"
+                "source": "https://github.com/charescape/php-functions/tree/1.3.0"
             },
-            "time": "2022-10-03T03:40:21+00:00"
+            "time": "2022-10-08T04:59:25+00:00"
         },
         {
             "name": "doctrine/lexer",
