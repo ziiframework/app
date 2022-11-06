@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zept\unit;
+namespace Tests\Unit;
 
 class DemoUnitTest extends BaseUnitTest
 {

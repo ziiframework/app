@@ -1,9 +1,8 @@
 <?php
 
-namespace Zept;
+declare(strict_types=1);
 
-use Codeception\Actor;
-use Zept\_generated\AcceptanceTesterActions;
+namespace Tests\Support;
 
 /**
  * Inherited Methods
@@ -16,13 +15,13 @@ use Zept\_generated\AcceptanceTesterActions;
  * @method void am($role)
  * @method void lookForwardTo($achieveValue)
  * @method void comment($description)
- * @method void pause()
+ * @method void pause($vars = [])
  *
  * @SuppressWarnings(PHPMD)
- */
-class AcceptanceTester extends Actor
+*/
+class UnitTester extends \Codeception\Actor
 {
-    use AcceptanceTesterActions;
+    use _generated\UnitTesterActions;
 
     /**
      * Define custom actions here

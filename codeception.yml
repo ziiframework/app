@@ -1,16 +1,18 @@
-namespace: Zept
+namespace: Tests
+
+support_namespace: Support
 
 paths:
   tests: tests
   output: tests/_output
-  data: tests/_data
-  support: tests
+  data: tests/Support/Data
+  support: tests/Support
   envs: tests/_envs
 
 actor_suffix: Tester
 
 extensions:
-  # array
+  # `enabled` is an array
   enabled:
     - Codeception\Extension\RunFailed
 
@@ -18,18 +20,20 @@ settings:
   memory_limit: 1024M
   colors: true
 
-# https://codeception.com/docs/06-ModulesAndHelpers
+# https://codeception.com/docs/ModulesAndHelpers
 modules:
-  # object
+  # `config` is an object
   config:
     Db:
       dsn: 'mysql:host=127.0.0.1;dbname=test0db'
       user: 'root'
       password: 'root12345'
-  # array
+
+  # `enabled` is an array
   enabled:
     - Asserts
     - Db:
       dsn: 'mysql:host=127.0.0.1;dbname=test0db'
       user: 'root'
       password: 'root12345'
+    - \Tests\Support\Helper\BaseHelper

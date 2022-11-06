@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Zept\unit;
+namespace Tests\Unit;
 
 use Codeception\Test\Unit as CodeceptionUnit;
-use Zept\UnitTester;
+use Tests\Support\UnitTester;
 
 class BaseUnitTest extends CodeceptionUnit
 {

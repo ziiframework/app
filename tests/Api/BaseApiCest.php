@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Zept\api;
+namespace Tests\Api;
 
-use Zept\ApiTester;
+use Tests\Support\ApiTester;
 
 class BaseApiCest
 {

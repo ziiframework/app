@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Zept\acceptance;
+namespace Tests\Acceptance;
 
-use Zept\AcceptanceTester;
+use Tests\Support\AcceptanceTester;
 
 final class SiteCest extends BaseAcceptanceCest
 {
