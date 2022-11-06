@@ -1,0 +1,11 @@
+actor: ApiTester
+
+modules:
+  enabled:
+    - \Tests\Support\Helper\BaseHelper
+    - PhpBrowser:
+        url: http://app.yiitest.com
+    - REST:
+        url: http://app.yiitest.com
+        depends: PhpBrowser
+        part: Json
