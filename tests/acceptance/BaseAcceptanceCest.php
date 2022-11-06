@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Zept\acceptance;
+namespace Tests\Acceptance;
 
 use InvalidArgumentException;
-use Zept\AcceptanceTester;
+use Tests\AcceptanceTester;
 
 class BaseAcceptanceCest
 {

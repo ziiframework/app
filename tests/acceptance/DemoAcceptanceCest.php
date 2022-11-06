@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Zept\acceptance;
+namespace Tests\Acceptance;
 
-use Zept\AcceptanceTester;
+use Tests\AcceptanceTester;
 
 final class DemoAcceptanceCest
 {
