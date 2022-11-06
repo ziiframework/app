@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tests\Acceptance;
 
 use InvalidArgumentException;
-use Tests\AcceptanceTester;
+use Tests\Support\AcceptanceTester;
 
 class BaseAcceptanceCest
 {
