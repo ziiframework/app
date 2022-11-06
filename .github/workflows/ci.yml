@@ -79,7 +79,7 @@ jobs:
 
       - name: "🧪"
         id: id_Codeception_Cest
-        run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run --steps
+        run: ${{ env.PHP_CMD }} ./vendor/bin/codecept run
         continue-on-error: true
 
       - name: "📦"
