@@ -8,7 +8,7 @@ actor: AcceptanceTester
 
 modules:
   enabled:
-    - \Tests\Support\BaseHelper
+    - \Tests\Support\Helper\BaseHelper
     - PhpBrowser:
         url: http://app.yiitest.com
 step_decorators: ~

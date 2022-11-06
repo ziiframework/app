@@ -10,5 +10,5 @@ actor: FunctionalTester
 modules:
   enabled:
     # add a framework module here
-    - \Tests\Support\BaseHelper
+    - \Tests\Support\Helper\BaseHelper
   step_decorators: ~
