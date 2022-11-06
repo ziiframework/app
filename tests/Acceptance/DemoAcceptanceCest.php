@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Acceptance;
 
-use Tests\AcceptanceTester;
+use Tests\Support\AcceptanceTester;
 
 final class DemoAcceptanceCest
 {
