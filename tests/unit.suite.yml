@@ -7,7 +7,5 @@ actor: UnitTester
 modules:
   enabled:
     - Asserts
-    - \Zept\UnitHelper
+    - \Tests\Support\UnitHelper
   step_decorators: ~
-
-# bootstrap: './bootstrap.php'

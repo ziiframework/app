@@ -1,9 +1,8 @@
-
 actor: ApiTester
 
 modules:
   enabled:
-    - \Zept\ApiHelper
+    - \Tests\Support\ApiHelper
     - PhpBrowser:
         url: http://app.yiitest.com
     - REST:
