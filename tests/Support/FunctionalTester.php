@@ -1,9 +1,8 @@
 <?php
 
-namespace Zept;
+declare(strict_types=1);
 
-use Codeception\Actor;
-use Zept\_generated\ApiTesterActions;
+namespace Tests\Support;
 
 /**
  * Inherited Methods
@@ -16,13 +15,13 @@ use Zept\_generated\ApiTesterActions;
  * @method void am($role)
  * @method void lookForwardTo($achieveValue)
  * @method void comment($description)
- * @method void pause()
+ * @method void pause($vars = [])
  *
  * @SuppressWarnings(PHPMD)
 */
-class ApiTester extends Actor
+class FunctionalTester extends \Codeception\Actor
 {
-    use ApiTesterActions;
+    use _generated\FunctionalTesterActions;
 
     /**
      * Define custom actions here
