@@ -20,7 +20,7 @@ jobs:
 
     env:
       PHP_CMD: '/usr/local/php/bin/php'
-      COMPOSER_CMD: '/usr/local/bin/composer.phar'
+      COMPOSER_CMD: '/usr/local/bin/composer'
 
     container: charescape/web:6.1.1
 
