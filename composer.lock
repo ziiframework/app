@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c0eafff03fe40c790229b6411aac589",
+    "content-hash": "8b75488648f329152e852f204b82b7ca",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1574,16 +1574,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.0.15",
+            "version": "v6.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "51ac0fa0ccf132a00519b87c97e8f775fa14e771"
+                "reference": "3f57003dd8a67ed76870cc03092f8501db7788d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/51ac0fa0ccf132a00519b87c97e8f775fa14e771",
-                "reference": "51ac0fa0ccf132a00519b87c97e8f775fa14e771",
+                "url": "https://api.github.com/repos/symfony/string/zipball/3f57003dd8a67ed76870cc03092f8501db7788d9",
+                "reference": "3f57003dd8a67ed76870cc03092f8501db7788d9",
                 "shasum": ""
             },
             "require": {
@@ -1639,7 +1639,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.0.15"
+                "source": "https://github.com/symfony/string/tree/v6.0.17"
             },
             "funding": [
                 {
@@ -1655,7 +1655,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-10T09:34:08+00:00"
+            "time": "2022-12-14T15:52:41+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -1791,16 +1791,16 @@
         },
         {
             "name": "ziiframework/queue",
-            "version": "3.6.1",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/queue.git",
-                "reference": "ba70ffb4a343e48fc3b79d5f95f0928254c522e3"
+                "reference": "c54ea429cbad25f0314e437c19fc759d1704838b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/queue/zipball/ba70ffb4a343e48fc3b79d5f95f0928254c522e3",
-                "reference": "ba70ffb4a343e48fc3b79d5f95f0928254c522e3",
+                "url": "https://api.github.com/repos/ziiframework/queue/zipball/c54ea429cbad25f0314e437c19fc759d1704838b",
+                "reference": "c54ea429cbad25f0314e437c19fc759d1704838b",
                 "shasum": ""
             },
             "require": {
@@ -1809,10 +1809,10 @@
                 "ziiframework/zii": ">=3.5.25"
             },
             "require-dev": {
-                "aws/aws-sdk-php": ">=3.212.7",
+                "aws/aws-sdk-php": ">=3.236.0",
                 "enqueue/amqp-lib": "^0.10.9",
                 "enqueue/stomp": "^0.10.9",
-                "jeremeamia/superclosure": "*",
+                "opis/closure": "*",
                 "pda/pheanstalk": "v3.*",
                 "php-amqplib/php-amqplib": "*",
                 "phpunit/phpunit": "^8.0",
@@ -1871,7 +1871,7 @@
                 "issues": "https://github.com/ziiframework/queue/issues",
                 "source": "https://github.com/ziiframework/queue"
             },
-            "time": "2022-04-05T13:49:23+00:00"
+            "time": "2023-01-18T11:07:23+00:00"
         },
         {
             "name": "ziiframework/swiftmailer",
@@ -1933,16 +1933,16 @@
         },
         {
             "name": "ziiframework/zii",
-            "version": "3.10.0",
+            "version": "3.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ziiframework/zii.git",
-                "reference": "28c57f6ce470fd1feddb72111189ab0d507dc7cf"
+                "reference": "e739d2ef255916aa5d7f32d68fc3745c8927cce0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ziiframework/zii/zipball/28c57f6ce470fd1feddb72111189ab0d507dc7cf",
-                "reference": "28c57f6ce470fd1feddb72111189ab0d507dc7cf",
+                "url": "https://api.github.com/repos/ziiframework/zii/zipball/e739d2ef255916aa5d7f32d68fc3745c8927cce0",
+                "reference": "e739d2ef255916aa5d7f32d68fc3745c8927cce0",
                 "shasum": ""
             },
             "require": {
@@ -1965,7 +1965,7 @@
                 "nette/php-generator": "^4.0",
                 "phpstan/phpstan": "^1.9",
                 "phpunit/phpunit": "^9.5",
-                "rector/rector": "^0.14.8",
+                "rector/rector": "^0.15.3",
                 "symfony/var-dumper": "^6.0"
             },
             "bin": [
@@ -2007,7 +2007,7 @@
                 "issues": "https://github.com/ziiframework/zii/issues?state=open",
                 "source": "https://github.com/ziiframework/zii"
             },
-            "time": "2022-12-01T15:36:42+00:00"
+            "time": "2023-01-10T04:53:16+00:00"
         }
     ],
     "packages-dev": [
